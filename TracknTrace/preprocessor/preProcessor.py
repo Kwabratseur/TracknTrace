@@ -68,7 +68,8 @@ from PIL import Image, ImageChops
 import copy
 import markdown
 import pytz
-from TracknTrace.analysis import *
+from TracknTrace import analysis
+from inspect import getmembers, isfunction
 import matplotlib as mpl
 mpl.rcParams.update(mpl.rcParamsDefault)
 plt.rcParams['text.usetex'] = False
@@ -612,11 +613,7 @@ def KNMI_Resampler(FileName, T_Columns, ScaleArray, RevertArray = None, Interval
     KNMI["    T"] = KNMI["    T"]*0.1 # scale to C
     KNMI["    FF"] = KNMI["   FF"]*0.1 # scale to mm
     return KNMI[["    T","    Q","   DD","   FH","   RH"]] # returns temperature, solar radiation, wind direction, wind speed, rainfall. Anything that can influence thermal balance.
-# T_Columns = ["    Q","   RH"]
-# ScaleArray = [100*100.,1.0] # scale J/cm2 to J/m2 and rain in 0.1mm to rain in mm
-# RevertArray = []
-# KNMI_15min = KNMI_Resampler("uurgeg_290_2011-2020.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
-# KNMI_15min.plot()
+
 
 ## Defining the color white for latex
 white = (255, 255, 255, 255)
@@ -709,12 +706,20 @@ def DerivedCategory(trends, newtrend, CategoryWeights, Verbose=0):
         print("Derriving categories failed for {}".format(newtrend))
         return trends
 
-def AnalysisDealer(analysis):
-    LogReport("__"*80, 2)
-    LogReport("# {}".format(str(fcn.__name__)))
-    for fcn in analysis:
-        data, Log, columns, viz = fcn(data)
+def AnalysisDealer(data, analysis):
+    """Apply all user defined functions from analysis.py to data
 
+    @param data  Standardized input (pandas)dataframe.
+    @param analysis  a list of [[name:function],] of user defined functions
+
+    @return data the transformed dataframe"""
+    global Log
+    LogReport("__"*80, 2)
+
+    for fcn in analysis:
+        LogReport("# {}".format(str(fcn[0])))
+        data, Log, columns, viz = fcn[1](data, Log)
+    return data
 
 
 ## Variable contains the generated Log, equal to code output in commandline.
@@ -789,7 +794,6 @@ def ProcessData():
 
     LogReport("{}".format(CategoryUnits),3)
     LogReport("{}".format(CategoryWeights),3)
-
 
 
     for i in transform:
@@ -876,7 +880,7 @@ def ProcessData():
     if modules[MODULE] == str(1):
         LogReport("Executing module {}".format(MODULE),5)
         LogReport(Ps)
-        #dT = data.loc[:, "DateTime"].copy()
+
 
     MODULE = "SanityCheckE"
     if modules[MODULE] == str(1):
@@ -885,7 +889,10 @@ def ProcessData():
         MODULE = "DHWUserProfile"
         if modules[MODULE] == str(1):
             data[["Vdhw"]] = RepairCumulatives(data[["Vdhw"]])
+
+###############~~~~~~~~~~~~~~~~~~Milestone!
     data = data.resample(config["preprocessing"]["ResampleTime"]).mean().interpolate()
+###############~~~~~~~~~~~~~~~~~~Milestone!
 
     MODULE = "EtoP"
     if modules[MODULE] == str(1):
@@ -893,16 +900,12 @@ def ProcessData():
         data[Ps] = data[Es].diff().bfill() #  energy to power
         timeDivisionArray.append(Es)
 
+
     data["dt"] = pd.to_numeric(data.index.to_series().diff().bfill())/(1000*1000*1000) #  dt
     CategoryWeights.append(["dt",0,0,0,1,0,0])
     CategoryUnits.append(["dt","s", "berekend","delta tijd, verschil tussen opvolgende tijdstappen"])
     data["DateTime"] = data.index
-    # If we have a problem like this, copy and re-set after destructive OP
 
-
-
-    # modList = ["Tamb","dt"]
-    # data[modList] = EnvironmentTemperatureCheck(data[modList], ROCLimit = 30.0/(12.0*60*60), ULimit = 50.0, LLimit = -15.0, VERBOSE = 5)
 
     if config["preprocessing"]["KNMI"] == "True":
         T_Columns = ["    Q","   RH"]
@@ -936,11 +939,6 @@ def ProcessData():
 
     MODULE = "SanityCheckThese"
     if modules[MODULE] == str(1):
-        #log start, stop column
-        # identify potential replacements
-        # Give a list of potential candidates
-        # create one dataset from these ppotential candidates
-        # plot something in time which shows the overlap
         LogReport("Executing module {}".format(MODULE),5)
         data = SimilarityCheck(data, "Tamb", "T-KNMI", ULimit = 40.0, LLimit = -15.0, ROCLimit = 30.0/(12.0*60*60), VERBOSE = 10)
         logFigure("data_with_knmi", data, Instance)
@@ -949,6 +947,15 @@ def ProcessData():
     LogReport("## Repaired cumulative trends, calculated power, calculted delta time")
     LogReport(data.describe().to_markdown())
     logFigure("Fixed_Data", data, Instance)
+
+####~~~~~~~~~~~~~~~~~ USER ANALYSIS FUNCTION MAGIC ~~~~~~~~~~~~~~~~~####
+
+    Function_List = getmembers(analysis, isfunction)
+    if len(Function_List) > 0:
+
+        data = AnalysisDealer(data,Function_List)
+
+####~~~~~~~~~~~~~~~~~ USER ANALYSIS FUNCTION MAGIC ~~~~~~~~~~~~~~~~~####
 
     MODULE = "CalculateTavg"
     if modules[MODULE] == str(1):
@@ -1114,8 +1121,6 @@ def ProcessData():
                     LogReport("\n {}".format(tex))
 
         fmf = MultiFitter(Instance,lambdaMap=lambdaMap,lambdaDict=lambdaDict,verbose=2) # On instantiation we MUST pass instance NAME
-        # In the future parameters can be retrieved with the INSTANCE NAME, then the combination of folder in which you run + INSTANCE NAME
-        # will provide the unique combination!
         fmf.loadData(data,initPredictors=True)
         fmf.loadConstants({"C":12000.0,"U":regressor.coef_[0][0],"Ag":float(config["schil"]["glasoppervlak"]),"Ga":0.3})
         fmf.loadConstants("best")
@@ -1123,10 +1128,6 @@ def ProcessData():
         fmf.dt = 1800.0
 
 
-        # subsequent loops of evolution + gradient descent and simulation for error checking
-        #logFigure("HLC_Analysis",pd.DataFrame(fmf.SimSolve((int(fmf.dataLength*3/10)),10,"Tavg"),columns=["index","error","y","ypred","c0","c1"])[["y","ypred","error","c0","c1"]])
-
-        # Evolution + gradient descent + bounds
         MODULE = "FastSim"
         if modules[MODULE] == str(1):
             LogReport("Executing module {}".format(MODULE),5)
@@ -1144,6 +1145,11 @@ def ProcessData():
         fmf.resetIndex()
         LogReport("-".format(i,Bestparams[i]),4)
         bestSimulation = pd.DataFrame(fmf.Simulate(steps=fmf.dataLength, err="Tavg")[-fmf.dataLength:],columns=["index","err","Tavg","Tavg_pr","U","Ag","Ga","C"])
+        logFigure("Simulation with best parameters",bestSimulation, Instance,verbosityLimit=2)
+        print(data["DateTime"])
+        bestSimulation["DateTime"] = data.loc[:, "DateTime"]
+        bestSimulation = bestSimulation.set_index("DateTime")
+
 
         MODULE = "RCReversePowerCurve"
         if modules[MODULE] == str(1):
@@ -1154,14 +1160,7 @@ def ProcessData():
             PredictedThermal = pd.DataFrame(tp.Simulate(steps=tp.dataLength, err="HeatInput")[-tp.dataLength:],columns=["index","err","HeatInput","HeatInput_pr","U","Ag","Ga","C"])
             logFigure("Thermal prediction with best parameters",PredictedThermal, Instance, verbosityLimit=2)
 
-        logFigure("Simulation with best parameters",bestSimulation, Instance,verbosityLimit=2)
 
-
-        print(data["DateTime"])
-        bestSimulation["DateTime"] = data.loc[:, "DateTime"]
-        bestSimulation = bestSimulation.set_index("DateTime")
-
-        #Add predicted energy data
         MODULE = "RCReversePowerCurve"
         if modules[MODULE] == str(1):
             PredictedThermal["DateTime"] = data.loc[:, "DateTime"]
@@ -1170,16 +1169,7 @@ def ProcessData():
         print(len(data), len(bestSimulation))
         data.drop(data.tail(1).index,inplace=True)
         print(len(data), len(bestSimulation))
-        #data.reset_index()
-        # slice = bestSimulation.iloc[-1]
-        #
-        #
-        # slice.index = bestSimulation.iloc[-1].index + datime.timedelta(minutes=int(config["preprocessing"]["ResampleTime"].split("T")[0]))
-        # bestSimulation = pd.concat([bestSimulation, slice], ignore_index=True, axis=1)
-        # data = pd.concat([data, pd.DataFrame([new_row])], ignore_index=True)
-        #
-        # #bestSimulation.append(bestSimulation.iloc[-1], ignore_index=True)
-        # print(len(data), len(bestSimulation))
+
         data["simulation_Tavg_pr"] = bestSimulation["Tavg_pr"].values
         data["simulation_error"] = bestSimulation["err"].values
         CategoryUnits.append(["simulation_Tavg_pr","°C", "gesimuleerd/berekend","Tavg voorspelling volgens model"])
@@ -1494,8 +1484,6 @@ def ProcessData():
     LogReport(pd.DataFrame(CategoryUnits).to_markdown(),1)
     Log = Headers + "__"*100 + Log
     return data, Log, Instance
-
-
 
 def main():
     return ProcessData()
