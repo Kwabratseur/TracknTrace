@@ -117,35 +117,35 @@ Sra = 0,0.7,0.2,0,0,0.1
 Std = 0,0.7,0.2,0,0,0.1
 
 [eventdetection]
-GenericEvents = 24,336,1.2,None    ```Short window: 24h long windows:336 Delta stdev.p > 1,2 -> event ```
-NormalizedEvents = 0.8             ```Check what this does....?```
-OtherEvents = Eventset_1,Eventset_2,Eventset_1 ```refers to below 3 custom event detectors```
-Eventset_1 = 0.2,event_Vdhw_ra_336_24_1.2      ```0.2: Vdhw running average is used to detect events```
+GenericEvents = 24,336,1.2,None    #Short window: 24h long windows:336 Delta stdev.p > 1,2 -> event
+NormalizedEvents = 0.8             #Check what this does?
+OtherEvents = Eventset_1,Eventset_2,Eventset_1 #refers to below 3 custom event detectors
+Eventset_1 = 0.2,event_Vdhw_ra_336_24_1.2      #0.2: Vdhw running average is used to detect events
 Eventset_2 = 0.2,event_HeatInput_ra_336_24_1.2
 Eventset_3 = 0.2,event_COP_ra_336_24_1.2
-Scanlist = Tavg,HeatInput```Scan all those columns on errors```
+Scanlist = Tavg,HeatInput               #Scan all those columns on errors```
 
-[schil] ```Hardly used ```
+[schil] #Hardly used
 bouwjaar=1955
 renovatiejaar=2019
 meetjaar=2020
-vloeroppervlak=120  ```could be used in future for characteristic performance```
-schiloppervlak=60   ```could be used in future for characteristic performance```
-glasoppervlak=8     ```could be used in future for characteristic performance```
-pvoppervlak=5       ```Is used to determine PV Performance [simplified]```
-gas=0               ```Is used to switch between heatpump and gas boiler calculations```
+vloeroppervlak=120  #could be used in future for characteristic performance
+schiloppervlak=60   #could be used in future for characteristic performance
+glasoppervlak=8     #could be used in future for characteristic performance
+pvoppervlak=5       #Is used to determine PV Performance [simplified
+gas=0               #Is used to switch between heatpump and gas boiler calculations
 
 [locatie]
 orientatie=180
 Location=Enschede
 type_woning=tussenwoning
-aantal_bewoners=1     ```Is used to determine DHW curve```
+aantal_bewoners=1     #Is used to determine DHW curve
 uren_buitenhuis=40
 
 [model]
-instance=Prototype_Amini   ```Is used to store model parameters under, and retrieve them on a re-run. Also refers to all project related files.```
+instance=Prototype_Amini   #Is used to store model parameters under, and retrieve them on a re-run. Also refers to all project related files.
 
-[transform] ```valuepairs of new_column = existing_column_name, serves for standardisation.```
+[transform] #valuepairs of new_column = existing_column_name, serves for standardisation.
 Tlv = Airsensorlivingroom_temperature_1_livingroom
 Tsk = Airsensorlivingroom_temperature_2_livingroom
 Tzo = Alklimaheatpump_room_temp
@@ -166,32 +166,42 @@ T2cv2 = Alklimaheatpump_total_energyHeating_produced
 Edhw = Alklimaheatpump_total_energyDHW_produced
 Vdhw = Waterflow_volume_out
 
-[modules]  ```Standardised calculation modules to execute on code execution.```
-SanityCheckE = 1
-EtoP = 1
-KNMI = 1
-SanityCheckTamb = 1
-CalculateTavg = 1
-DegreeDays = 1
-EventDetection = 1
-GenericEvents = 1
-ThermalBalance = 1
-OpeningState = 0
-SolarPanelAnalysis = 1
-EnergySignatureMethod = 1
-RCNetworkMethod = 1
-ElectricUserProfile = 1
-DHWUserProfile = 0
-BalanceDurationCurve = 1
-TemperatureDurationCurve = 1
-OtherEventDetectors = 1
-ColumnCategorization = 1
-DataExport = 1
-DHWDataDriven = 1
-RCReversePowerCurve = 1
-SanityCheckThese = 1
-dataCoverage = 0
-COP = 0
-FastSim = 1
+[modules]  #Standardised calculation modules to execute on code execution.
+SanityCheckE = 1                      # Sanity check Energy trends
+EtoP = 1                              # Convert energy trends to Power trends
+KNMI = 1                              # Utilize KNMI weather data
+SanityCheckTamb = 1                   # Sanity check climate data
+CalculateTavg = 1                     # Compile Tavg from multiple temperatures
+DegreeDays = 1                        # Degree days calculation
+EventDetection = 1                    # Event detection
+GenericEvents = 1                     # Statistical generic event detection
+ThermalBalance = 1                    # Create thermal balance based on preprocessing section
+OpeningState = 0                      # Analyze boolean state values
+SolarPanelAnalysis = 1                # Simplified solar panel performance estimate
+EnergySignatureMethod = 1             # Apply heat signature method for RC estimation        
+RCNetworkMethod = 1                   # Apply RC model method for RC estimation        
+ElectricUserProfile = 1               # Calculate electric use profile based on balance
+DHWUserProfile = 0                    # calculate DHW user profile based on measured data
+BalanceDurationCurve = 1              # create duration curves for energy balance
+TemperatureDurationCurve = 1          # create temperature duration curves
+OtherEventDetectors = 1               # Extensive event detection
+ColumnCategorization = 1              # Categorize columns
+DataExport = 1                        # Export data
+DHWDataDriven = 1                     # Use data driven DHW curve estimation
+RCReversePowerCurve = 1               # Use the fitted RC model to approximate heating energy
+SanityCheckThese = 1                  # Check the Scanlist data extensively on errors
+dataCoverage = 0                      # Do a data coverage check, this DOES NOT execute the code. Gives insight in data coverage over the dataset!
+COP = 0                               # Do Coefficient of Performance calculation
+FastSim = 1                           # Run a simplified short simulation, to do tests or if you already have good coefficients
+```
 
+## Custom Analysis functions in analysis.py
+Custom analysis or result visualisation can be done in analysis.py. This allows you to work with your own workflow, maybe you are used to different units, then you could do conversions here.
+```
+def skeleton(data,Log):
+   data["new_column"] = (data["a"] * data["b"] / data["c"] - data["e"] + data["d"].sum())
+   data["Tlv_k"] = data["Tlv"] + 273.15
+   Log += "\n## Did something\n A*B/(C - E) + sum(D), cool\n\n"
+   columns = ["new_column"]
+   return data, Log, columns
 ```
