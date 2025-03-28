@@ -718,7 +718,7 @@ def AnalysisDealer(data, analysis):
 
     for fcn in analysis:
         LogReport("# {}".format(str(fcn[0])))
-        data, Log, columns, viz = fcn[1](data, Log)
+        data, Log, columns = fcn[1](data, Log)
     return data
 
 
@@ -907,15 +907,21 @@ def ProcessData():
     data["DateTime"] = data.index
 
 
-    if config["preprocessing"]["KNMI"] == "True":
+    if config["preprocessing"]["KNMI"] != "False":
         T_Columns = ["    Q","   RH"]
         ScaleArray = [100*100.,1.0] # scale J/cm2 to J/m2 and rain in 0.1mm to rain in mm
         RevertArray = []
-        try:
-            KNMI = KNMI_Resampler("uurgeg_290_2011-2020.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
-            KNMI = KNMI.T[data.index].T#KNMI.index.year == int(config["schil"]["meetjaar"])]
-        except KeyError:  #Attempt a newer KNMI Data file
-            KNMI = KNMI_Resampler("uurgeg_290_2021-2025.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
+        path = os.path.abspath(analysis.__file__)
+        path = "".join(["/{}".format(i) for i in path.split("/")[:-1]])
+        if config["preprocessing"]["KNMI"] == "True":
+            try:
+                KNMI = KNMI_Resampler(path+"/uurgeg_290_2011-2020.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
+                KNMI = KNMI.T[data.index].T#KNMI.index.year == int(config["schil"]["meetjaar"])]
+            except KeyError:  #Attempt a newer KNMI Data file
+                KNMI = KNMI_Resampler(path+"/uurgeg_290_2021-2025.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
+                KNMI = KNMI.T[data.index].T#KNMI.index.year == int(config["schil"]["meetjaar"])]
+        else:
+            KNMI = KNMI_Resampler(config["preprocessing"]["KNMI"],T_Columns,ScaleArray,header=28, Interval = "30min")
             KNMI = KNMI.T[data.index].T#KNMI.index.year == int(config["schil"]["meetjaar"])]
         data[["T-KNMI","P-sun","Dir","Wspd","Rf"]] = KNMI
         for i in ["T-KNMI","P-sun","Dir","Wspd","Rf"]:
@@ -952,7 +958,6 @@ def ProcessData():
 
     Function_List = getmembers(analysis, isfunction)
     if len(Function_List) > 0:
-
         data = AnalysisDealer(data,Function_List)
 
 ####~~~~~~~~~~~~~~~~~ USER ANALYSIS FUNCTION MAGIC ~~~~~~~~~~~~~~~~~####
