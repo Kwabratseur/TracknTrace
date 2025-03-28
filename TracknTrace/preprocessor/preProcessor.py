@@ -69,6 +69,9 @@ import copy
 import markdown
 import pytz
 from TracknTrace.analysis import *
+import matplotlib as mpl
+mpl.rcParams.update(mpl.rcParamsDefault)
+plt.rcParams['text.usetex'] = False
 ## Ignore FutureWarning errors, floods log
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
@@ -1103,9 +1106,12 @@ def ProcessData():
             if OS == "Windows_NT":
                 LogReport("\n {}".format(tex))
             else:
-                test = py2tex(tex,print_formula=False, print_latex=False, output="tex").replace("$","")
-                latex_to_img(test).save('{}.png'.format(i))
-                LogReport("\n ![{} term]({}.png)".format(i,i))
+                try:
+                    test = py2tex(tex,print_formula=False, print_latex=False, output="tex").replace("$","")
+                    latex_to_img(test).save('{}.png'.format(i))
+                    LogReport("\n ![{} term]({}.png)".format(i,i))
+                except RuntimeError:
+                    LogReport("\n {}".format(tex))
 
         fmf = MultiFitter(Instance,lambdaMap=lambdaMap,lambdaDict=lambdaDict,verbose=2) # On instantiation we MUST pass instance NAME
         # In the future parameters can be retrieved with the INSTANCE NAME, then the combination of folder in which you run + INSTANCE NAME
@@ -1121,7 +1127,11 @@ def ProcessData():
         #logFigure("HLC_Analysis",pd.DataFrame(fmf.SimSolve((int(fmf.dataLength*3/10)),10,"Tavg"),columns=["index","error","y","ypred","c0","c1"])[["y","ypred","error","c0","c1"]])
 
         # Evolution + gradient descent + bounds
-        if "{}.json".format(Instance) in Files:
+        MODULE = "FastSim"
+        if modules[MODULE] == str(1):
+            LogReport("Executing module {}".format(MODULE),5)
+            logFigure("HLC_Analysis_Evolution_Inspired_Errors",pd.DataFrame(fmf.BulkEvolver("Tavg", constraints={"U":[0.01,1.5],"C":[1200.0,120000.0], "Ga":[0.0001,1.0]}, N = 20, repeats=3, Iterations=10),columns=["err","U","Ga","C"]), Instance)
+        elif "{}.json".format(Instance) in Files:
             logFigure("HLC_Analysis_Evolution_Inspired_Errors",pd.DataFrame(fmf.BulkEvolver("Tavg", constraints={"U":[0.01,1.5],"C":[1200.0,120000.0], "Ga":[0.0001,1.0]}, N = 40, repeats=10, Iterations=100),columns=["err","U","Ga","C"]), Instance)
         else:
             logFigure("HLC_Analysis_Evolution_Inspired_Errors",pd.DataFrame(fmf.BulkEvolver("Tavg", constraints={"U":[0.01,1.5],"C":[1200.0,120000.0], "Ga":[0.0001,1.0]}, N = 4, repeats=100, Iterations=100),columns=["err","U","Ga","C"]), Instance)
@@ -1201,11 +1211,6 @@ def ProcessData():
             if Verbosity > 1:
                 Log += "\n" + mufit_html
 
-    MODULE = "RCReversePowerCurve"
-    if modules[MODULE] == str(1):
-        print("dothisroutinelol")
-        # reverse the 1r1c eq
-        # make heat power function of the rest
 
     MODULE = "COP"
     if modules[MODULE] == str(1) and gas == 0:
@@ -1254,13 +1259,13 @@ def ProcessData():
 
         Epiv = pd.pivot_table(data, index=['hour'], columns=['day'], values=['Premainder'])
         Epiv = Epiv.loc[:, (Epiv != 0).any(axis=0)]
-        Epiv.plot(legend=False, color="g", title="Remainder Energy usage All days")
+        Epiv.plot( color="g", title="Remainder Energy usage All days")
 
         E_Baseline = Epiv.mean(axis=1)
-        E_Baseline.plot(legend=False, color="r", lw=3)
+        E_Baseline.plot( color="r", lw=3)
         plt.savefig("Remainder_Energy_each_day_{}.png".format(Instance))
         plt.clf()
-        E_Baseline.plot(legend=False, color="r", lw=3, title="Average electricity profile")
+        E_Baseline.plot( color="r", lw=3, title="Average electricity profile")
         plt.savefig("Remainder_Electricity_Profile_{}.png".format(Instance))
 
         LogReport("__"*80, 1)
@@ -1302,7 +1307,7 @@ def ProcessData():
             LogReport("Executing module {}".format(MODULE),5)
             SummerDetection = pd.pivot_table(data, index=["hour"], columns=["day"], values= ThermalColumns) # DHSummerSlice[]
             plt.clf()
-            SummerDetection.plot(legend=False, color="g", title="warm water usage > 0 taken from summer period")
+            SummerDetection.plot( color="g", title="warm water usage > 0 taken from summer period")
             LogReport("### Summer detection DHW")
             LogReport(SummerDetection.to_markdown())
             LogReport(SummerDetection.describe().to_markdown())
@@ -1310,15 +1315,16 @@ def ProcessData():
         piv = pd.pivot_table(data, index=['hour'], columns=['day'], values=['Vdhwcal'])
         piv2 = piv.loc[:, (piv != 0).any(axis=0)]
         #plt.clf()
-        piv.plot(legend=False, color="g", title="All days with warm water usage > 0 and average of those")
+        pd.options.plotting.backend = "matplotlib"
+        piv.plot(color="g", title="All days with warm water usage > 0 and average of those")
         DHW_Baseline = piv.mean(axis=1)
-        DHW_Baseline.plot(legend=False, color="r", lw=3)
+        DHW_Baseline.plot( color="r", lw=3)
         plt.plot(dhw[Inhabitants-1][0], dhw[Inhabitants-1][1], color="b", lw=2)
         plt.savefig("Remainder_DHW_each_day_{}.png".format(Instance))
         LogReport("\n\n ![All DHW days recorded](Remainder_DHW_each_day_{}.png)".format(Instance))
 
         plt.clf()
-        DHW_Baseline.plot(legend=False, color="r", lw=3)
+        DHW_Baseline.plot( color="r", lw=3)
         plt.plot(dhw[Inhabitants-1][0], dhw[Inhabitants-1][1], color="b", lw=2)
         plt.savefig("User_profile_theory_DHW_{}.png".format(Instance))
 

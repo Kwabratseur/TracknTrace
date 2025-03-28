@@ -39,7 +39,8 @@ setup(name='TracknTrace',
         'scikit-learn',
         'fimufit @ git+https://github.com/Kwabratseur/fimufit.git',
         'openpyxl',
-        'tabulate'
+        'tabulate',
+        'latex'
       ],
       entry_points = {
         'console_scripts': ['TracknTrace=TracknTrace.wrapper:main'],#,
