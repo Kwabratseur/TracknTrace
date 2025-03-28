@@ -39,6 +39,9 @@ A typical metadata file looks like the delivered example, see below for possible
 
 
 ## Metadata
+Every analysis starts with creating a file named ```<dataname>.metadata```. This file should at least contain the headers as discussed below. Or refer to the example ```Prototype_Amini.metadata``` which is supplied with the code.
+
+```
 [preprocessing]
 Filename=Dongen121_2023_2024.csv  ```input filename```
 KNMI=True                         ```lookup KNMI data and add```
@@ -153,3 +156,5 @@ RCReversePowerCurve = 1
 SanityCheckThese = 1
 dataCoverage = 0
 COP = 0
+
+```

@@ -59,7 +59,7 @@ import configparser
 import warnings
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
-from fimufit.mufit import *
+from mufit.main import *
 import inspect
 from pytexit import py2tex
 import io
@@ -68,7 +68,7 @@ from PIL import Image, ImageChops
 import copy
 import markdown
 import pytz
-from analysis import *
+from TracknTrace.analysis import *
 ## Ignore FutureWarning errors, floods log
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
