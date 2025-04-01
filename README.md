@@ -70,20 +70,20 @@ Filename=Prototype_Amini.xlsx  # input filename
 KNMI=True                         # lookup KNMI data and add
 RenamedColumns=Tlv,Tsk,Tzo,Tamb,Eih,Eil,Eoh,Eol,Epv,Ecv1h,Ecv1c,T1cv1,T2cv1,Ecv2h,Ecv2c,T1cv2,T2cv2,E1wp,E2wp,Edhw,T1dhw,T2dhw,Vdhw,Sbd,Sra,Std,DateTime
           # transform** means of renaming columns. Can also take a list matching input length
-ThermalColumns=Ecv                Columns describing heating energy
-IndoorTemperatures = Tlv1,Tlv2,ThoAir Temperatures measured in the building
-DoorWindowStates = None           States of doors and windows
-PVPanels = Ppv                    Solar Panel power column name
-HeatPumpElectric = Pwp            Heatpump input power column
-HeatPumpThermal = Pcv             Heatpump heating power column
-PositivePower = Pi,Ppv            All electric columns that are positive <gain
-NegativePower = Po,Pwp            All electric columns that are negative <loss
-DHWColumns = Pdhw                 Domestic Hot Water Power Column
-ResampleTime = 30T                Delta Time to resample all data towards
-format = Excel                   linear**: chronologic data or ordered **csv**
+ThermalColumns=Ecv                # Columns describing heating energy
+IndoorTemperatures = Tlv1,Tlv2,ThoAir # Temperatures measured in the building
+DoorWindowStates = None           # States of doors and windows
+PVPanels = Ppv                    # Solar Panel power column name
+HeatPumpElectric = Pwp            # Heatpump input power column
+HeatPumpThermal = Pcv             # Heatpump heating power column
+PositivePower = Pi,Ppv            # All electric columns that are positive <gain
+NegativePower = Po,Pwp            # All electric columns that are negative <loss
+DHWColumns = Pdhw                 # Domestic Hot Water Power Column
+ResampleTime = 30T                # Delta Time to resample all data towards
+format = Excel                    # linear**: chronologic data or ordered **csv**
 dataYear = 2020
 
-[CategoryUnits]                   Each column in RenamedColumns need to be described according to below standard
+[CategoryUnits]                   # Each column in RenamedColumns need to be described according to below standard
 Tlv = °C,gebouwdata,"temperatuur woonkamer"
 Tsk = °C,gebouwdata,"temperatuur slaapkamer"
 Tzo = °C,gebouwdata,"temperatuur zolder"
@@ -111,7 +111,7 @@ Sbd = n,gebouwdata,"dimensieloos"
 Sra = n,gebouwdata,"dimensieloos"
 Std = n,gebouwdata,"dimensieloos"
 
-[CategoryWeights]                   Each column in RenamedColumns need to be described according to below standard. This is required for statistical fault detection.         
+[CategoryWeights]                   # Each column in RenamedColumns need to be described according to below standard. This is required for statistical fault detection.         
 Tlv = 0,0.9,0.05,0,0.05,0
 Tsk = 0,0.8,0,0,0.1,0.1
 Tzo = 0,0.5,0,0,0.2,0.3
