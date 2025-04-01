@@ -1,0 +1,165 @@
+[preprocessing]
+Filename=Prototype_Amini.xlsx
+KNMI=True
+RenamedColumns=Tlv,Tsk,Tzo,Tamb,Eih,Eil,Eoh,Eol,Epv,Ecv1h,Ecv1c,T1cv1,T2cv1,Ecv2h,Ecv2c,T1cv2,T2cv2,E1wp,E2wp,Edhw,T1dhw,T2dhw,Vdhw,Sbd,Sra,Std,DateTime
+ThermalColumns=Ecv1h,Ecv2h
+IndoorTemperatures = Tlv,Tsk,Tzo
+DoorWindowStates = Sbd,Sra,Std
+PVPanels = Ppv
+HeatPumpElectric = P1wp,P2wp
+HeatPumpThermal = Pcv1h,Pcv2h,Pcv1c,Pcv2c
+PositivePower = Pil,Pih,Ppv
+NegativePower = Pol,Poh,P1wp,P2wp
+DHWColumns = T1dhw,T2dhw,Pdhw
+ResampleTime = 30T
+format = Excel
+dataYear = 2020
+
+
+[CategoryWeights]
+Tlv = 0,0.9,0.05,0,0.05,0
+Tsk = 0,0.8,0,0,0.1,0.1
+Tzo = 0,0.5,0,0,0.2,0.3
+Tamb = 0,0,0,0,0,1
+Eih = 0.3,0,0.1,0.5,0.1,0
+Eil = 0.3,0,0.1,0.5,0.1,0
+Eoh = 0.2,0,0,0.4,0.2,0.2
+Eol = 0.2,0,0,0.4,0.2,0.2
+Epv = 0,0,0,0.4,0,0.6
+Ecv1h = 0,0.5,0.1,0.2,0.2,0
+Ecv1c = 0,0.2,0.2,0.3,0.3,0
+T1cv1 = 0,0,0.2,0,0.1,0.7
+T2cv1 = 0,0.3,0.2,0.1,0.4,0
+Ecv2h = 0.2,0.2,0.2,0.1,0.3,0
+Ecv2c = 0,0.1,0.3,0.1,0.5,0
+T1cv2 = 0,0,0.1,0,0.2,0.7
+T2cv2 = 0,0.3,0.1,0.1,0.5,0
+E1wp = 0.1,0.1,0.2,0.5,0.1,0
+E2wp = 0.1,0.1,0.3,0.4,0.1,0
+Edhw = 0.4,0.3,0,0.05,0.25,0
+T1dhw = 0,0.1,0,0.025,0.075,0.8
+T2dhw = 0,0.8,0,0.05,0.15,0
+Vdhw = 0,1,0,0,0,0
+Sbd = 0,0.7,0.2,0,0,0.1
+Sra = 0,0.7,0.2,0,0,0.1
+Std = 0,0.7,0.2,0,0,0.1
+
+
+[CategoryUnits]
+Tlv = °C,gebouwdata,"temperatuur woonkamer"
+Tsk = °C,gebouwdata,"temperatuur slaapkamer"
+Tzo = °C,gebouwdata,"temperatuur zolder"
+Tamb = °C,gebouwdata,"temperatuur omgeving"
+Eih = kWh,gebouwdata,"energie hoog tarief in"
+Eil = kWh,gebouwdata,"energie laag tarief in"
+Eoh = kWh,gebouwdata,"energie hoog tarief uit"
+Eol = kWh,gebouwdata,"energie laag tarief uit"
+Epv = kWh,gebouwdata,"energie zonnepanelen"
+Ecv1h = kWh,gebouwdata,"energie warmtepomp zone 1 verwarmen"
+Ecv1c = kWh,gebouwdata,"energie warmtepomp zone 1 koelen"
+T1cv1 = °C,gebouwdata,"temperatuur in warmtepomp zone 1 verwarmen"
+T2cv1 = °C,gebouwdata,"temperatuur uit warmtepomp zone 1 koelen"
+Ecv2h = kWh,gebouwdata,"energie warmtepomp zone 2 verwarmen"
+Ecv2c = kWh,gebouwdata,"energie warmtepomp zone 2 koelen"
+T1cv2 = °C,gebouwdata,"temperatuur in warmtepomp zone 2 verwarmen"
+T2cv2 = °C,gebouwdata,"temperatuur uit warmtepomp zone 2 koelen"
+E1wp = kWh,gebouwdata,"energie zone 1 warmtepomp"
+E2wp = kWh,gebouwdata,"energie zone 2 warmtepomp"
+Edhw = kWh,gebouwdata,"energie warm tapwater"
+T1dhw = °C,gebouwdata,"temperatuur in warm tapwater"
+T2dhw = °C,gebouwdata,"temperatuur uit warm tapwater"
+Vdhw = L,gebouwdata,"Liters warm tapwater"
+Sbd = n,gebouwdata,"dimensieloos"
+Sra = n,gebouwdata,"dimensieloos"
+Std = n,gebouwdata,"dimensieloos"
+
+
+[eventdetection]
+GenericEvents = 24,336,1.2,None
+NormalizedEvents = 0.8
+OtherEvents = Eventset_1,Eventset_2,Eventset_1
+Eventset_1 = 0.2,event_Vdhwcal_ra_336_24_1.2
+Eventset_2 = 0.2,event_HeatInput_ra_336_24_1.2
+Eventset_3 = 0.2,event_COP_ra_336_24_1.2
+Scanlist = Tavg,HeatInput
+
+[schil]
+bouwjaar=1955
+renovatiejaar=2019
+meetjaar=2020
+vloeroppervlak=120
+schiloppervlak=60
+glasoppervlak=8
+pvoppervlak=5
+gas=0
+
+
+[locatie]
+orientatie=180
+Location=Enschede
+type_woning=tussenwoning
+aantal_bewoners=1
+uren_buitenhuis=40
+
+
+[model]
+instance=Prototype_Amini
+
+
+[transform]
+Tlv = Airsensorlivingroom_temperature_1_livingroom
+Tsk = Airsensorlivingroom_temperature_2_livingroom
+Tzo = Alklimaheatpump_room_temp
+Tamb = Alklimaheatpump_outdoor_temp
+Eih = Slimmemeter_kWhUsedHigh
+Eil = Slimmemeter_kWhUsedLow
+Eoh = Slimmemeter_kWhReturnedHigh
+Eol = Slimmemeter_kWhReturnedLow
+Epv = Growattinverter_total_energy_out
+Ecv1h = Alklimaheatpump_total_energyHeating_produced
+Ecv1c = Alklimaheatpump_total_energyHeating_produced
+T1cv1 = Alklimaheatpump_total_energyHeating_produced
+T2cv1 = Alklimaheatpump_total_energyHeating_produced
+Ecv2h = Alklimaheatpump_total_energyHeating_produced
+Ecv2c = Alklimaheatpump_total_energyHeating_produced
+T1cv2 = Alklimaheatpump_total_energyHeating_produced
+T2cv2 = Alklimaheatpump_total_energyHeating_produced
+E1wp =
+E2wp =
+Edhw = Alklimaheatpump_total_energyDHW_produced
+Vdhw = Waterflow_volume_out
+T1dhw =
+T2dhw =
+Sbd =
+Sra =
+Std =
+DateTime =
+
+
+[modules]
+SanityCheckE = 1
+EtoP = 1
+KNMI = 1
+SanityCheckTamb = 1
+CalculateTavg = 1
+DegreeDays = 1
+EventDetection = 1
+GenericEvents = 1
+ThermalBalance = 1
+OpeningState = 1
+SolarPanelAnalysis = 1
+EnergySignatureMethod = 1
+RCNetworkMethod = 1
+ElectricUserProfile = 1
+DHWUserProfile = 1
+BalanceDurationCurve = 1
+TemperatureDurationCurve = 1
+OtherEventDetectors = 1
+ColumnCategorization = 1
+DataExport = 1
+DHWDataDriven = 0
+RCReversePowerCurve = 1
+SanityCheckThese = 1
+dataCoverage = 0
+COP = 0
+FastSim = 1

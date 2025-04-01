@@ -768,7 +768,7 @@ def ProcessData():
 
     dataformat = config["preprocessing"]["format"]
     dataYear = config["preprocessing"]["dataYear"]
-    if dataformat == "csv":
+    if dataformat == "Excel":
         metadata = pd.read_excel(config["preprocessing"]["Filename"], sheet_name = "Informatie", index_col=1)
         LogReport("__"*80, 2)
         LogReport("# Metadata")
@@ -801,8 +801,15 @@ def ProcessData():
         TransformDataSelection.append(transform[i])
         Transform.append(i)
 
-    if dataformat == "csv":
+    if dataformat == "Excel":
         data = pd.read_excel(config["preprocessing"]["Filename"], sheet_name = "Data", header=[0,1])
+        data["DateTime"] = data[["Date","Time"]].apply(lambda x: str(x[0])[:10]+" "+str(x[1]), axis=1)
+        data["DateTime"] = pd.to_datetime(data.DateTime, format="%Y-%m-%d %H:%M:%S")
+        data["Datetime"] = data.loc[:, "DateTime"]#data[["DateTime"]]
+        data = data.drop(["Date","Time"], axis=1)
+        data = data.set_index("DateTime")
+    if dataformat == "csv":
+        data = pd.read_csv(config["preprocessing"]["Filename"]).fillna("None")
         data["DateTime"] = data[["Date","Time"]].apply(lambda x: str(x[0])[:10]+" "+str(x[1]), axis=1)
         data["DateTime"] = pd.to_datetime(data.DateTime, format="%Y-%m-%d %H:%M:%S")
         data["Datetime"] = data.loc[:, "DateTime"]#data[["DateTime"]]
@@ -916,13 +923,13 @@ def ProcessData():
         if config["preprocessing"]["KNMI"] == "True":
             try:
                 KNMI = KNMI_Resampler(path+"/uurgeg_290_2011-2020.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
-                KNMI = KNMI.T[data.index].T#KNMI.index.year == int(config["schil"]["meetjaar"])]
+                KNMI = KNMI.T[data.index].T
             except KeyError:  #Attempt a newer KNMI Data file
                 KNMI = KNMI_Resampler(path+"/uurgeg_290_2021-2025.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
-                KNMI = KNMI.T[data.index].T#KNMI.index.year == int(config["schil"]["meetjaar"])]
+                KNMI = KNMI.T[data.index].T
         else:
             KNMI = KNMI_Resampler(config["preprocessing"]["KNMI"],T_Columns,ScaleArray,header=28, Interval = "30min")
-            KNMI = KNMI.T[data.index].T#KNMI.index.year == int(config["schil"]["meetjaar"])]
+            KNMI = KNMI.T[data.index].T
         data[["T-KNMI","P-sun","Dir","Wspd","Rf"]] = KNMI
         for i in ["T-KNMI","P-sun","Dir","Wspd","Rf"]:
             CategoryWeights.append(DerivedCategory(["Tamb"],i,copy.deepcopy(CategoryWeights)))
@@ -1328,6 +1335,8 @@ def ProcessData():
         LogReport("\n\n ![User profile compared to empirical model](User_profile_theory_DHW_{}.png)".format(Instance))
         Ps.append("Premainder")
         Ps.append("Pdhw")
+
+
     MODULE = "BalanceDurationCurve"
     if modules[MODULE] == str(1) and modules["ThermalBalance"] == 1:
         LogReport("Executing module {}".format(MODULE),5)
@@ -1346,6 +1355,8 @@ def ProcessData():
         LogReport("\n\n ![Power_Duration_Curve_sorted_on_balance](Power_Duration_Curve_sorted_on_balance_{}.png)".format(Instance))
         LogReport(PDC.describe().to_markdown())
         #logFigure("Interactive_pdc_curve",PDC)
+
+
     MODULE = "TemperatureDurationCurve"
     if modules[MODULE] == str(1):
         LogReport("Executing module {}".format(MODULE),5)
@@ -1360,6 +1371,7 @@ def ProcessData():
         plt.savefig("Temperature_Duration_Curve_sorted_on_balance_{}.png".format(Instance))
         LogReport("\n\n ![Temperature_Duration_Curve_sorted_on_balance](Temperature_Duration_Curve_sorted_on_balance_{}.png)".format(Instance))
         LogReport(TDC.describe().to_markdown())
+
 
     MODULE = "GenericEvents"
     if modules[MODULE] == str(1):

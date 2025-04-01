@@ -1,21 +1,9 @@
 # TracknTrace
- Track building performance and Trace errors back to the source
-
-```python.exe .\wrapper.py .\<file>.metadata -v```
-```python categorizer/categorizer.py <file>```
-From line #940 - #950 there is clean data which is suitable for analysis. Every code run also exports 8 files with clean data, suitable for further analysis:
- * ```<file>_afternoon.csv``` - afternoon from 12:00 to 17:00
- * ```<file>_daily.csv```     - daily data, for each 24h
- * ```<file>_evening.csv```   - evening data from 17:00 to 23:00
- * ```<file>_hour.csv```      - hourly data, each hour
- * ```<file>_monthly.csv```   - monthly data, for each 30 days
- * ```<file>_morning.csv```   - morning data, from 7:00 to 12:00
- * ```<file>_night.csv```     - nightly data, from 23:00 to 7:00
- * ```<file>_weekly.csv```    - weekly data, for every 7 days
+Track building performance and Trace errors back to the source
 
 ## Install
 
-pip install TracknTrace
+```pip install TracknTrace```
 
 ## Performance Tracking
  * Multiple modules are defined to calculate performance of different aspects/components
@@ -37,30 +25,65 @@ The aggregate of **all** correlations and outliers is a measure to link effect(s
 
 A typical metadata file looks like the delivered example, see below for possible options.
 
+## Usage
+First define a metadata file according to the format shown below, or like the file supplied with the module. Run the package from the directory where you store the data and your metadata file. The input format(s) are still pretty specific if it is not just a default .csv file with real **comma separated values**
+
+With Absolute references:
+* ```python.exe .\wrapper.py .\<file>.metadata -v```
+* ```python categorizer/categorizer.py <file>```
+Using installed command:
+* ```TracknTrace <file>.metadata -v```
+* ```TracknTrace.categorizer <file>```
+
+The amount of verbosity switches determines the amount of output, -v gives a nice clean result.html and result.md file. ```TracknTrace <file>.metadata -vvvvvvv``` gives the maximum possible output.
+
+Most of the functionality is dealt with under ```[modules]``` .
+
+There are some specifics about the ```[preprocessing]``` section.
 
 ## Metadata
-Every analysis starts with creating a file named ```<dataname>.metadata```. This file should at least contain the headers as discussed below. Or refer to the example ```Prototype_Amini.metadata``` which is supplied with the code.
+Every analysis starts with creating a file named ```<dataname>.metadata```. This file should at least contain the headers shown below. Or refer to the example ```Prototype_Amini.metadata``` which is supplied with the code.
+Steps to setup the file:
+1. Copy ```Prototype_Amini.metadata```
+2. Rename to ```<input_data_name>.metadata```
+3. Run the code with ```RenamedColumns = help```
+4. Look at the output and create a ```[transform]``` section, you can reuse existing variable names.
+5. Create ```[CategoryUnits]``` and ```[CategoryWeights]```. The first has a pairs of:
+    * unit of measure
+    * datasource
+    * explanation
+6. Now fill preprocessing to your best ability, and to the best data availability nad set RenamedColumns to ```transform```
+7. Switch on required modules and fix or switch off modules which cause errors.
+
+Important/deviating configurables:
+|  Configurable |  options |
+|---|---|
+| preprocessing.RenamedColumns  | IF ```help``` -> print original data to help user create ```.metadata``` file. IF ```transform``` -> use ```[transform]``` section for renaming columns. ELSE linearly map ```RenamedColumns``` to original data |
+| preprocessing.ResampleTime  | a Pandas resampletime refer to https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#dateoffset-objects  |
+| preprocessing.format  | IF ```Excel``` data will be imported as Excel with pandas.read_excel from tab Data, IF ```csv``` data will be read with pandas.read_csv. IF ```linear``` data will be imported as chronologically ordered data with ```Productname``` and ```Propertyname``` columns|
+| modules.DataCoverage  | Create a heatmap plot with datacoverage over the whole dataset. Helps the user identify holes and data quality. Cancels further execution of analysis.  |
+| schil.gas | Switch between heat-pump calculation and gas boiler calculation |
 
 ```
 [preprocessing]
-Filename=Prototype_Amini.xlsx  ```input filename```
-KNMI=True                         ```lookup KNMI data and add```
+Filename=Prototype_Amini.xlsx  # input filename
+KNMI=True                         # lookup KNMI data and add
 RenamedColumns=Tlv,Tsk,Tzo,Tamb,Eih,Eil,Eoh,Eol,Epv,Ecv1h,Ecv1c,T1cv1,T2cv1,Ecv2h,Ecv2c,T1cv2,T2cv2,E1wp,E2wp,Edhw,T1dhw,T2dhw,Vdhw,Sbd,Sra,Std,DateTime
-          ```**transform** means of renaming columns. Can also take a list matching input length```
-ThermalColumns=Ecv                ```Columns describing heating energy```
-IndoorTemperatures = Tlv1,Tlv2,Tho```Air Temperatures measured in the building```
-DoorWindowStates = None           ```States of doors and windows```
-PVPanels = Ppv                    ```Solar Panel power column name```
-HeatPumpElectric = Pwp            ```Heatpump input power column```
-HeatPumpThermal = Pcv             ```Heatpump heating power column```
-PositivePower = Pi,Ppv            ```All electric columns that are positive <gain>```
-NegativePower = Po,Pwp            ```All electric columns that are negative <loss>```
-DHWColumns = Pdhw                 ```Domestic Hot Water Power Column```
-ResampleTime = 30T                ```Delta Time to resample all data towards```
-format = csv                   ```**linear**: chronologic data or ordered **csv**```
+          # transform** means of renaming columns. Can also take a list matching input length
+ThermalColumns=Ecv                Columns describing heating energy
+IndoorTemperatures = Tlv1,Tlv2,ThoAir Temperatures measured in the building
+DoorWindowStates = None           States of doors and windows
+PVPanels = Ppv                    Solar Panel power column name
+HeatPumpElectric = Pwp            Heatpump input power column
+HeatPumpThermal = Pcv             Heatpump heating power column
+PositivePower = Pi,Ppv            All electric columns that are positive <gain
+NegativePower = Po,Pwp            All electric columns that are negative <loss
+DHWColumns = Pdhw                 Domestic Hot Water Power Column
+ResampleTime = 30T                Delta Time to resample all data towards
+format = Excel                   linear**: chronologic data or ordered **csv**
 dataYear = 2020
 
-[CategoryUnits]                   ```Each column in RenamedColumns need to be described according to below standard```
+[CategoryUnits]                   Each column in RenamedColumns need to be described according to below standard
 Tlv = °C,gebouwdata,"temperatuur woonkamer"
 Tsk = °C,gebouwdata,"temperatuur slaapkamer"
 Tzo = °C,gebouwdata,"temperatuur zolder"
@@ -88,7 +111,7 @@ Sbd = n,gebouwdata,"dimensieloos"
 Sra = n,gebouwdata,"dimensieloos"
 Std = n,gebouwdata,"dimensieloos"
 
-[CategoryWeights]                   ```Each column in RenamedColumns need to be described according to below standard. This is required for statistical fault detection.```         
+[CategoryWeights]                   Each column in RenamedColumns need to be described according to below standard. This is required for statistical fault detection.         
 Tlv = 0,0.9,0.05,0,0.05,0
 Tsk = 0,0.8,0,0,0.1,0.1
 Tzo = 0,0.5,0,0,0.2,0.3
@@ -117,23 +140,23 @@ Sra = 0,0.7,0.2,0,0,0.1
 Std = 0,0.7,0.2,0,0,0.1
 
 [eventdetection]
-GenericEvents = 24,336,1.2,None    #Short window: 24h long windows:336 Delta stdev.p > 1,2 -> event
-NormalizedEvents = 0.8             #Check what this does?
-OtherEvents = Eventset_1,Eventset_2,Eventset_1 #refers to below 3 custom event detectors
-Eventset_1 = 0.2,event_Vdhw_ra_336_24_1.2      #0.2: Vdhw running average is used to detect events
+GenericEvents = 24,336,1.2,None    # Short window: 24h long windows:336 Delta stdev.p > 1,2 -> event for All columns (if last item is set to None, if set to column list detection will be selective)
+NormalizedEvents = 0.8             # Detection threshold, if value > 0.8 -> event
+OtherEvents = Eventset_1,Eventset_2,Eventset_1 # refers to below 3 custom event detectors
+Eventset_1 = 0.2,event_Vdhw_ra_336_24_1.2      # 0.2: Vdhw running average is used to detect events
 Eventset_2 = 0.2,event_HeatInput_ra_336_24_1.2
 Eventset_3 = 0.2,event_COP_ra_336_24_1.2
-Scanlist = Tavg,HeatInput               #Scan all those columns on errors```
+Scanlist = Tavg,HeatInput               # Scan all those columns on errors
 
 [schil] #Hardly used
 bouwjaar=1955
 renovatiejaar=2019
 meetjaar=2020
-vloeroppervlak=120  #could be used in future for characteristic performance
-schiloppervlak=60   #could be used in future for characteristic performance
-glasoppervlak=8     #could be used in future for characteristic performance
-pvoppervlak=5       #Is used to determine PV Performance [simplified
-gas=0               #Is used to switch between heatpump and gas boiler calculations
+vloeroppervlak=120  # could be used in future for characteristic performance
+schiloppervlak=60   # could be used in future for characteristic performance
+glasoppervlak=8     # could be used in future for characteristic performance
+pvoppervlak=5       # Is used to determine PV Performance [simplified
+gas=0               # Is used to switch between heatpump and gas boiler calculations
 
 [locatie]
 orientatie=180
@@ -195,8 +218,9 @@ COP = 0                               # Do Coefficient of Performance calculatio
 FastSim = 1                           # Run a simplified short simulation, to do tests or if you already have good coefficients
 ```
 
-## Custom Analysis functions in analysis.py
-Custom analysis or result visualisation can be done in analysis.py. This allows you to work with your own workflow, maybe you are used to different units, then you could do conversions here.
+### Custom Analysis functions in analysis.py
+Custom analysis or result visualisation can be done in analysis.py. This allows you to work with your own workflow, maybe you are used to different units, then you could do conversions here. This file is installed on your system and could be found with ```find analysis.py``` or ```whereis analysis.py``` in a console under linux or WSL.
+
 ```
 def skeleton(data,Log):
    data["new_column"] = (data["a"] * data["b"] / data["c"] - data["e"] + data["d"].sum())
@@ -205,3 +229,13 @@ def skeleton(data,Log):
    columns = ["new_column"]
    return data, Log, columns
 ```
+### Export
+From line #940 - #950 there is clean data which is suitable for analysis. Every code run also exports 8 files with clean data, suitable for further analysis:
+ * ```<file>_afternoon.csv``` - afternoon from 12:00 to 17:00
+ * ```<file>_daily.csv```     - daily data, for each 24h
+ * ```<file>_evening.csv```   - evening data from 17:00 to 23:00
+ * ```<file>_hour.csv```      - hourly data, each hour
+ * ```<file>_monthly.csv```   - monthly data, for each 30 days
+ * ```<file>_morning.csv```   - morning data, from 7:00 to 12:00
+ * ```<file>_night.csv```     - nightly data, from 23:00 to 7:00
+ * ```<file>_weekly.csv```    - weekly data, for every 7 days

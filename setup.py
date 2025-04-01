@@ -38,7 +38,7 @@ setup(name='TracknTrace',
         'pytexit',
         'seaborn',
         'scikit-learn',
-        'fimufit @ git+https://github.com/Kwabratseur/fimufit.git',
+        'mufit',
         'openpyxl',
         'tabulate',
         'latex'
