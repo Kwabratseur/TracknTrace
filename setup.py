@@ -28,7 +28,7 @@ setup(name='TracknTrace',
       packages=['TracknTrace',
                 'TracknTrace.preprocessor',
                 'TracknTrace.categorizer'],
-      package_data={"TracknTrace": ["*.metadata", "*.txt"]},
+      package_data={"TracknTrace": ["*.metadata", "*.txt", "*.xlsx"]},
       install_requires=[
         'pandas', # BSD-3
         'numpy', # BSD-3
