@@ -1049,8 +1049,8 @@ def ProcessData():
         print(len(data[PVColumn]),len(data[["P-sun"]]))
         data["PVEfficiency"] = COP(data[PVColumn[0]]*1000, data["P-sun"]*PVArea).fillna(0)# can be re-used here.. basically simple efficiency calculation with error checking
         #data["COP"] = COP(data[HPTColumns].sum(axis=1), data[HPEColumns].sum(axis=1)).fillna(0.0)
-        CategoryWeights.append(DerivedCategory(PVColumn,"P-sun",CategoryWeights))
-        CategoryUnits.append(["P-sun","kW", "KNMI","P-sun wordt gebruikt voor Ga factor in RC en PVEfficiency"])
+        CategoryWeights.append(DerivedCategory(PVColumn,"PVEfficiency",CategoryWeights))
+        CategoryUnits.append(["PVEfficiency","%", "afgeleid","P-sun en Ga factor voor PVEfficiency"])
         LogReport("__"*80,1)
         LogReport("# Solar panel performance")
         LogReport(PVColumn)
@@ -1187,7 +1187,7 @@ def ProcessData():
         CategoryUnits.append(["simulation_Tavg_pr","°C", "gesimuleerd/berekend","Tavg voorspelling volgens model"])
         CategoryUnits.append(["simulation_error","°C", "gesimuleerd/berekend","Error Tavg en Tavg_pr per tijdstap"])
         CategoryWeights.append(DerivedCategory(["Tavg"],"simulation_Tavg_pr",CategoryWeights))
-        CategoryWeights.append(DerivedCategory(["Tavg"],"simulation_Tavg_pr",CategoryWeights))
+        CategoryWeights.append(DerivedCategory(["Tavg"],"simulation_error",CategoryWeights))
         MODULE = "RCReversePowerCurve"
         if modules[MODULE] == str(1):
             data["simulation_HeatInput_pr"] = PredictedThermal["HeatInput_pr"].values
