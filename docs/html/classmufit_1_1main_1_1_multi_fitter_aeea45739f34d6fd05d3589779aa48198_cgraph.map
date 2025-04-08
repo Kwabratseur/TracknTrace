@@ -1,0 +1,38 @@
+<map id="BulkEvolver" name="BulkEvolver">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,132,97,159"/>
+<area shape="rect" id="Node000002" href="$classmufit_1_1main_1_1_multi_fitter.html#a74303c44a72649099fae3fd750d04db9" title="load an array of constants; expects same length and order as internal dictionary!" alt="" coords="145,5,271,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,130,96,91,143,49,161,37,163,42,146,53,99,95,65,134"/>
+<area shape="rect" id="Node000004" href="$classmufit_1_1main_1_1_multi_fitter.html#af8f9384caf99f3ade1fdf0335d5ac218" title=" " alt="" coords="477,5,555,32"/>
+<area shape="poly" id="edge20_Node000001_Node000004" title=" " alt="" coords="72,129,105,110,144,92,221,70,283,61,345,55,424,41,461,32,462,37,425,47,346,61,283,67,222,76,146,97,107,115,74,134"/>
+<area shape="rect" id="Node000005" href="$classmufit_1_1main_1_1_multi_fitter.html#ad69c6ba21edffaf797661ae8d49bcc6a" title="Do optimization run for scipy solver." alt="" coords="170,107,246,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="96,135,154,126,155,131,97,141"/>
+<area shape="rect" id="Node000009" href="$classmufit_1_1main_1_1_multi_fitter.html#a47d4d4f9470094b25c3e9b306d5fce27" title="Apply the model (Calculate) to the loaded data, does not strictly need a DF." alt="" coords="336,157,408,184"/>
+<area shape="poly" id="edge19_Node000001_Node000009" title=" " alt="" coords="97,146,320,164,320,169,97,152"/>
+<area shape="rect" id="Node000013" href="$classmufit_1_1main_1_1_multi_fitter.html#afce0fd16d20d4a39250136ab10fa45d2" title="convert dictionary to array" alt="" coords="472,360,560,387"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="85,157,272,244,477,350,475,355,270,249,83,162"/>
+<area shape="rect" id="Node000016" href="$classmufit_1_1main_1_1_multi_fitter.html#a646dc98802fc70130102410a34acfecf" title="Parameter transformer/gradient descent algorithm." alt="" coords="178,259,238,285"/>
+<area shape="poly" id="edge18_Node000001_Node000016" title=" " alt="" coords="65,157,99,196,146,238,165,250,162,254,143,242,96,199,61,161"/>
+<area shape="rect" id="Node000003" href="$classmufit_1_1main_1_1_multi_fitter.html#a3f72d7407994cf55924f941b72dd0ae3" title="Load a dictionary of constants and update solvelist too." alt="" coords="319,5,424,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="271,16,303,16,303,21,271,21"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="425,16,461,16,461,21,425,21"/>
+<area shape="rect" id="Node000006" href="$classmufit_1_1main_1_1_multi_fitter.html#acfdf32734331854123227f27f388f96e" title="reset the index to 0 and reset predictors and variables from SDF[0] IF SDF is defined" alt="" coords="475,56,557,83"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="245,113,424,85,459,79,460,84,425,91,246,118"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="247,129,322,153,320,158,245,134"/>
+<area shape="rect" id="Node000007" href="$classmufit_1_1main_1_1_multi_fitter.html#a74056280c28f6e8fa7eb29dac1c7889f" title="Load a dictionary of predictors." alt="" coords="608,56,712,83"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="558,67,592,67,592,72,558,72"/>
+<area shape="rect" id="Node000008" href="$classmufit_1_1main_1_1_multi_fitter.html#ab888df0346bb59a4de071cdc656c7bf3" title="Load a dictionary of variables and add in dt." alt="" coords="611,107,709,133"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="557,81,607,99,605,104,555,86"/>
+<area shape="poly" id="edge14_Node000009_Node000006" title=" " alt="" coords="395,155,423,136,471,99,482,90,486,95,474,103,426,141,398,159"/>
+<area shape="poly" id="edge13_Node000009_Node000008" title=" " alt="" coords="408,158,472,143,595,124,596,129,473,148,409,163"/>
+<area shape="rect" id="Node000010" href="$classmufit_1_1main_1_1_multi_fitter.html#ad9a1fb640ed33354bc50776b061e237c" title="Retrieves all current variables, constants and predictors, filles them into lambdafunctions and puts ..." alt="" coords="478,157,554,184"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="408,168,462,168,462,173,408,173"/>
+<area shape="rect" id="Node000012" href="$classmufit_1_1main_1_1_multi_fitter.html#ab3053982897eddb5a92ebf129115a3b3" title="return a dictionary slice from the loaded dataframe" alt="" coords="480,208,552,235"/>
+<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="409,181,466,201,464,206,407,186"/>
+<area shape="poly" id="edge12_Node000009_Node000013" title=" " alt="" coords="405,183,426,201,439,221,446,240,451,275,455,310,462,327,474,346,476,348,472,351,470,350,457,330,450,311,446,276,441,241,434,223,422,204,401,187"/>
+<area shape="rect" id="Node000014" href="$classmufit_1_1main_1_1_multi_fitter.html#ae1d6e3030b2700893bcd69432340c2d9" title="Step through the index and reset it once datalength is exceeded." alt="" coords="477,259,555,285"/>
+<area shape="poly" id="edge15_Node000009_Node000014" title=" " alt="" coords="399,182,426,201,450,223,474,245,479,248,475,252,471,249,446,227,423,205,396,187"/>
+<area shape="rect" id="Node000015" href="$classmufit_1_1main_1_1_multi_fitter.html#ae33a2b1c2a1bf47a1a237cda45ec1fbd" title="write the current predictors to SDF simulation dataframe" alt="" coords="477,309,555,336"/>
+<area shape="poly" id="edge16_Node000009_Node000015" title=" " alt="" coords="403,182,426,201,443,226,451,249,458,272,474,296,477,298,473,302,470,299,453,274,446,251,438,228,422,204,400,187"/>
+<area shape="rect" id="Node000011" href="$classmufit_1_1main_1_1_multi_fitter.html#afabe0eeecd44eacaf3ff9a91865884ef" title="Retrieves all current variables, constants and predictors." alt="" coords="617,157,703,184"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="555,168,601,168,601,173,555,173"/>
+</map>

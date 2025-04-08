@@ -1,0 +1,27 @@
+<map id="scipyOptimize" name="scipyOptimize">
+<area shape="rect" id="Node000001" title="Do parameter optimization with scipy.optimize." alt="" coords="5,107,110,133"/>
+<area shape="rect" id="Node000002" href="$classmufit_1_1main_1_1_multi_fitter.html#ad69c6ba21edffaf797661ae8d49bcc6a" title="Do optimization run for scipy solver." alt="" coords="158,107,233,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,117,142,117,142,123,110,123"/>
+<area shape="rect" id="Node000003" href="$classmufit_1_1main_1_1_multi_fitter.html#acfdf32734331854123227f27f388f96e" title="reset the index to 0 and reset predictors and variables from SDF[0] IF SDF is defined" alt="" coords="404,5,486,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="229,104,395,36,397,41,232,109"/>
+<area shape="rect" id="Node000006" href="$classmufit_1_1main_1_1_multi_fitter.html#a47d4d4f9470094b25c3e9b306d5fce27" title="Apply the model (Calculate) to the loaded data, does not strictly need a DF." alt="" coords="281,132,353,159"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="234,125,266,132,265,137,233,130"/>
+<area shape="rect" id="Node000004" href="$classmufit_1_1main_1_1_multi_fitter.html#a74056280c28f6e8fa7eb29dac1c7889f" title="Load a dictionary of predictors." alt="" coords="537,5,641,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="487,16,521,16,521,21,487,21"/>
+<area shape="rect" id="Node000005" href="$classmufit_1_1main_1_1_multi_fitter.html#ab888df0346bb59a4de071cdc656c7bf3" title="Load a dictionary of variables and add in dt." alt="" coords="540,56,638,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="486,30,536,48,534,53,484,35"/>
+<area shape="poly" id="edge11_Node000006_Node000003" title=" " alt="" coords="327,130,358,92,399,49,410,40,413,44,403,53,362,96,331,133"/>
+<area shape="poly" id="edge10_Node000006_Node000005" title=" " alt="" coords="334,130,364,110,400,92,463,76,524,69,524,74,464,81,402,97,367,114,337,134"/>
+<area shape="rect" id="Node000007" href="$classmufit_1_1main_1_1_multi_fitter.html#ad9a1fb640ed33354bc50776b061e237c" title="Retrieves all current variables, constants and predictors, filles them into lambdafunctions and puts ..." alt="" coords="407,107,483,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="353,136,391,128,392,133,354,141"/>
+<area shape="rect" id="Node000009" href="$classmufit_1_1main_1_1_multi_fitter.html#ab3053982897eddb5a92ebf129115a3b3" title="return a dictionary slice from the loaded dataframe" alt="" coords="409,157,481,184"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="354,150,395,158,393,163,353,155"/>
+<area shape="rect" id="Node000010" href="$classmufit_1_1main_1_1_multi_fitter.html#afce0fd16d20d4a39250136ab10fa45d2" title="convert dictionary to array" alt="" coords="401,208,489,235"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="342,157,403,194,409,197,406,202,400,198,340,161"/>
+<area shape="rect" id="Node000011" href="$classmufit_1_1main_1_1_multi_fitter.html#ae1d6e3030b2700893bcd69432340c2d9" title="Step through the index and reset it once datalength is exceeded." alt="" coords="406,259,484,285"/>
+<area shape="poly" id="edge12_Node000006_Node000011" title=" " alt="" coords="330,157,360,199,403,245,406,247,403,251,400,249,356,202,325,161"/>
+<area shape="rect" id="Node000012" href="$classmufit_1_1main_1_1_multi_fitter.html#ae33a2b1c2a1bf47a1a237cda45ec1fbd" title="write the current predictors to SDF simulation dataframe" alt="" coords="406,309,484,336"/>
+<area shape="poly" id="edge13_Node000006_Node000012" title=" " alt="" coords="326,158,353,222,375,260,403,296,406,298,402,302,399,299,371,263,348,224,321,160"/>
+<area shape="rect" id="Node000008" href="$classmufit_1_1main_1_1_multi_fitter.html#afabe0eeecd44eacaf3ff9a91865884ef" title="Retrieves all current variables, constants and predictors." alt="" coords="546,107,632,133"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="484,117,530,117,530,123,484,123"/>
+</map>

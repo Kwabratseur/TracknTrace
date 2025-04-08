@@ -1,0 +1,38 @@
+\doxysection{Trackn\+Trace.\+analysis Namespace Reference}
+\hypertarget{namespace_trackn_trace_1_1analysis}{}\label{namespace_trackn_trace_1_1analysis}\index{TracknTrace.analysis@{TracknTrace.analysis}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1analysis_a65bdb80cbfe93da4f5719dd22ddd0707}{Degree\+Days}} (data, Log)
+\begin{DoxyCompactList}\small\item\em Calculate Degreedays based on outside temperature and livingroom temperature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_trackn_trace_1_1analysis_a65bdb80cbfe93da4f5719dd22ddd0707}\index{TracknTrace.analysis@{TracknTrace.analysis}!DegreeDays@{DegreeDays}}
+\index{DegreeDays@{DegreeDays}!TracknTrace.analysis@{TracknTrace.analysis}}
+\doxysubsubsection{\texorpdfstring{DegreeDays()}{DegreeDays()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1analysis_a65bdb80cbfe93da4f5719dd22ddd0707} 
+Degree\+Days (\begin{DoxyParamCaption}\item[{}]{data}{, }\item[{}]{Log}{}\end{DoxyParamCaption})}
+
+
+
+Calculate Degreedays based on outside temperature and livingroom temperature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Standardized input (pandas)dataframe. It\textquotesingle{}s content can be derived from $<$input\+\_\+data$>$.metadata \\
+\hline
+{\em Log} & This Log will be compiled to .html, you can add results to this.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+data A new dataframe with the applied transformations 
+
+Log The log with new entries 
+
+columns New columns added to the dataframe 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{analysis_8py_source_l00009}{9}} of file \mbox{\hyperlink{analysis_8py_source}{analysis.\+py}}.
+

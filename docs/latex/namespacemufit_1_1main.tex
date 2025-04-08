@@ -1,0 +1,135 @@
+\doxysection{mufit.\+main Namespace Reference}
+\hypertarget{namespacemufit_1_1main}{}\label{namespacemufit_1_1main}\index{mufit.main@{mufit.main}}
+
+
+Defines the \doxylink{classmufit_1_1main_1_1_multi_fitter}{Multi\+Fitter} classes.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter}{Multi\+Fitter}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{classmufit_1_1main_1_1_multi_fitter}{Multi\+Fitter} base class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemufit_1_1main_a51af30a60f9f02777c6396b8247e356f}{main}} ()
+\begin{DoxyCompactList}\small\item\em Example main to run if file is not being imported. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemufit_1_1main_aaf2c20bc9fd9e1be6f44da995865fe2b}{Profile\+Generator}} (length, \mbox{\hyperlink{namespacemufit_1_1main_a54f72263d89b4bf8177906717257042b}{Profile}})
+\begin{DoxyCompactList}\small\item\em Profile generator function, returns a dataframe with the profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{namespacemufit_1_1main_a54f72263d89b4bf8177906717257042b}{Profile}}
+\begin{DoxyCompactList}\small\item\em Example profile dictionary as input for the generator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacemufit_1_1main_a82c3a13bae3361874995093ddb45eb6c}{Sim\+This}} = \mbox{\hyperlink{namespacemufit_1_1main_aaf2c20bc9fd9e1be6f44da995865fe2b}{Profile\+Generator}}(100,\mbox{\hyperlink{namespacemufit_1_1main_a54f72263d89b4bf8177906717257042b}{Profile}})
+\begin{DoxyCompactList}\small\item\em An Example generated profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the \doxylink{classmufit_1_1main_1_1_multi_fitter}{Multi\+Fitter} classes. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacemufit_1_1main_a51af30a60f9f02777c6396b8247e356f}\index{mufit.main@{mufit.main}!main@{main}}
+\index{main@{main}!mufit.main@{mufit.main}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespacemufit_1_1main_a51af30a60f9f02777c6396b8247e356f} 
+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Example main to run if file is not being imported. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00687}{687}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00687}{main()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00687}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=117pt]{namespacemufit_1_1main_a51af30a60f9f02777c6396b8247e356f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=117pt]{namespacemufit_1_1main_a51af30a60f9f02777c6396b8247e356f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespacemufit_1_1main_aaf2c20bc9fd9e1be6f44da995865fe2b}\index{mufit.main@{mufit.main}!ProfileGenerator@{ProfileGenerator}}
+\index{ProfileGenerator@{ProfileGenerator}!mufit.main@{mufit.main}}
+\doxysubsubsection{\texorpdfstring{ProfileGenerator()}{ProfileGenerator()}}
+{\footnotesize\ttfamily \label{namespacemufit_1_1main_aaf2c20bc9fd9e1be6f44da995865fe2b} 
+Profile\+Generator (\begin{DoxyParamCaption}\item[{}]{length}{, }\item[{}]{Profile}{}\end{DoxyParamCaption})}
+
+
+
+Profile generator function, returns a dataframe with the profile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & the length of the dataset to be generated \\
+\hline
+{\em Profile} & A dictionary with name\+:array pairs where the array has format \mbox{[}value,upto,value,upto,etc....\mbox{]} \\
+\hline
+{\em verbose} & verbose boolean generates more output for debugging\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Pandas data\+Frame of length with the specified profile 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00052}{52}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacemufit_1_1main_a54f72263d89b4bf8177906717257042b}\index{mufit.main@{mufit.main}!Profile@{Profile}}
+\index{Profile@{Profile}!mufit.main@{mufit.main}}
+\doxysubsubsection{\texorpdfstring{Profile}{Profile}}
+{\footnotesize\ttfamily \label{namespacemufit_1_1main_a54f72263d89b4bf8177906717257042b} 
+dict Profile}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{\textcolor{stringliteral}{"{}Tenv"{}}:[10,20,18,40,25,60,18,80,8,100],}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Pe"{}}:[700,10,200,20,0,60,700,100],\ \textcolor{comment}{\#\ 700W\ power\ up\ to\ point\ 10,\ then\ 200W\ up\ to\ point\ 20,\ then\ 0\ W\ up\ to\ 60\ and\ finally\ 700W\ up\ to\ point\ 100}}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Tobj"{}}:[24,100],}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Psol"{}}:[0,10,100,20,200,30,300,40,250,50,225,60,200,70,175,80,125,90,0,100]\}}
+
+\end{DoxyCode}
+
+
+Example profile dictionary as input for the generator. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00047}{47}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+\Hypertarget{namespacemufit_1_1main_a82c3a13bae3361874995093ddb45eb6c}\index{mufit.main@{mufit.main}!SimThis@{SimThis}}
+\index{SimThis@{SimThis}!mufit.main@{mufit.main}}
+\doxysubsubsection{\texorpdfstring{SimThis}{SimThis}}
+{\footnotesize\ttfamily \label{namespacemufit_1_1main_a82c3a13bae3361874995093ddb45eb6c} 
+Sim\+This = \mbox{\hyperlink{namespacemufit_1_1main_aaf2c20bc9fd9e1be6f44da995865fe2b}{Profile\+Generator}}(100,\mbox{\hyperlink{namespacemufit_1_1main_a54f72263d89b4bf8177906717257042b}{Profile}})}
+
+
+
+An Example generated profile. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00071}{71}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+

@@ -1,0 +1,18 @@
+<map id="dictToArray" name="dictToArray">
+<area shape="rect" id="Node000001" title="convert dictionary to array" alt="" coords="401,5,489,32"/>
+<area shape="rect" id="Node000002" href="$classmufit_1_1main_1_1_multi_fitter.html#aeea45739f34d6fd05d3589779aa48198" title=" " alt="" coords="12,5,103,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="386,21,103,21,103,16,386,16"/>
+<area shape="rect" id="Node000003" href="$classmufit_1_1main_1_1_multi_fitter.html#a47d4d4f9470094b25c3e9b306d5fce27" title="Apply the model (Calculate) to the loaded data, does not strictly need a DF." alt="" coords="281,56,353,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="396,41,354,58,352,53,394,36"/>
+<area shape="poly" id="edge6_Node000003_Node000002" title=" " alt="" coords="266,55,232,47,165,34,103,26,104,21,166,29,234,41,267,50"/>
+<area shape="rect" id="Node000004" href="$classmufit_1_1main_1_1_multi_fitter.html#ad69c6ba21edffaf797661ae8d49bcc6a" title="Do optimization run for scipy solver." alt="" coords="158,56,233,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="266,72,234,72,234,67,266,67"/>
+<area shape="rect" id="Node000006" href="$classmufit_1_1main_1_1_multi_fitter.html#a56d5756c3daa13635c818f93766d4273" title="Evolution inspired parameter search algorithm." alt="" coords="163,107,228,133"/>
+<area shape="poly" id="edge7_Node000003_Node000006" title=" " alt="" coords="270,92,229,109,227,104,268,87"/>
+<area shape="rect" id="Node000007" href="$classmufit_1_1main_1_1_multi_fitter.html#a0a76c49d8703e3a61cfaccc6b9a75c6c" title="Subsequent simulating and evolution based algorithm to test results." alt="" coords="19,132,96,159"/>
+<area shape="poly" id="edge9_Node000003_Node000007" title=" " alt="" coords="298,97,270,125,234,148,199,157,162,160,96,156,97,150,162,155,198,152,232,143,267,121,295,93"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="142,53,95,35,97,30,144,48"/>
+<area shape="rect" id="Node000005" href="$classmufit_1_1main_1_1_multi_fitter.html#ad0c7c03a772799c36476d8f0276e2bf8" title="Do parameter optimization with scipy.optimize." alt="" coords="5,56,110,83"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="142,72,110,72,110,67,142,67"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="148,131,97,141,96,136,147,126"/>
+</map>

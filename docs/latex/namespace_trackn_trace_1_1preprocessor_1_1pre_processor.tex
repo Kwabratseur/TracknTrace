@@ -1,0 +1,2287 @@
+\doxysection{Trackn\+Trace.\+preprocessor.\+pre\+Processor Namespace Reference}
+\hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor}{}\label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+
+
+Defines the smart meter (pre)processor.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor}{Eventor}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7ef6d46f126f51b82519230d6bcdc6c6}{Analysis\+Dealer}} (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}, analysis)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa9ed57be29aabfe20c83e11207c78738}{Carnot}} (Tc, Th)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aeef4654bf4c070a33b2129de4c54741f}{COP}} (Pth, Pel)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a81c5da09d6c36cb869d156a29cf4fdad}{Derived\+Category}} (trends, newtrend, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a94d86d5585fc3679a090429b6a91c58b}{Category\+Weights}}, Verbose=0)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad587464e66b523e2a69ebe892bcb8616}{Environment\+Temperature\+Check}} (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab52c96bea30646abf8170f333bbd42b9}{df}}, ROCLimit=30.\+0/(12.\+0 \texorpdfstring{$\ast$}{*}60 \texorpdfstring{$\ast$}{*}60), ULimit=50.\+0, LLimit=-\/15.\+0, VERBOSE=0)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2823c609f48424c07b60c16a67cb843d}{Event\+Categorizer\+Fcn}} (categories, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}})
+\begin{DoxyCompactList}\small\item\em Summarizes all detected events to a limited group of categories, does the same as internal class function Event\+Categorizer but requires data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8dbd14ec38e92d99b89bc5983502e12b}{fracH}} (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a770f288d3048ff6cbee9faa0969fd6b0}{dt}})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a748b6e4a23141150eb7eea30e37adc56}{KNMI\+\_\+\+Resampler}} (File\+Name, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8185d012ca9fccb0e82894d6268051e1}{T\+\_\+\+Columns}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a411b4055c15d54c130bb7d43cba668b3}{Scale\+Array}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a68664b85ab66ee545e09b003f570d965}{Revert\+Array}}=None, Interval="{}5min"{}, header=28, Export=False, plot=False)
+\begin{DoxyCompactList}\small\item\em KNMI file reader with different output modi. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a9677202f505710d2296b91bd116a9f6e}{Lambda2\+Tex}} (lmd, VERBOSE=0)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a06f5fab3acebaee19f6bafa3575942af}{latex\+\_\+to\+\_\+img}} (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a4e721c2d345d18d80d240cbaf1597be5}{tex}})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a054d957ed5694406866987e1ca300e5c}{linint}} (x1, x2, y1, y2)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a841dc1d81f5c89ecaa3888fc3f6b585b}{log\+Figure}} (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a051e403214cb6872ad3fe4e50302a6ee}{title}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a86244c5fd1a9e478af20a7ebed03f7e4}{Instance}}, fig=None, sort=None, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aaf25ee7e2306d78c74ec7bc48f092e81}{kind}}=None, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a376a8f74499c7db65e21effee3e6a563}{verbosity\+Limit}}=None)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aab7f97d5f5ef5ec9412b17fd261bf4eb}{Log\+Report}} (msg, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a376a8f74499c7db65e21effee3e6a563}{verbosity\+Limit}}=None)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a51af30a60f9f02777c6396b8247e356f}{main}} ()
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a9a9f945f98818dbe441ea04cafa0f109}{Pandas\+DHWWrapper}} (x, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abf9ffe942818d5c1b1e8ea527f3c7d86}{Inhabitants}}=1)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0a1a42b6da1a549a9b303dada976924e}{Pd\+TtoV}} (x, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa7255c4bc0e9fa663f62fbafe1026daa}{T1}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a5a30d530a77bc992810b0c24a3e8f550}{T2}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a00d6d9c4902af020959292d110095aa9}{Pdhw}})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a100f97803b72565daedee80e34bbb7f0}{Process\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Example main to run if file is not being imported. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6e2b3c22d32fdf80f2d7cb6651fb2982}{Repair\+Cumulatives}} (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab52c96bea30646abf8170f333bbd42b9}{df}}, VERBOSE=0)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad2f79aa6a576fe089b1c390117f1f7d5}{Similarity\+Check}} (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab52c96bea30646abf8170f333bbd42b9}{df}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}, corrector, ULimit=50.\+0, LLimit=-\/15.\+0, ROCLimit=30.\+0/(12.\+0 \texorpdfstring{$\ast$}{*}60 \texorpdfstring{$\ast$}{*}60), VERBOSE=0)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a926eda992ad3b4e6f48b3e9b32965c60}{Stochastic\+\_\+\+Usage}} (H, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1c40db1d9b56c27240e420765695f1c4}{Size}}=1.\+0)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}} (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab52c96bea30646abf8170f333bbd42b9}{df}}, Columns, scale\+Array=None, reverse=False)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acd235ea713df82292a00e05776adccfe}{Visualize\+Event}} (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab52c96bea30646abf8170f333bbd42b9}{df}}, event, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a86244c5fd1a9e478af20a7ebed03f7e4}{Instance}}, Extra=None, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=None, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1c40db1d9b56c27240e420765695f1c4}{Size}}=None, Type="{}default"{}, Save=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd}{True}})
+\begin{DoxyCompactList}\small\item\em Summarizes all detected events to a limited group of categories. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2f4ab7bf743142dae2e459aa18f9f1d4}{action}}
+\begin{DoxyCompactList}\small\item\em Ignore Future\+Warning errors, floods log. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a911a49b7967ef10985d331841303b75f}{All}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a62197192f0fbf4e0675eb37be1c4c175}{alpha}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a9a4a149c4f77bf47a0c4fac2691465f6}{ambiguous}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8187411843a6284ffb964ef3fb9fcab3}{args}} = parser.\+parse\+\_\+args()
+\begin{DoxyCompactList}\small\item\em Instantiate the parser. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_accc088009d44c521706aa98d6387ee21}{axis}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad46530db38f9cae023847546641d801f}{backend}}
+\begin{DoxyCompactList}\small\item\em plotting backend for pandas \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad032136fd2e3b89ba1ef6a2d0c771049}{Base\+Weights}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a84c73abbf865979be6bb5eeca1e3651b}{Bestparams}} = fmf.\+constants
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e9c9687f02ea38d98bccb3ab8a6f75}{best\+Simulation}} = pd.\+Data\+Frame(fmf.\+Simulate(steps=fmf.\+data\+Length, err="{}Tavg"{})\mbox{[}-\/fmf.\+data\+Length\+:\mbox{]},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{[}"{}index"{},"{}err"{},"{}Tavg"{},"{}Tavg\+\_\+pr"{},"{}U"{},"{}Ag"{},"{}Ga"{},"{}C"{}\mbox{]})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a71494cb32e3acaab23cde05f1136df5e}{category}}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a94d86d5585fc3679a090429b6a91c58b}{Category\+Weights}} = \mbox{[}\mbox{[}"{}Combined\+\_\+\+Categories"{}, "{}User\+\_\+\+Electric"{}, "{}User\+\_\+\+Thermal"{}, "{}Building\+\_\+thermal"{}, "{}Installation\+\_\+\+Electric"{}, "{}Installation\+\_\+\+Thermal"{}, "{}Weather\+\_\+thermal"{}\mbox{]}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ae87043160b3295a0695ff6056f0184a5}{c\+Event\+Cfg}} = config\mbox{[}"{}eventdetection"{}\mbox{]}\mbox{[}"{}Other\+Events"{}\mbox{]}.split("{},"{})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa8d54c4043f02951bacad7522e761ad6}{chained\+\_\+assignment}}
+\begin{DoxyCompactList}\small\item\em turn of error reporting for chained assignments \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a37dbdc30935031c05304482e1be89d8f}{color}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa3b416e2b196aeb3bb9dedbbefb086c1}{COPDC}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}\mbox{[}"{}COP"{}\mbox{]}\mbox{]}.resample("{}1h"{}).mean().interpolate().sort\+\_\+values("{}COP"{},ascending=False).reset\+\_\+index(drop=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd}{True}})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}} = data.\+resample(config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Resample\+Time"{}\mbox{]}).mean().interpolate()
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\+Milestone! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af8f5b173a80e7441bc3e299ff23e83d6}{data\+Afternoon}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3a9976e180ef1cca59d25c5aaa56cb4b}{data\+Hourly}},time\+Division\+Array)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a687925eaa47d1e1c7a59a1d9d0516426}{data\+Daily}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}},time\+Division\+Array)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab8870495466dd209a562b3be2b8904b5}{data\+Evening}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3a9976e180ef1cca59d25c5aaa56cb4b}{data\+Hourly}},time\+Division\+Array)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3a9976e180ef1cca59d25c5aaa56cb4b}{data\+Hourly}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}},time\+Division\+Array)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a880b3302692cf7ea4256cd451b6493a9}{data\+Monthly}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}},time\+Division\+Array)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a869cd2532b518cb77a727068236b6679}{data\+Morning}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3a9976e180ef1cca59d25c5aaa56cb4b}{data\+Hourly}},time\+Division\+Array)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3d76576af3eed0eebbb65f20eee5b182}{data\+Night}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3a9976e180ef1cca59d25c5aaa56cb4b}{data\+Hourly}},time\+Division\+Array)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad6b45706316030e1967edc814132bd17}{data\+Weekly}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}},time\+Division\+Array)
+\item 
+tuple \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a382263fa3fc43a688a91c2649595e9da}{dda}} = degree\+Days\+\_\+delta\+\_\+annemarie.\+sum()
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a41cf01b411fe50939ca9c26a8ad81c99}{ddi}} = degree\+Days\+\_\+indoor.\+sum()
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af0d8c3ce7a6068f4f1c883a073f8d775}{ddo}} = degree\+Days\+\_\+outdoor.\+sum()
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_affb1327b18bf08a379d19eef89cf1ed1}{default}}
+\item 
+tuple \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a11bba9651ef9a01a4969115d2574e7dc}{degree\+Days\+\_\+delta\+\_\+annemarie}} = (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}"{}Tavg"{}\mbox{]} -\/ \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}"{}Tamb"{}\mbox{]}).resample("{}1d"{}).mean().interpolate()
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2e9b4bbff13e0c881b9a747dec7b20a9}{degree\+Days\+\_\+indoor}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}"{}Tavg"{}\mbox{]}.resample("{}1d"{}).mean().interpolate().apply(lambda x\+: 18 -\/ x if x $>$ 18 else 0)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ae441bcf7e0480338caab89bdc180af22}{degree\+Days\+\_\+outdoor}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}"{}Tamb"{}\mbox{]}.resample("{}1d"{}).mean().interpolate().apply(lambda x\+: 18 -\/ x if x $>$ 18 else 0)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab52c96bea30646abf8170f333bbd42b9}{df}} = pd.\+Data\+Frame(fmf.\+error,\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{[}"{}index"{},"{}error"{},"{}c0"{},"{}c1"{}\mbox{]})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af942a59766e8d957ff5c9b853d052b31}{DHSummer\+Slice}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0f4f3d3ce8dd876d85863080bcaaafad}{Thermal\+Columns}}\mbox{]}.loc\mbox{[}"{}\{\}-\/05-\/01"{}.format(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0745af922737ddf9b3fe2496b859809d}{year}}) \+: "{}\{\}-\/07-\/31"{}.format(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0745af922737ddf9b3fe2496b859809d}{year}})\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acdaf61fa74e7d327aa0e9476707542fe}{dhw}} = \mbox{[}\mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a27382ab85bace0f5f0b43565483e2a2d}{dhw1}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a61e9f31de2a7a53e242d5cac8b39b90f}{dhw2}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a170197343d54c8250fcfb28ca8726402}{dhw3}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a130853d34846d76517f0d3c453a9ccbf}{dhw4}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a00334d0bfa77eafbfe83e416f007c151}{dhw5}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8ba8f28922d95285d2958000600dd4b2}{dhw6}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a183e9d6295d6c0ba3e8aeb95c61ad6c2}{dhw7}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7440784fcfdc6412ad75245561a74e90}{dhw8}}\mbox{]}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Domestic hot water lookup table. \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a27382ab85bace0f5f0b43565483e2a2d}{dhw1}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a61e9f31de2a7a53e242d5cac8b39b90f}{dhw2}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a170197343d54c8250fcfb28ca8726402}{dhw3}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a130853d34846d76517f0d3c453a9ccbf}{dhw4}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a00334d0bfa77eafbfe83e416f007c151}{dhw5}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8ba8f28922d95285d2958000600dd4b2}{dhw6}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a183e9d6295d6c0ba3e8aeb95c61ad6c2}{dhw7}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7440784fcfdc6412ad75245561a74e90}{dhw8}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ae570b730459a4c0086679b0c83b42b0e}{DHW\+\_\+\+Baseline}} = piv.\+mean(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_accc088009d44c521706aa98d6387ee21}{axis}}=1)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a236dc76bf8ee429c9610894808d178f0}{DHWColumns}} = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}DHWColumns"{}\mbox{]}.split("{},"{})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a770f288d3048ff6cbee9faa0969fd6b0}{dt}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a67085f4aaac82ed4f9881c0a4c0430cb}{dwstate\+Columns}} = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Door\+Window\+States"{}\mbox{]}.split("{},"{})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa272f8ba6bf89aa2d1d0aa59fc707d1f}{E\+\_\+\+Baseline}} = Epiv.\+mean(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_accc088009d44c521706aa98d6387ee21}{axis}}=1)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a327396e283f21511ef39c5c7ebf1bb92}{Epiv}} = pd.\+pivot\+\_\+table(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}=\mbox{[}\textquotesingle{}hour\textquotesingle{}\mbox{]}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{[}\textquotesingle{}day\textquotesingle{}\mbox{]}, values=\mbox{[}\textquotesingle{}Premainder\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acc42076253600be964e110149b458971}{errors}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af4634bed996b96d40d32549eb7c8f087}{Event\+Config}} = config\mbox{[}"{}eventdetection"{}\mbox{]}\mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}\mbox{]}.split("{},"{})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aad68c7d49ea9b97b2b72b394a9ed105e}{Event\+Data}} = Event\+Study.\+data\mbox{[}Event\+Study.\+eventcolumns\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0376cb273cd085212cf7ba18d4341725}{Events}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abb223c68503d29942cdc947a26c305ca}{Event\+Study}} = \mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor}{Eventor}}(data.\+loc\mbox{[}\+:, data.\+columns != \textquotesingle{}Date\+Time\textquotesingle{}\mbox{]}, VERBOSE=5)
+\item 
+str \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a34ec49257378926386b6e65e68210a05}{figname}} = \textquotesingle{}\{\}\+\_\+data\+\_\+processed\textquotesingle{}.format(config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Filename"{}\mbox{]}.split("{}."{})\mbox{[}0\mbox{]})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af20b96457082b747b09590bd6bc97fed}{Finalcategories}} = pd.\+Data\+Frame(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a94d86d5585fc3679a090429b6a91c58b}{Category\+Weights}}\mbox{[}1\+:\mbox{]},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a94d86d5585fc3679a090429b6a91c58b}{Category\+Weights}}\mbox{[}0\mbox{]}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}=\mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}\mbox{[}0\mbox{]} for \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} in \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a94d86d5585fc3679a090429b6a91c58b}{Category\+Weights}}\mbox{[}1\+:\mbox{]}\mbox{]}).drop("{}Combined\+\_\+\+Categories"{},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_accc088009d44c521706aa98d6387ee21}{axis}}=1)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1eb456e82718cddf25aeb38c54fdbaba}{fmf}} = \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter}{Multi\+Fitter}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a86244c5fd1a9e478af20a7ebed03f7e4}{Instance}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a12152b2cffe15a1d5fe0a13c0d37dd2d}{lambda\+Map}}=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a12152b2cffe15a1d5fe0a13c0d37dd2d}{lambda\+Map}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e8bfd5caf83689e42ef179314fc19a}{lambda\+Dict}}=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e8bfd5caf83689e42ef179314fc19a}{lambda\+Dict}},verbose=2)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa94786cc17367592a0c032a3daf38741}{Function\+\_\+\+List}} = getmembers(analysis, isfunction)
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~} USER ANALYSIS FUNCTION MAGIC \texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\#\#\#\# \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6362dfd499977558c64a97fbd23e4cbf}{gas}} = int(config\mbox{[}"{}schil"{}\mbox{]}\mbox{[}"{}gas"{}\mbox{]})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7ef3fbbbdc02e90473fcde6465ac5d41}{Generic\+Config}} = config\mbox{[}"{}eventdetection"{}\mbox{]}\mbox{[}"{}Generic\+Events"{}\mbox{]}.split("{},"{})
+\item 
+str \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aac0a9fe24cf205f76bb6ecf942026d71}{Headers}} = "{}\# Table Of Content\textbackslash{}n "{} + "{}\+\_\+\+\_\+"{}\texorpdfstring{$\ast$}{*}100
+\begin{DoxyCompactList}\small\item\em Headers of document. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a81ae9faedaa69e3e28e2960a0548df8d}{help}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0a073fcd28a0f7cef2d427d109a6b448}{HPEColumns}} = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Heat\+Pump\+Electric"{}\mbox{]}.split("{},"{})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0ebbdbd538d9e06ca4df9745d3c40699}{HPTColumns}} = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Heat\+Pump\+Thermal"{}\mbox{]}.split("{},"{})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a5c87bcfcfb9cb9eb7a1f8a3a13b3b00d}{Indoor\+\_\+temperatures}} = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Indoor\+Temperatures"{}\mbox{]}.split("{},"{})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abf9ffe942818d5c1b1e8ea527f3c7d86}{Inhabitants}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1c676b83110d20ae09b899578afca523}{init\+Predictors}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abd31afffb41ba70fdebb50032e9dfd4a}{inplace}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a86244c5fd1a9e478af20a7ebed03f7e4}{Instance}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abf2bc2545a4a5f5683d9ef3ed0d977e0}{j}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aaf25ee7e2306d78c74ec7bc48f092e81}{kind}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a4bfcaea18ca8d12a4c1f3316d3c9a2b2}{KNMI}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a748b6e4a23141150eb7eea30e37adc56}{KNMI\+\_\+\+Resampler}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a847c4ee87a1c07fb74df90049dbf53dc}{path}}+"{}/uurgeg\+\_\+290\+\_\+2011-\/2020.txt"{},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8185d012ca9fccb0e82894d6268051e1}{T\+\_\+\+Columns}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a411b4055c15d54c130bb7d43cba668b3}{Scale\+Array}},header=28, Interval = "{}30min"{})
+\item 
+dict \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e8bfd5caf83689e42ef179314fc19a}{lambda\+Dict}}
+\item 
+dict \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a12152b2cffe15a1d5fe0a13c0d37dd2d}{lambda\+Map}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac5fa4cdab45a2a40e1c0fdcd5df3675d}{legend}}
+\item 
+str \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a08c7d88782948ad52fd15ce2a8f2c4e7}{Log}} = "{}"{}
+\begin{DoxyCompactList}\small\item\em Variable contains the generated Log, equal to code output in commandline. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a65198d70e065cc75a935e8213de6d4cb}{long\+Window}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aea01c649994f33fb3a83b427bec999bc}{lw}}
+\item 
+str \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abe695cc0f2f6f75ea45b0fd1b2499931}{MODULE}} = "{}Eto\+P"{}
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\+Milestone! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_adb3409b0004549c01c02012b46075b58}{mufit\+\_\+html}} = f.\+read()
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa8acf9e5fcd3adc6bf9660acf4b3678c}{nonexistent}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa111147e659696a8db3a164e192bb3be}{Normalized\+Events}} = Event\+Study.\+Event\+Indicer(threshold=float(config\mbox{[}"{}eventdetection"{}\mbox{]}\mbox{[}"{}Normalized\+Events"{}\mbox{]}))
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1effff646202b58929cfe5f1428ba760}{NPColumns}} = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Negative\+Power"{}\mbox{]}.split("{},"{})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa96c7f5f38b5c249059d45bc343fd791}{OS}} = os.\+environ.\+get(\textquotesingle{}OS\textquotesingle{},\textquotesingle{}\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Variable containing type of OS the code is running on. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ae9f224b0bd1bb5ccbb0be853792c0fe0}{Pandas\+DHWWrapper}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a90eee7a4677ca8b1ed116364a24367f9}{parser}} = argparse.\+Argument\+Parser()
+\begin{DoxyCompactList}\small\item\em Argument parser, filled with Commandline arguments. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a847c4ee87a1c07fb74df90049dbf53dc}{path}} = os.\+path.\+abspath(analysis.\+\_\+\+\_\+file\+\_\+\+\_\+)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac12e018451e17653d55e301323057fd7}{PDC}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}"{}Premainder"{}\mbox{]}.resample("{}1h"{}).mean().interpolate().sort\+\_\+values("{}Premainder"{},ascending=False).reset\+\_\+index(drop=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd}{True}})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a00d6d9c4902af020959292d110095aa9}{Pdhw}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8fbb8c1537e6e3eff60f8e6426ef26c2}{Pd\+TtoV}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a61d9d7051eccd3d3dbfb87e8b31c5b5a}{piv}} = pd.\+pivot\+\_\+table(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}=\mbox{[}\textquotesingle{}hour\textquotesingle{}\mbox{]}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{[}\textquotesingle{}day\textquotesingle{}\mbox{]}, values=\mbox{[}\textquotesingle{}Vdhwcal\textquotesingle{}\mbox{]})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2d4faf064e2181efa878dad421c71c56}{piv2}} = piv.\+loc\mbox{[}\+:, (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a61d9d7051eccd3d3dbfb87e8b31c5b5a}{piv}} != 0).any(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_accc088009d44c521706aa98d6387ee21}{axis}}=0)\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abef4d2c80d3b4a9ed9e1ee9659e707cd}{PPColumns}} = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Positive\+Power"{}\mbox{]}.split("{},"{})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa26bd9527c3f797157e8caf0871fd14f}{Predicted\+Thermal}} = pd.\+Data\+Frame(tp.\+Simulate(steps=tp.\+data\+Length, err="{}Heat\+Input"{})\mbox{[}-\/tp.\+data\+Length\+:\mbox{]},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{[}"{}index"{},"{}err"{},"{}Heat\+Input"{},"{}Heat\+Input\+\_\+pr"{},"{}U"{},"{}Ag"{},"{}Ga"{},"{}C"{}\mbox{]})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a653f5b94d8d977dedac73b3bf4024990}{PVArea}} = float(config\mbox{[}"{}schil"{}\mbox{]}\mbox{[}"{}pvoppervlak"{}\mbox{]})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a78172c433ac0ffc160e4cb8fe4e0d6fc}{PVColumn}} = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}PVPanels"{}\mbox{]}.split("{},"{})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac805ba3d188465f3e0bfcd2552cf16cb}{PVDC}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}\mbox{[}"{}PVEfficiency"{}\mbox{]}\mbox{]}.resample("{}1h"{}).mean().interpolate().sort\+\_\+values("{}PVEfficiency"{},ascending=False).reset\+\_\+index(drop=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd}{True}})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a02b27bc6080387afdccdfcaaa7e20afd}{regressor}} = Linear\+Regression()
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a68664b85ab66ee545e09b003f570d965}{Revert\+Array}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a411b4055c15d54c130bb7d43cba668b3}{Scale\+Array}} = \mbox{[}100\texorpdfstring{$\ast$}{*}100.,1.\+0\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acc2bd8f09bb88b5dd20f9b432631b8ca}{sd}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2491aeeb0d7f7b4ded74cd65a48aafe3}{short\+Window}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1c40db1d9b56c27240e420765695f1c4}{Size}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a01e13f4fbebdaf9845a886b047422fb0}{Summer\+Detection}} = pd.\+pivot\+\_\+table(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}=\mbox{[}"{}hour"{}\mbox{]}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{[}"{}day"{}\mbox{]}, values= \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0f4f3d3ce8dd876d85863080bcaaafad}{Thermal\+Columns}})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa7255c4bc0e9fa663f62fbafe1026daa}{T1}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a5a30d530a77bc992810b0c24a3e8f550}{T2}}
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8185d012ca9fccb0e82894d6268051e1}{T\+\_\+\+Columns}} = \mbox{[}"{} Q"{},"{} RH"{}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab4383970452a1434d45847c8c2560b15}{TDC}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}Ts\mbox{]}.resample("{}1h"{}).mean().interpolate().sort\+\_\+values("{}d\+T"{},ascending=False).reset\+\_\+index(drop=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd}{True}})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a05a671c66aefea124cc08b76ea6d30bb}{test}} = py2tex(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a4e721c2d345d18d80d240cbaf1597be5}{tex}},print\+\_\+formula=False, print\+\_\+latex=False, output="{}tex"{}).replace("{}\$"{},"{}"{})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a4e721c2d345d18d80d240cbaf1597be5}{tex}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a9677202f505710d2296b91bd116a9f6e}{Lambda2\+Tex}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e8bfd5caf83689e42ef179314fc19a}{lambda\+Dict}}\mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}\mbox{]})
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0f4f3d3ce8dd876d85863080bcaaafad}{Thermal\+Columns}} = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Thermal\+Columns"{}\mbox{]}.split("{},"{})
+\item 
+dict \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac999cab977824adc7574f9904ff7143b}{Thermallambda\+Dict}}
+\item 
+dict \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a55f420ef76f2b72e537126ce6d679fce}{Thermallambda\+Map}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a051e403214cb6872ad3fe4e50302a6ee}{title}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8a1eb1db6dc99f82114ae4594b3593ea}{tp}} = \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter}{Multi\+Fitter}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a86244c5fd1a9e478af20a7ebed03f7e4}{Instance}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a12152b2cffe15a1d5fe0a13c0d37dd2d}{lambda\+Map}}=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a55f420ef76f2b72e537126ce6d679fce}{Thermallambda\+Map}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e8bfd5caf83689e42ef179314fc19a}{lambda\+Dict}}=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac999cab977824adc7574f9904ff7143b}{Thermallambda\+Dict}},verbose=2)
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd}{True}}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7aead736a07eaf25623ad7bfa1f0ee2d}{type}}
+\item 
+int \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab00944552a5ef41ef0c18de744dd8207}{Verbosity}} = 1
+\begin{DoxyCompactList}\small\item\em For which level of knowledge to generate a report.\+ssss. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a376a8f74499c7db65e21effee3e6a563}{verbosity\+Limit}}
+\item 
+tuple \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a5ccda5a9527d60260eda95ad946bb749}{white}} = (255, 255, 255, 255)
+\begin{DoxyCompactList}\small\item\em Defining the color white for latex. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac51b57a703ba1c5869228690c93e1701}{X}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}\mbox{[}"{}d\+T"{}\mbox{]}\mbox{]}.interpolate().bfill().ffill()
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2fb1c5cf58867b5bbc9a1b145a86f3a0}{y}} = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}\mbox{[}"{}Heat\+Input"{}\mbox{]}\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6567d292f257b0b28cdf1bb56f568312}{y\+\_\+pred}} = regressor.\+predict(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac51b57a703ba1c5869228690c93e1701}{X}})
+\item 
+list \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0745af922737ddf9b3fe2496b859809d}{year}} = data.\+index\mbox{[}0\mbox{]}.year
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the smart meter (pre)processor. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7ef6d46f126f51b82519230d6bcdc6c6}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!AnalysisDealer@{AnalysisDealer}}
+\index{AnalysisDealer@{AnalysisDealer}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{AnalysisDealer()}{AnalysisDealer()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7ef6d46f126f51b82519230d6bcdc6c6} 
+Analysis\+Dealer (\begin{DoxyParamCaption}\item[{}]{data}{, }\item[{}]{analysis}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Apply all user defined functions from analysis.py to data
+
+@param data  Standardized input (pandas)dataframe.
+@param analysis  a list of [[name:function],] of user defined functions
+
+@return data the transformed dataframe\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00709}{709}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{pre_processor_8py_source_l00478}{Log\+Report()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7ef6d46f126f51b82519230d6bcdc6c6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa9ed57be29aabfe20c83e11207c78738}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Carnot@{Carnot}}
+\index{Carnot@{Carnot}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Carnot()}{Carnot()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa9ed57be29aabfe20c83e11207c78738} 
+Carnot (\begin{DoxyParamCaption}\item[{}]{Tc}{, }\item[{}]{Th}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate Carnot efficiency.
+
+@param Tc  cold temperature in celsius.
+@param Th  hot temperature in celsius.
+
+@return Carnot efficiency\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00534}{534}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aeef4654bf4c070a33b2129de4c54741f}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!COP@{COP}}
+\index{COP@{COP}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{COP()}{COP()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aeef4654bf4c070a33b2129de4c54741f} 
+COP (\begin{DoxyParamCaption}\item[{}]{Pth}{, }\item[{}]{Pel}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate Coefficient of Performance.
+
+@param Pth  Thermal power units do not matter as long as they are both the same.
+@param Pel  Electrical power, units do not matter as long as they are the same.
+
+@return Coefficient of Performance\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00545}{545}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a81c5da09d6c36cb869d156a29cf4fdad}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!DerivedCategory@{DerivedCategory}}
+\index{DerivedCategory@{DerivedCategory}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{DerivedCategory()}{DerivedCategory()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a81c5da09d6c36cb869d156a29cf4fdad} 
+Derived\+Category (\begin{DoxyParamCaption}\item[{}]{trends}{, }\item[{}]{newtrend}{, }\item[{}]{Category\+Weights}{, }\item[{}]{Verbose}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Derive categories from initial guesses.
+
+@param trends  The base trend from which to derive
+@param newtrend  The derived trends which categories still need to be determined
+@param CategoryWeights  The original category weights used for base trends, which will derive to new trends
+@param Verbose  Verbosity switch for debugging
+
+@return the same dataframe as trends but with newtrends added and with derived categories\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00670}{670}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00756}{Process\+Data()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a81c5da09d6c36cb869d156a29cf4fdad_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad587464e66b523e2a69ebe892bcb8616}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!EnvironmentTemperatureCheck@{EnvironmentTemperatureCheck}}
+\index{EnvironmentTemperatureCheck@{EnvironmentTemperatureCheck}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{EnvironmentTemperatureCheck()}{EnvironmentTemperatureCheck()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad587464e66b523e2a69ebe892bcb8616} 
+Environment\+Temperature\+Check (\begin{DoxyParamCaption}\item[{}]{df}{, }\item[{}]{ROCLimit}{ = {\ttfamily 30.0/(12.0\texorpdfstring{$\ast$}{*}60\texorpdfstring{$\ast$}{*}60)}, }\item[{}]{ULimit}{ = {\ttfamily 50.0}, }\item[{}]{LLimit}{ = {\ttfamily -\/15.0}, }\item[{}]{VERBOSE}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00359}{359}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{pre_processor_8py_source_l00317}{linint()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad587464e66b523e2a69ebe892bcb8616_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2823c609f48424c07b60c16a67cb843d}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!EventCategorizerFcn@{EventCategorizerFcn}}
+\index{EventCategorizerFcn@{EventCategorizerFcn}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{EventCategorizerFcn()}{EventCategorizerFcn()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2823c609f48424c07b60c16a67cb843d} 
+Event\+Categorizer\+Fcn (\begin{DoxyParamCaption}\item[{}]{categories}{, }\item[{}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Summarizes all detected events to a limited group of categories, does the same as internal class function Event\+Categorizer but requires data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em categories} & a list of name\+:category to translate any column to a new category \\
+\hline
+{\em data} & a list of input data to categorize.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new dataframe with events linked to categories 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00242}{242}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8dbd14ec38e92d99b89bc5983502e12b}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!fracH@{fracH}}
+\index{fracH@{fracH}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{fracH()}{fracH()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8dbd14ec38e92d99b89bc5983502e12b} 
+fracH (\begin{DoxyParamCaption}\item[{}]{dt}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate the fraction of an hour, for interpolation.
+
+@param dt datetime time object
+
+@return decimal number between 0 and 24\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00455}{455}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00467}{Pandas\+DHWWrapper()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8dbd14ec38e92d99b89bc5983502e12b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a748b6e4a23141150eb7eea30e37adc56}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!KNMI\_Resampler@{KNMI\_Resampler}}
+\index{KNMI\_Resampler@{KNMI\_Resampler}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{KNMI\_Resampler()}{KNMI\_Resampler()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a748b6e4a23141150eb7eea30e37adc56} 
+KNMI\+\_\+\+Resampler (\begin{DoxyParamCaption}\item[{}]{File\+Name}{, }\item[{}]{T\+\_\+\+Columns}{, }\item[{}]{Scale\+Array}{, }\item[{}]{Revert\+Array}{ = {\ttfamily None}, }\item[{}]{Interval}{ = {\ttfamily "{}5min"{}}, }\item[{}]{header}{ = {\ttfamily 28}, }\item[{}]{Export}{ = {\ttfamily False}, }\item[{}]{plot}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+
+
+KNMI file reader with different output modi. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\+Name} & the filename with KNMI data to open, can include the path \\
+\hline
+{\em T\+\_\+\+Columns} & Time independent columns; the code needs to be aware of these in order to correctly interpolate. Array of strings.\+1 \\
+\hline
+{\em Scale\+Array} & Scales T\+\_\+\+Columns, amount of items should match T\+\_\+\+Columns \\
+\hline
+{\em Revert\+Array} & Revert T\+\_\+\+Columns through the scalars given here, amount of items should match T\+\_\+\+Columns \\
+\hline
+{\em Interval} & Time interval to interpolate or extrapolate towards. Can be a string like 5s, 5min, 1h, 1d, etc. \\
+\hline
+{\em header} & Number of lines to skip for the header line. Open the input file to find this. \\
+\hline
+{\em Export} & If the resulting data needs to be exported to .CSV for future use or not. True or False \\
+\hline
+{\em plot} & If set to True, a plot will be opened on completion.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Pandas data\+Frame transformed as configured 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00581}{581}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{pre_processor_8py_source_l00559}{Time\+Division()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a748b6e4a23141150eb7eea30e37adc56_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a9677202f505710d2296b91bd116a9f6e}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Lambda2Tex@{Lambda2Tex}}
+\index{Lambda2Tex@{Lambda2Tex}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Lambda2Tex()}{Lambda2Tex()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a9677202f505710d2296b91bd116a9f6e} 
+Lambda2\+Tex (\begin{DoxyParamCaption}\item[{}]{lmd}{, }\item[{}]{VERBOSE}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert Lambda system of equations to latex
+
+@param lmd  lambda function to convert
+@param VERBOSE  retardcounter higher = less retarded
+
+@return the converted equation in tex format\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00642}{642}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a06f5fab3acebaee19f6bafa3575942af}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!latex\_to\_img@{latex\_to\_img}}
+\index{latex\_to\_img@{latex\_to\_img}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{latex\_to\_img()}{latex\_to\_img()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a06f5fab3acebaee19f6bafa3575942af} 
+latex\+\_\+to\+\_\+img (\begin{DoxyParamCaption}\item[{}]{tex}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Convert Latex expression to .png image
+
+@param tex  the latex expression to convert to an image
+
+@return an html compatible image? (check this!)\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00621}{621}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a054d957ed5694406866987e1ca300e5c}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!linint@{linint}}
+\index{linint@{linint}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{linint()}{linint()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a054d957ed5694406866987e1ca300e5c} 
+linint (\begin{DoxyParamCaption}\item[{}]{x1}{, }\item[{}]{x2}{, }\item[{}]{y1}{, }\item[{}]{y2}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Linear interpolation.
+
+@param x1  value  (x2-x1)
+@param x2  value  (x2-x1)
+@param y1  value  delta = y2-y1
+@param y2  value  delta = y2-y1
+
+@return x2-x1 frames interpolated between y2 and y1\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00317}{317}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00359}{Environment\+Temperature\+Check()}}, and \mbox{\hyperlink{pre_processor_8py_source_l00398}{Repair\+Cumulatives()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a054d957ed5694406866987e1ca300e5c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a841dc1d81f5c89ecaa3888fc3f6b585b}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!logFigure@{logFigure}}
+\index{logFigure@{logFigure}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{logFigure()}{logFigure()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a841dc1d81f5c89ecaa3888fc3f6b585b} 
+log\+Figure (\begin{DoxyParamCaption}\item[{}]{title}{, }\item[{}]{data}{, }\item[{}]{Instance}{, }\item[{}]{fig}{ = {\ttfamily None}, }\item[{}]{sort}{ = {\ttfamily None}, }\item[{}]{kind}{ = {\ttfamily None}, }\item[{}]{verbosity\+Limit}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Add figure to the created log. And make sure it is rendered properly in HTML
+
+@param title  the name of the figure under which it will be saved
+@param data  the data to plot in the figure
+@param fig  the figure object to plot, to allow customization but still end up in log/report.
+@param sort  If the data to be plotted needs to be sorted or not, generates time-duration curves.
+@param kind  type of matplotlib plot to generate (line, bar, etc.)
+
+@param return  Adds figure to Log, either HTML or a link to the output figure.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00500}{500}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{pre_processor_8py_source_l00478}{Log\+Report()}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00756}{Process\+Data()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a841dc1d81f5c89ecaa3888fc3f6b585b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a841dc1d81f5c89ecaa3888fc3f6b585b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aab7f97d5f5ef5ec9412b17fd261bf4eb}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!LogReport@{LogReport}}
+\index{LogReport@{LogReport}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{LogReport()}{LogReport()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aab7f97d5f5ef5ec9412b17fd261bf4eb} 
+Log\+Report (\begin{DoxyParamCaption}\item[{}]{msg}{, }\item[{}]{verbosity\+Limit}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Function to unify logging, messaging, errors and report generation.
+
+@param msg  Message to append to log or report
+@param verbosityLimit The verbosity number connected to this message.
+
+@return sets Log, Verbosity and Headers for every message\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00478}{478}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00709}{Analysis\+Dealer()}}, \mbox{\hyperlink{pre_processor_8py_source_l00500}{log\+Figure()}}, and \mbox{\hyperlink{pre_processor_8py_source_l00756}{Process\+Data()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aab7f97d5f5ef5ec9412b17fd261bf4eb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a51af30a60f9f02777c6396b8247e356f}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!main@{main}}
+\index{main@{main}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a51af30a60f9f02777c6396b8247e356f} 
+main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01505}{1505}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{pre_processor_8py_source_l00756}{Process\+Data()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a51af30a60f9f02777c6396b8247e356f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a9a9f945f98818dbe441ea04cafa0f109}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!PandasDHWWrapper@{PandasDHWWrapper}}
+\index{PandasDHWWrapper@{PandasDHWWrapper}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{PandasDHWWrapper()}{PandasDHWWrapper()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a9a9f945f98818dbe441ea04cafa0f109} 
+Pandas\+DHWWrapper (\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{Inhabitants}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Wrap for Domestic Hot Water empirical equation for Pandas Apply.
+
+@param x  a pandas dataframe to which DHW will be appended
+@param Inhabitants  amount of inhabitants for which to generate a DHW profile
+
+@return DHW profile for \end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00467}{467}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{pre_processor_8py_source_l00455}{frac\+H()}}, and \mbox{\hyperlink{pre_processor_8py_source_l00299}{Stochastic\+\_\+\+Usage()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a9a9f945f98818dbe441ea04cafa0f109_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0a1a42b6da1a549a9b303dada976924e}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!PdTtoV@{PdTtoV}}
+\index{PdTtoV@{PdTtoV}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{PdTtoV()}{PdTtoV()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0a1a42b6da1a549a9b303dada976924e} 
+Pd\+TtoV (\begin{DoxyParamCaption}\item[{}]{x}{, }\item[{}]{T1}{, }\item[{}]{T2}{, }\item[{}]{Pdhw}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calculate DHW flow rate based on temperature difference and power.
+
+@param x  series with power of domestic hot water
+@param T1  value  (x2-x1)
+@param T2  value  delta = y2-y1
+@param y2  value  delta = y2-y1
+
+@return x2-x1 frames interpolated between y2 and y1\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00441}{441}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a100f97803b72565daedee80e34bbb7f0}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!ProcessData@{ProcessData}}
+\index{ProcessData@{ProcessData}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{ProcessData()}{ProcessData()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a100f97803b72565daedee80e34bbb7f0} 
+Process\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Example main to run if file is not being imported. 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00756}{756}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{pre_processor_8py_source_l00670}{Derived\+Category()}}, \mbox{\hyperlink{pre_processor_8py_source_l00500}{log\+Figure()}}, \mbox{\hyperlink{pre_processor_8py_source_l00478}{Log\+Report()}}, and \mbox{\hyperlink{pre_processor_8py_source_l00398}{Repair\+Cumulatives()}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l01505}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a100f97803b72565daedee80e34bbb7f0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a100f97803b72565daedee80e34bbb7f0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6e2b3c22d32fdf80f2d7cb6651fb2982}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!RepairCumulatives@{RepairCumulatives}}
+\index{RepairCumulatives@{RepairCumulatives}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{RepairCumulatives()}{RepairCumulatives()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6e2b3c22d32fdf80f2d7cb6651fb2982} 
+Repair\+Cumulatives (\begin{DoxyParamCaption}\item[{}]{df}{, }\item[{}]{VERBOSE}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Repair cumulative trends from smart meter data.
+
+@param df  input cumulative trends dataframe to repair
+@param VERBOSE  verbosity switch to generate reports for different levels of knowledge
+
+@return dataframe with actually cumulative trends.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00398}{398}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{pre_processor_8py_source_l00317}{linint()}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00756}{Process\+Data()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6e2b3c22d32fdf80f2d7cb6651fb2982_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6e2b3c22d32fdf80f2d7cb6651fb2982_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad2f79aa6a576fe089b1c390117f1f7d5}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!SimilarityCheck@{SimilarityCheck}}
+\index{SimilarityCheck@{SimilarityCheck}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{SimilarityCheck()}{SimilarityCheck()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad2f79aa6a576fe089b1c390117f1f7d5} 
+Similarity\+Check (\begin{DoxyParamCaption}\item[{}]{df}{, }\item[{}]{data}{, }\item[{}]{corrector}{, }\item[{}]{ULimit}{ = {\ttfamily 50.0}, }\item[{}]{LLimit}{ = {\ttfamily -\/15.0}, }\item[{}]{ROCLimit}{ = {\ttfamily 30.0/(12.0\texorpdfstring{$\ast$}{*}60\texorpdfstring{$\ast$}{*}60)}, }\item[{}]{VERBOSE}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}General sanity and similarity check
+
+@param df  base dataframe containing all series to work with
+@param data  name of column in dataframe which needs to be corrected
+@param corrector  name of column in dataframe which can be used to correct data
+@param ULimit  the upper limit, exceeding this value means that values from corrector will be taken
+@param LLimit  the lower limit, going below this value means that values from corrector will be taken
+@param ROCLimit  if this Rate Of Change is exceeded, values from corrector are taken
+@param VERBOSE  if this value is bigger the 0, corrected values will be reported in the log with more details
+
+@return The original dataframe but with the data column fixed according to above  rules.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00332}{332}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a926eda992ad3b4e6f48b3e9b32965c60}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Stochastic\_Usage@{Stochastic\_Usage}}
+\index{Stochastic\_Usage@{Stochastic\_Usage}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Stochastic\_Usage()}{Stochastic\_Usage()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a926eda992ad3b4e6f48b3e9b32965c60} 
+Stochastic\+\_\+\+Usage (\begin{DoxyParamCaption}\item[{}]{H}{, }\item[{}]{Size}{ = {\ttfamily 1.0}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Empirical equation for Domestic Hot Water usage.
+
+@param H  Hour of the day for which to get the L/h value
+@param Size  size of household, number of inhabitants
+
+@return  A new dataframe with events linked to categories
+\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00299}{299}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00467}{Pandas\+DHWWrapper()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a926eda992ad3b4e6f48b3e9b32965c60_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!TimeDivision@{TimeDivision}}
+\index{TimeDivision@{TimeDivision}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{TimeDivision()}{TimeDivision()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84} 
+Time\+Division (\begin{DoxyParamCaption}\item[{}]{df}{, }\item[{}]{Columns}{, }\item[{}]{scale\+Array}{ = {\ttfamily None}, }\item[{}]{reverse}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Find delta in dataset and divide Columns by time.
+
+@param df  input dataset containing columns to divide by time
+@param Columns  Columns to divide by time. Delta will be detected automatically
+@param scaleArray  Scaling to apply when dividing by time
+@param reverse  Reverse the operation or not.
+
+@return df  return the transformed dataframe. Calling same function with identical arguments but reverse = True returns to the original.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00559}{559}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00581}{KNMI\+\_\+\+Resampler()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acd235ea713df82292a00e05776adccfe}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!VisualizeEvent@{VisualizeEvent}}
+\index{VisualizeEvent@{VisualizeEvent}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{VisualizeEvent()}{VisualizeEvent()}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acd235ea713df82292a00e05776adccfe} 
+Visualize\+Event (\begin{DoxyParamCaption}\item[{}]{df}{, }\item[{}]{event}{, }\item[{}]{Instance}{, }\item[{}]{Extra}{ = {\ttfamily None}, }\item[{}]{columns}{ = {\ttfamily None}, }\item[{}]{Size}{ = {\ttfamily None}, }\item[{}]{Type}{ = {\ttfamily "{}default"{}}, }\item[{}]{Save}{ = {\ttfamily \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd}{True}}}}\end{DoxyParamCaption})}
+
+
+
+Summarizes all detected events to a limited group of categories. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & finish this!!\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new dataframe with events linked to categories 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00258}{258}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2f4ab7bf743142dae2e459aa18f9f1d4}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!action@{action}}
+\index{action@{action}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2f4ab7bf743142dae2e459aa18f9f1d4} 
+action}
+
+
+
+Ignore Future\+Warning errors, floods log. 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00077}{77}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a911a49b7967ef10985d331841303b75f}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!All@{All}}
+\index{All@{All}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{All}{All}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a911a49b7967ef10985d331841303b75f} 
+All}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01207}{1207}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a62197192f0fbf4e0675eb37be1c4c175}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!alpha@{alpha}}
+\index{alpha@{alpha}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a62197192f0fbf4e0675eb37be1c4c175} 
+alpha}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01235}{1235}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a9a4a149c4f77bf47a0c4fac2691465f6}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!ambiguous@{ambiguous}}
+\index{ambiguous@{ambiguous}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{ambiguous}{ambiguous}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a9a4a149c4f77bf47a0c4fac2691465f6} 
+ambiguous}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01452}{1452}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8187411843a6284ffb964ef3fb9fcab3}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!args@{args}}
+\index{args@{args}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8187411843a6284ffb964ef3fb9fcab3} 
+args = parser.\+parse\+\_\+args()}
+
+
+
+Instantiate the parser. 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00098}{98}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_accc088009d44c521706aa98d6387ee21}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!axis@{axis}}
+\index{axis@{axis}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{axis}{axis}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_accc088009d44c521706aa98d6387ee21} 
+axis}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00976}{976}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad46530db38f9cae023847546641d801f}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!backend@{backend}}
+\index{backend@{backend}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{backend}{backend}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad46530db38f9cae023847546641d801f} 
+backend}
+
+
+
+plotting backend for pandas 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00086}{86}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad032136fd2e3b89ba1ef6a2d0c771049}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!BaseWeights@{BaseWeights}}
+\index{BaseWeights@{BaseWeights}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{BaseWeights}{BaseWeights}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad032136fd2e3b89ba1ef6a2d0c771049} 
+list Base\+Weights}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [[\textcolor{stringliteral}{"{}Combined\_Categories"{}},\ \textcolor{stringliteral}{"{}User\_Electric"{}},\ \textcolor{stringliteral}{"{}User\_Thermal"{}},\ \textcolor{stringliteral}{"{}Building\_thermal"{}},\ \textcolor{stringliteral}{"{}Installation\_Electric"{}},\ \textcolor{stringliteral}{"{}Installation\_Thermal"{}},\ \textcolor{stringliteral}{"{}Weather\_thermal"{}}],}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}Tlive"{}},\ 0,\ 0.9,\ 0.05,\ 0,\ 0.05,\ 0],}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}Ttraffic"{}},\ 0,\ 0.5,\ 0,\ 0,\ 0.2,\ 0.3],}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}Tambient"{}},\ 0,\ 0.5,\ 0,\ 0,\ 0.2,\ 0.3],}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ [\textcolor{stringliteral}{"{}Emachine"{}},\ 0.1,\ 0.1,\ 0.2,\ 0.5,\ 0.1,\ 0]]}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00663}{663}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a84c73abbf865979be6bb5eeca1e3651b}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Bestparams@{Bestparams}}
+\index{Bestparams@{Bestparams}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Bestparams}{Bestparams}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a84c73abbf865979be6bb5eeca1e3651b} 
+Bestparams = fmf.\+constants}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01154}{1154}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e9c9687f02ea38d98bccb3ab8a6f75}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!bestSimulation@{bestSimulation}}
+\index{bestSimulation@{bestSimulation}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{bestSimulation}{bestSimulation}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e9c9687f02ea38d98bccb3ab8a6f75} 
+best\+Simulation = pd.\+Data\+Frame(fmf.\+Simulate(steps=fmf.\+data\+Length, err="{}Tavg"{})\mbox{[}-\/fmf.\+data\+Length\+:\mbox{]},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{[}"{}index"{},"{}err"{},"{}Tavg"{},"{}Tavg\+\_\+pr"{},"{}U"{},"{}Ag"{},"{}Ga"{},"{}C"{}\mbox{]})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01159}{1159}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a71494cb32e3acaab23cde05f1136df5e}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!category@{category}}
+\index{category@{category}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{category}{category}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a71494cb32e3acaab23cde05f1136df5e} 
+category}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00077}{77}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a94d86d5585fc3679a090429b6a91c58b}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!CategoryWeights@{CategoryWeights}}
+\index{CategoryWeights@{CategoryWeights}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{CategoryWeights}{CategoryWeights}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a94d86d5585fc3679a090429b6a91c58b} 
+list Category\+Weights = \mbox{[}\mbox{[}"{}Combined\+\_\+\+Categories"{}, "{}User\+\_\+\+Electric"{}, "{}User\+\_\+\+Thermal"{}, "{}Building\+\_\+thermal"{}, "{}Installation\+\_\+\+Electric"{}, "{}Installation\+\_\+\+Thermal"{}, "{}Weather\+\_\+thermal"{}\mbox{]}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00662}{662}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ae87043160b3295a0695ff6056f0184a5}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!cEventCfg@{cEventCfg}}
+\index{cEventCfg@{cEventCfg}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{cEventCfg}{cEventCfg}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ae87043160b3295a0695ff6056f0184a5} 
+c\+Event\+Cfg = config\mbox{[}"{}eventdetection"{}\mbox{]}\mbox{[}"{}Other\+Events"{}\mbox{]}.split("{},"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01408}{1408}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa8d54c4043f02951bacad7522e761ad6}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!chained\_assignment@{chained\_assignment}}
+\index{chained\_assignment@{chained\_assignment}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{chained\_assignment}{chained\_assignment}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa8d54c4043f02951bacad7522e761ad6} 
+chained\+\_\+assignment}
+
+
+
+turn of error reporting for chained assignments 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00088}{88}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a37dbdc30935031c05304482e1be89d8f}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!color@{color}}
+\index{color@{color}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a37dbdc30935031c05304482e1be89d8f} 
+color}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01075}{1075}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!columns@{columns}}
+\index{columns@{columns}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5} 
+columns}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01007}{1007}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa3b416e2b196aeb3bb9dedbbefb086c1}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!COPDC@{COPDC}}
+\index{COPDC@{COPDC}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{COPDC}{COPDC}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa3b416e2b196aeb3bb9dedbbefb086c1} 
+COPDC = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}\mbox{[}"{}COP"{}\mbox{]}\mbox{]}.resample("{}1h"{}).mean().interpolate().sort\+\_\+values("{}COP"{},ascending=False).reset\+\_\+index(drop=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd}{True}})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01232}{1232}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!data@{data}}
+\index{data@{data}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93} 
+data = data.\+resample(config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Resample\+Time"{}\mbox{]}).mean().interpolate()}
+
+
+
+\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\+Milestone! 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00901}{901}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af8f5b173a80e7441bc3e299ff23e83d6}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dataAfternoon@{dataAfternoon}}
+\index{dataAfternoon@{dataAfternoon}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dataAfternoon}{dataAfternoon}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af8f5b173a80e7441bc3e299ff23e83d6} 
+data\+Afternoon = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3a9976e180ef1cca59d25c5aaa56cb4b}{data\+Hourly}},time\+Division\+Array)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01486}{1486}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a687925eaa47d1e1c7a59a1d9d0516426}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dataDaily@{dataDaily}}
+\index{dataDaily@{dataDaily}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dataDaily}{dataDaily}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a687925eaa47d1e1c7a59a1d9d0516426} 
+data\+Daily = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}},time\+Division\+Array)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01463}{1463}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab8870495466dd209a562b3be2b8904b5}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dataEvening@{dataEvening}}
+\index{dataEvening@{dataEvening}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dataEvening}{dataEvening}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab8870495466dd209a562b3be2b8904b5} 
+data\+Evening = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3a9976e180ef1cca59d25c5aaa56cb4b}{data\+Hourly}},time\+Division\+Array)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01491}{1491}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3a9976e180ef1cca59d25c5aaa56cb4b}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dataHourly@{dataHourly}}
+\index{dataHourly@{dataHourly}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dataHourly}{dataHourly}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3a9976e180ef1cca59d25c5aaa56cb4b} 
+data\+Hourly = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}},time\+Division\+Array)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01457}{1457}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a880b3302692cf7ea4256cd451b6493a9}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dataMonthly@{dataMonthly}}
+\index{dataMonthly@{dataMonthly}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dataMonthly}{dataMonthly}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a880b3302692cf7ea4256cd451b6493a9} 
+data\+Monthly = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}},time\+Division\+Array)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01475}{1475}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a869cd2532b518cb77a727068236b6679}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dataMorning@{dataMorning}}
+\index{dataMorning@{dataMorning}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dataMorning}{dataMorning}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a869cd2532b518cb77a727068236b6679} 
+data\+Morning = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3a9976e180ef1cca59d25c5aaa56cb4b}{data\+Hourly}},time\+Division\+Array)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01481}{1481}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3d76576af3eed0eebbb65f20eee5b182}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dataNight@{dataNight}}
+\index{dataNight@{dataNight}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dataNight}{dataNight}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3d76576af3eed0eebbb65f20eee5b182} 
+data\+Night = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a3a9976e180ef1cca59d25c5aaa56cb4b}{data\+Hourly}},time\+Division\+Array)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01496}{1496}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad6b45706316030e1967edc814132bd17}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dataWeekly@{dataWeekly}}
+\index{dataWeekly@{dataWeekly}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dataWeekly}{dataWeekly}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ad6b45706316030e1967edc814132bd17} 
+data\+Weekly = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a726032e66711e758369c6651db720e84}{Time\+Division}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}},time\+Division\+Array)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01469}{1469}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a382263fa3fc43a688a91c2649595e9da}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dda@{dda}}
+\index{dda@{dda}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dda}{dda}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a382263fa3fc43a688a91c2649595e9da} 
+tuple dda = degree\+Days\+\_\+delta\+\_\+annemarie.\+sum()}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00995}{995}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a41cf01b411fe50939ca9c26a8ad81c99}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!ddi@{ddi}}
+\index{ddi@{ddi}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{ddi}{ddi}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a41cf01b411fe50939ca9c26a8ad81c99} 
+ddi = degree\+Days\+\_\+indoor.\+sum()}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00991}{991}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af0d8c3ce7a6068f4f1c883a073f8d775}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!ddo@{ddo}}
+\index{ddo@{ddo}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{ddo}{ddo}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af0d8c3ce7a6068f4f1c883a073f8d775} 
+ddo = degree\+Days\+\_\+outdoor.\+sum()}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00993}{993}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_affb1327b18bf08a379d19eef89cf1ed1}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!default@{default}}
+\index{default@{default}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{default}{default}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_affb1327b18bf08a379d19eef89cf1ed1} 
+default}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00095}{95}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a11bba9651ef9a01a4969115d2574e7dc}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!degreeDays\_delta\_annemarie@{degreeDays\_delta\_annemarie}}
+\index{degreeDays\_delta\_annemarie@{degreeDays\_delta\_annemarie}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{degreeDays\_delta\_annemarie}{degreeDays\_delta\_annemarie}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a11bba9651ef9a01a4969115d2574e7dc} 
+tuple degree\+Days\+\_\+delta\+\_\+annemarie = (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}"{}Tavg"{}\mbox{]} -\/ \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}"{}Tamb"{}\mbox{]}).resample("{}1d"{}).mean().interpolate()}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00994}{994}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2e9b4bbff13e0c881b9a747dec7b20a9}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!degreeDays\_indoor@{degreeDays\_indoor}}
+\index{degreeDays\_indoor@{degreeDays\_indoor}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{degreeDays\_indoor}{degreeDays\_indoor}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2e9b4bbff13e0c881b9a747dec7b20a9} 
+degree\+Days\+\_\+indoor = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}"{}Tavg"{}\mbox{]}.resample("{}1d"{}).mean().interpolate().apply(lambda x\+: 18 -\/ x if x $>$ 18 else 0)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00990}{990}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ae441bcf7e0480338caab89bdc180af22}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!degreeDays\_outdoor@{degreeDays\_outdoor}}
+\index{degreeDays\_outdoor@{degreeDays\_outdoor}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{degreeDays\_outdoor}{degreeDays\_outdoor}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ae441bcf7e0480338caab89bdc180af22} 
+degree\+Days\+\_\+outdoor = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}"{}Tamb"{}\mbox{]}.resample("{}1d"{}).mean().interpolate().apply(lambda x\+: 18 -\/ x if x $>$ 18 else 0)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00992}{992}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab52c96bea30646abf8170f333bbd42b9}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!df@{df}}
+\index{df@{df}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab52c96bea30646abf8170f333bbd42b9} 
+df = pd.\+Data\+Frame(fmf.\+error,\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{[}"{}index"{},"{}error"{},"{}c0"{},"{}c1"{}\mbox{]})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01139}{1139}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af942a59766e8d957ff5c9b853d052b31}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!DHSummerSlice@{DHSummerSlice}}
+\index{DHSummerSlice@{DHSummerSlice}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{DHSummerSlice}{DHSummerSlice}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af942a59766e8d957ff5c9b853d052b31} 
+DHSummer\+Slice = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0f4f3d3ce8dd876d85863080bcaaafad}{Thermal\+Columns}}\mbox{]}.loc\mbox{[}"{}\{\}-\/05-\/01"{}.format(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0745af922737ddf9b3fe2496b859809d}{year}}) \+: "{}\{\}-\/07-\/31"{}.format(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0745af922737ddf9b3fe2496b859809d}{year}})\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01297}{1297}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acdaf61fa74e7d327aa0e9476707542fe}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dhw@{dhw}}
+\index{dhw@{dhw}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dhw}{dhw}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acdaf61fa74e7d327aa0e9476707542fe} 
+list dhw = \mbox{[}\mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a27382ab85bace0f5f0b43565483e2a2d}{dhw1}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a61e9f31de2a7a53e242d5cac8b39b90f}{dhw2}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a170197343d54c8250fcfb28ca8726402}{dhw3}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a130853d34846d76517f0d3c453a9ccbf}{dhw4}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a00334d0bfa77eafbfe83e416f007c151}{dhw5}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8ba8f28922d95285d2958000600dd4b2}{dhw6}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a183e9d6295d6c0ba3e8aeb95c61ad6c2}{dhw7}}\mbox{]}, \mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7440784fcfdc6412ad75245561a74e90}{dhw8}}\mbox{]}\mbox{]}}
+
+
+
+Domestic hot water lookup table. 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00753}{753}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a27382ab85bace0f5f0b43565483e2a2d}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dhw1@{dhw1}}
+\index{dhw1@{dhw1}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dhw1}{dhw1}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a27382ab85bace0f5f0b43565483e2a2d} 
+list dhw1 = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00732}{732}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a61e9f31de2a7a53e242d5cac8b39b90f}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dhw2@{dhw2}}
+\index{dhw2@{dhw2}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dhw2}{dhw2}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a61e9f31de2a7a53e242d5cac8b39b90f} 
+list dhw2 = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00733}{733}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a170197343d54c8250fcfb28ca8726402}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dhw3@{dhw3}}
+\index{dhw3@{dhw3}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dhw3}{dhw3}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a170197343d54c8250fcfb28ca8726402} 
+list dhw3 = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00734}{734}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a130853d34846d76517f0d3c453a9ccbf}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dhw4@{dhw4}}
+\index{dhw4@{dhw4}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dhw4}{dhw4}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a130853d34846d76517f0d3c453a9ccbf} 
+list dhw4 = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00735}{735}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a00334d0bfa77eafbfe83e416f007c151}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dhw5@{dhw5}}
+\index{dhw5@{dhw5}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dhw5}{dhw5}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a00334d0bfa77eafbfe83e416f007c151} 
+list dhw5 = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00736}{736}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8ba8f28922d95285d2958000600dd4b2}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dhw6@{dhw6}}
+\index{dhw6@{dhw6}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dhw6}{dhw6}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8ba8f28922d95285d2958000600dd4b2} 
+list dhw6 = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00737}{737}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a183e9d6295d6c0ba3e8aeb95c61ad6c2}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dhw7@{dhw7}}
+\index{dhw7@{dhw7}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dhw7}{dhw7}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a183e9d6295d6c0ba3e8aeb95c61ad6c2} 
+list dhw7 = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00738}{738}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7440784fcfdc6412ad75245561a74e90}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dhw8@{dhw8}}
+\index{dhw8@{dhw8}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dhw8}{dhw8}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7440784fcfdc6412ad75245561a74e90} 
+list dhw8 = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00739}{739}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ae570b730459a4c0086679b0c83b42b0e}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!DHW\_Baseline@{DHW\_Baseline}}
+\index{DHW\_Baseline@{DHW\_Baseline}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{DHW\_Baseline}{DHW\_Baseline}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ae570b730459a4c0086679b0c83b42b0e} 
+DHW\+\_\+\+Baseline = piv.\+mean(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_accc088009d44c521706aa98d6387ee21}{axis}}=1)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01322}{1322}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a236dc76bf8ee429c9610894808d178f0}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!DHWColumns@{DHWColumns}}
+\index{DHWColumns@{DHWColumns}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{DHWColumns}{DHWColumns}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a236dc76bf8ee429c9610894808d178f0} 
+DHWColumns = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}DHWColumns"{}\mbox{]}.split("{},"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01292}{1292}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a770f288d3048ff6cbee9faa0969fd6b0}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dt@{dt}}
+\index{dt@{dt}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a770f288d3048ff6cbee9faa0969fd6b0} 
+dt}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01140}{1140}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a67085f4aaac82ed4f9881c0a4c0430cb}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!dwstateColumns@{dwstateColumns}}
+\index{dwstateColumns@{dwstateColumns}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{dwstateColumns}{dwstateColumns}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a67085f4aaac82ed4f9881c0a4c0430cb} 
+dwstate\+Columns = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Door\+Window\+States"{}\mbox{]}.split("{},"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01033}{1033}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa272f8ba6bf89aa2d1d0aa59fc707d1f}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!E\_Baseline@{E\_Baseline}}
+\index{E\_Baseline@{E\_Baseline}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{E\_Baseline}{E\_Baseline}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa272f8ba6bf89aa2d1d0aa59fc707d1f} 
+E\+\_\+\+Baseline = Epiv.\+mean(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_accc088009d44c521706aa98d6387ee21}{axis}}=1)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01266}{1266}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a327396e283f21511ef39c5c7ebf1bb92}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Epiv@{Epiv}}
+\index{Epiv@{Epiv}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Epiv}{Epiv}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a327396e283f21511ef39c5c7ebf1bb92} 
+Epiv = pd.\+pivot\+\_\+table(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}=\mbox{[}\textquotesingle{}hour\textquotesingle{}\mbox{]}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{[}\textquotesingle{}day\textquotesingle{}\mbox{]}, values=\mbox{[}\textquotesingle{}Premainder\textquotesingle{}\mbox{]})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01262}{1262}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acc42076253600be964e110149b458971}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!errors@{errors}}
+\index{errors@{errors}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{errors}{errors}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acc42076253600be964e110149b458971} 
+errors}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01209}{1209}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af4634bed996b96d40d32549eb7c8f087}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!EventConfig@{EventConfig}}
+\index{EventConfig@{EventConfig}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{EventConfig}{EventConfig}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af4634bed996b96d40d32549eb7c8f087} 
+Event\+Config = config\mbox{[}"{}eventdetection"{}\mbox{]}\mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}\mbox{]}.split("{},"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01411}{1411}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aad68c7d49ea9b97b2b72b394a9ed105e}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!EventData@{EventData}}
+\index{EventData@{EventData}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{EventData}{EventData}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aad68c7d49ea9b97b2b72b394a9ed105e} 
+Event\+Data = Event\+Study.\+data\mbox{[}Event\+Study.\+eventcolumns\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01424}{1424}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0376cb273cd085212cf7ba18d4341725}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Events@{Events}}
+\index{Events@{Events}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Events}{Events}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0376cb273cd085212cf7ba18d4341725} 
+list Events = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01409}{1409}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abb223c68503d29942cdc947a26c305ca}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!EventStudy@{EventStudy}}
+\index{EventStudy@{EventStudy}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{EventStudy}{EventStudy}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abb223c68503d29942cdc947a26c305ca} 
+Event\+Study = \mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor}{Eventor}}(data.\+loc\mbox{[}\+:, data.\+columns != \textquotesingle{}Date\+Time\textquotesingle{}\mbox{]}, VERBOSE=5)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01000}{1000}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a34ec49257378926386b6e65e68210a05}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!figname@{figname}}
+\index{figname@{figname}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{figname}{figname}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a34ec49257378926386b6e65e68210a05} 
+str figname = \textquotesingle{}\{\}\+\_\+data\+\_\+processed\textquotesingle{}.format(config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Filename"{}\mbox{]}.split("{}."{})\mbox{[}0\mbox{]})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01423}{1423}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af20b96457082b747b09590bd6bc97fed}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Finalcategories@{Finalcategories}}
+\index{Finalcategories@{Finalcategories}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Finalcategories}{Finalcategories}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_af20b96457082b747b09590bd6bc97fed} 
+Finalcategories = pd.\+Data\+Frame(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a94d86d5585fc3679a090429b6a91c58b}{Category\+Weights}}\mbox{[}1\+:\mbox{]},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a94d86d5585fc3679a090429b6a91c58b}{Category\+Weights}}\mbox{[}0\mbox{]}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}=\mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}\mbox{[}0\mbox{]} for \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}} in \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a94d86d5585fc3679a090429b6a91c58b}{Category\+Weights}}\mbox{[}1\+:\mbox{]}\mbox{]}).drop("{}Combined\+\_\+\+Categories"{},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_accc088009d44c521706aa98d6387ee21}{axis}}=1)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01440}{1440}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1eb456e82718cddf25aeb38c54fdbaba}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!fmf@{fmf}}
+\index{fmf@{fmf}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{fmf}{fmf}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1eb456e82718cddf25aeb38c54fdbaba} 
+fmf = \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter}{Multi\+Fitter}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a86244c5fd1a9e478af20a7ebed03f7e4}{Instance}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a12152b2cffe15a1d5fe0a13c0d37dd2d}{lambda\+Map}}=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a12152b2cffe15a1d5fe0a13c0d37dd2d}{lambda\+Map}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e8bfd5caf83689e42ef179314fc19a}{lambda\+Dict}}=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e8bfd5caf83689e42ef179314fc19a}{lambda\+Dict}},verbose=2)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01135}{1135}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa94786cc17367592a0c032a3daf38741}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Function\_List@{Function\_List}}
+\index{Function\_List@{Function\_List}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Function\_List}{Function\_List}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa94786cc17367592a0c032a3daf38741} 
+Function\+\_\+\+List = getmembers(analysis, isfunction)}
+
+
+
+\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~} USER ANALYSIS FUNCTION MAGIC \texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\#\#\#\# 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00966}{966}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6362dfd499977558c64a97fbd23e4cbf}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!gas@{gas}}
+\index{gas@{gas}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{gas}{gas}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6362dfd499977558c64a97fbd23e4cbf} 
+gas = int(config\mbox{[}"{}schil"{}\mbox{]}\mbox{[}"{}gas"{}\mbox{]})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01014}{1014}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7ef3fbbbdc02e90473fcde6465ac5d41}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!GenericConfig@{GenericConfig}}
+\index{GenericConfig@{GenericConfig}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{GenericConfig}{GenericConfig}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7ef3fbbbdc02e90473fcde6465ac5d41} 
+Generic\+Config = config\mbox{[}"{}eventdetection"{}\mbox{]}\mbox{[}"{}Generic\+Events"{}\mbox{]}.split("{},"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01001}{1001}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aac0a9fe24cf205f76bb6ecf942026d71}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Headers@{Headers}}
+\index{Headers@{Headers}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Headers}{Headers}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aac0a9fe24cf205f76bb6ecf942026d71} 
+str Headers = "{}\# Table Of Content\textbackslash{}n "{} + "{}\+\_\+\+\_\+"{}\texorpdfstring{$\ast$}{*}100}
+
+
+
+Headers of document. 
+
+Created Table of Content. 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00728}{728}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a81ae9faedaa69e3e28e2960a0548df8d}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!help@{help}}
+\index{help@{help}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{help}{help}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a81ae9faedaa69e3e28e2960a0548df8d} 
+help}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00093}{93}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0a073fcd28a0f7cef2d427d109a6b448}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!HPEColumns@{HPEColumns}}
+\index{HPEColumns@{HPEColumns}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{HPEColumns}{HPEColumns}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0a073fcd28a0f7cef2d427d109a6b448} 
+HPEColumns = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Heat\+Pump\+Electric"{}\mbox{]}.split("{},"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01220}{1220}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0ebbdbd538d9e06ca4df9745d3c40699}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!HPTColumns@{HPTColumns}}
+\index{HPTColumns@{HPTColumns}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{HPTColumns}{HPTColumns}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0ebbdbd538d9e06ca4df9745d3c40699} 
+HPTColumns = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Heat\+Pump\+Thermal"{}\mbox{]}.split("{},"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01221}{1221}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7e98b8a17c0aad30ba64d47b74e2a6c1}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!i@{i}}
+\index{i@{i}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7e98b8a17c0aad30ba64d47b74e2a6c1} 
+i}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01402}{1402}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!index@{index}}
+\index{index@{index}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e} 
+index = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00740}{740}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a5c87bcfcfb9cb9eb7a1f8a3a13b3b00d}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Indoor\_temperatures@{Indoor\_temperatures}}
+\index{Indoor\_temperatures@{Indoor\_temperatures}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Indoor\_temperatures}{Indoor\_temperatures}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a5c87bcfcfb9cb9eb7a1f8a3a13b3b00d} 
+Indoor\+\_\+temperatures = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Indoor\+Temperatures"{}\mbox{]}.split("{},"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00975}{975}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abf9ffe942818d5c1b1e8ea527f3c7d86}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Inhabitants@{Inhabitants}}
+\index{Inhabitants@{Inhabitants}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Inhabitants}{Inhabitants}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abf9ffe942818d5c1b1e8ea527f3c7d86} 
+Inhabitants}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01300}{1300}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1c676b83110d20ae09b899578afca523}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!initPredictors@{initPredictors}}
+\index{initPredictors@{initPredictors}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{initPredictors}{initPredictors}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1c676b83110d20ae09b899578afca523} 
+init\+Predictors}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01136}{1136}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abd31afffb41ba70fdebb50032e9dfd4a}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!inplace@{inplace}}
+\index{inplace@{inplace}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{inplace}{inplace}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abd31afffb41ba70fdebb50032e9dfd4a} 
+inplace}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01182}{1182}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a86244c5fd1a9e478af20a7ebed03f7e4}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Instance@{Instance}}
+\index{Instance@{Instance}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a86244c5fd1a9e478af20a7ebed03f7e4} 
+Instance}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01160}{1160}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abf2bc2545a4a5f5683d9ef3ed0d977e0}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!j@{j}}
+\index{j@{j}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{j}{j}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abf2bc2545a4a5f5683d9ef3ed0d977e0} 
+j}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01419}{1419}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aaf25ee7e2306d78c74ec7bc48f092e81}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!kind@{kind}}
+\index{kind@{kind}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{kind}{kind}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aaf25ee7e2306d78c74ec7bc48f092e81} 
+kind}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01443}{1443}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a4bfcaea18ca8d12a4c1f3316d3c9a2b2}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!KNMI@{KNMI}}
+\index{KNMI@{KNMI}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{KNMI}{KNMI}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a4bfcaea18ca8d12a4c1f3316d3c9a2b2} 
+KNMI = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a748b6e4a23141150eb7eea30e37adc56}{KNMI\+\_\+\+Resampler}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a847c4ee87a1c07fb74df90049dbf53dc}{path}}+"{}/uurgeg\+\_\+290\+\_\+2011-\/2020.txt"{},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8185d012ca9fccb0e82894d6268051e1}{T\+\_\+\+Columns}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a411b4055c15d54c130bb7d43cba668b3}{Scale\+Array}},header=28, Interval = "{}30min"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00925}{925}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e8bfd5caf83689e42ef179314fc19a}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!lambdaDict@{lambdaDict}}
+\index{lambdaDict@{lambdaDict}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{lambdaDict}{lambdaDict}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e8bfd5caf83689e42ef179314fc19a} 
+dict lambda\+Dict}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{\textcolor{stringliteral}{"{}Qtr"{}}:\ \textcolor{keyword}{lambda}\ Tamb,\ Tavg,\ U:\ (Tamb-\/Tavg)*0.001/\ U,}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qcv"{}}:\ \textcolor{keyword}{lambda}\ HeatInput:\ HeatInput,}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qsol"{}}:\ \textcolor{keyword}{lambda}\ P\_sun,\ Ag,\ Ga:\ P\_sun*0.001*Ag*Ga,}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}dTobj"{}}:\ \textcolor{keyword}{lambda}\ Qsol,\ Qcv,\ Qtr,\ dt,\ C:\ (Qtr+Qcv+Qsol)*dt/C,}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Tavg"{}}:\ \textcolor{keyword}{lambda}\ Tavg,\ dTobj:\ Tavg\ +\ dTobj\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01097}{1097}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a12152b2cffe15a1d5fe0a13c0d37dd2d}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!lambdaMap@{lambdaMap}}
+\index{lambdaMap@{lambdaMap}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{lambdaMap}{lambdaMap}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a12152b2cffe15a1d5fe0a13c0d37dd2d} 
+dict lambda\+Map}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{\textcolor{stringliteral}{"{}Qtr"{}}:\ [\textcolor{stringliteral}{"{}Tamb"{}},\textcolor{stringliteral}{"{}Tavg"{}},\textcolor{stringliteral}{"{}\$U"{}}],}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qcv"{}}:[\textcolor{stringliteral}{"{}HeatInput"{}}],}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qsol"{}}:[\textcolor{stringliteral}{"{}P-\/sun"{}},\textcolor{stringliteral}{"{}*Ag"{}},\textcolor{stringliteral}{"{}\$Ga"{}}],\ \textcolor{comment}{\#\ where\ Ag\ =\ glass\ area\ and\ Ga\ =\ solar\ irradiance\ factor,\ for\ solver!}}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}dTobj"{}}:[\textcolor{stringliteral}{"{}Qsol"{}},\textcolor{stringliteral}{"{}Qcv"{}},\textcolor{stringliteral}{"{}Qtr"{}},\textcolor{stringliteral}{"{}dt"{}},\textcolor{stringliteral}{"{}\$C"{}}],}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Tavg"{}}:[\textcolor{stringliteral}{"{}Tavg"{}},\textcolor{stringliteral}{"{}dTobj"{}}]\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01091}{1091}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac5fa4cdab45a2a40e1c0fdcd5df3675d}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!legend@{legend}}
+\index{legend@{legend}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{legend}{legend}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac5fa4cdab45a2a40e1c0fdcd5df3675d} 
+legend}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01060}{1060}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a08c7d88782948ad52fd15ce2a8f2c4e7}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Log@{Log}}
+\index{Log@{Log}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Log}{Log}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a08c7d88782948ad52fd15ce2a8f2c4e7} 
+str Log = "{}"{}}
+
+
+
+Variable contains the generated Log, equal to code output in commandline. 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00726}{726}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a65198d70e065cc75a935e8213de6d4cb}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!longWindow@{longWindow}}
+\index{longWindow@{longWindow}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{longWindow}{longWindow}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a65198d70e065cc75a935e8213de6d4cb} 
+long\+Window}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01007}{1007}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aea01c649994f33fb3a83b427bec999bc}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!lw@{lw}}
+\index{lw@{lw}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{lw}{lw}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aea01c649994f33fb3a83b427bec999bc} 
+lw}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01060}{1060}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abe695cc0f2f6f75ea45b0fd1b2499931}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!MODULE@{MODULE}}
+\index{MODULE@{MODULE}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{MODULE}{MODULE}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abe695cc0f2f6f75ea45b0fd1b2499931} 
+str MODULE = "{}Eto\+P"{}}
+
+
+
+\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\+Milestone! 
+
+\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~} USER ANALYSIS FUNCTION MAGIC \texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\texorpdfstring{$\sim$}{\string~}\#\#\#\# 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00904}{904}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_adb3409b0004549c01c02012b46075b58}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!mufit\_html@{mufit\_html}}
+\index{mufit\_html@{mufit\_html}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{mufit\_html}{mufit\_html}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_adb3409b0004549c01c02012b46075b58} 
+mufit\+\_\+html = f.\+read()}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01210}{1210}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa8acf9e5fcd3adc6bf9660acf4b3678c}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!nonexistent@{nonexistent}}
+\index{nonexistent@{nonexistent}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{nonexistent}{nonexistent}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa8acf9e5fcd3adc6bf9660acf4b3678c} 
+nonexistent}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01452}{1452}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa111147e659696a8db3a164e192bb3be}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!NormalizedEvents@{NormalizedEvents}}
+\index{NormalizedEvents@{NormalizedEvents}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{NormalizedEvents}{NormalizedEvents}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa111147e659696a8db3a164e192bb3be} 
+Normalized\+Events = Event\+Study.\+Event\+Indicer(threshold=float(config\mbox{[}"{}eventdetection"{}\mbox{]}\mbox{[}"{}Normalized\+Events"{}\mbox{]}))}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01396}{1396}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1effff646202b58929cfe5f1428ba760}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!NPColumns@{NPColumns}}
+\index{NPColumns@{NPColumns}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{NPColumns}{NPColumns}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1effff646202b58929cfe5f1428ba760} 
+NPColumns = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Negative\+Power"{}\mbox{]}.split("{},"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01252}{1252}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa96c7f5f38b5c249059d45bc343fd791}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!OS@{OS}}
+\index{OS@{OS}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{OS}{OS}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa96c7f5f38b5c249059d45bc343fd791} 
+OS = os.\+environ.\+get(\textquotesingle{}OS\textquotesingle{},\textquotesingle{}\textquotesingle{})}
+
+
+
+Variable containing type of OS the code is running on. 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00082}{82}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ae9f224b0bd1bb5ccbb0be853792c0fe0}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!PandasDHWWrapper@{PandasDHWWrapper}}
+\index{PandasDHWWrapper@{PandasDHWWrapper}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{PandasDHWWrapper}{PandasDHWWrapper}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ae9f224b0bd1bb5ccbb0be853792c0fe0} 
+Pandas\+DHWWrapper}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01300}{1300}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a90eee7a4677ca8b1ed116364a24367f9}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!parser@{parser}}
+\index{parser@{parser}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{parser}{parser}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a90eee7a4677ca8b1ed116364a24367f9} 
+parser = argparse.\+Argument\+Parser()}
+
+
+
+Argument parser, filled with Commandline arguments. 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00091}{91}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a847c4ee87a1c07fb74df90049dbf53dc}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!path@{path}}
+\index{path@{path}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a847c4ee87a1c07fb74df90049dbf53dc} 
+str path = os.\+path.\+abspath(analysis.\+\_\+\+\_\+file\+\_\+\+\_\+)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00921}{921}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac12e018451e17653d55e301323057fd7}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!PDC@{PDC}}
+\index{PDC@{PDC}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{PDC}{PDC}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac12e018451e17653d55e301323057fd7} 
+PDC = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}"{}Premainder"{}\mbox{]}.resample("{}1h"{}).mean().interpolate().sort\+\_\+values("{}Premainder"{},ascending=False).reset\+\_\+index(drop=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd}{True}})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01350}{1350}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a00d6d9c4902af020959292d110095aa9}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Pdhw@{Pdhw}}
+\index{Pdhw@{Pdhw}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Pdhw}{Pdhw}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a00d6d9c4902af020959292d110095aa9} 
+Pdhw}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01298}{1298}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8fbb8c1537e6e3eff60f8e6426ef26c2}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!PdTtoV@{PdTtoV}}
+\index{PdTtoV@{PdTtoV}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{PdTtoV}{PdTtoV}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8fbb8c1537e6e3eff60f8e6426ef26c2} 
+Pd\+TtoV}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01298}{1298}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a61d9d7051eccd3d3dbfb87e8b31c5b5a}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!piv@{piv}}
+\index{piv@{piv}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{piv}{piv}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a61d9d7051eccd3d3dbfb87e8b31c5b5a} 
+piv = pd.\+pivot\+\_\+table(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}=\mbox{[}\textquotesingle{}hour\textquotesingle{}\mbox{]}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{[}\textquotesingle{}day\textquotesingle{}\mbox{]}, values=\mbox{[}\textquotesingle{}Vdhwcal\textquotesingle{}\mbox{]})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01317}{1317}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2d4faf064e2181efa878dad421c71c56}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!piv2@{piv2}}
+\index{piv2@{piv2}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{piv2}{piv2}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2d4faf064e2181efa878dad421c71c56} 
+piv2 = piv.\+loc\mbox{[}\+:, (\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a61d9d7051eccd3d3dbfb87e8b31c5b5a}{piv}} != 0).any(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_accc088009d44c521706aa98d6387ee21}{axis}}=0)\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01318}{1318}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abef4d2c80d3b4a9ed9e1ee9659e707cd}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!PPColumns@{PPColumns}}
+\index{PPColumns@{PPColumns}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{PPColumns}{PPColumns}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_abef4d2c80d3b4a9ed9e1ee9659e707cd} 
+PPColumns = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Positive\+Power"{}\mbox{]}.split("{},"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01251}{1251}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa26bd9527c3f797157e8caf0871fd14f}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!PredictedThermal@{PredictedThermal}}
+\index{PredictedThermal@{PredictedThermal}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{PredictedThermal}{PredictedThermal}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa26bd9527c3f797157e8caf0871fd14f} 
+Predicted\+Thermal = pd.\+Data\+Frame(tp.\+Simulate(steps=tp.\+data\+Length, err="{}Heat\+Input"{})\mbox{[}-\/tp.\+data\+Length\+:\mbox{]},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{[}"{}index"{},"{}err"{},"{}Heat\+Input"{},"{}Heat\+Input\+\_\+pr"{},"{}U"{},"{}Ag"{},"{}Ga"{},"{}C"{}\mbox{]})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01172}{1172}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a653f5b94d8d977dedac73b3bf4024990}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!PVArea@{PVArea}}
+\index{PVArea@{PVArea}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{PVArea}{PVArea}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a653f5b94d8d977dedac73b3bf4024990} 
+PVArea = float(config\mbox{[}"{}schil"{}\mbox{]}\mbox{[}"{}pvoppervlak"{}\mbox{]})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01045}{1045}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a78172c433ac0ffc160e4cb8fe4e0d6fc}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!PVColumn@{PVColumn}}
+\index{PVColumn@{PVColumn}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{PVColumn}{PVColumn}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a78172c433ac0ffc160e4cb8fe4e0d6fc} 
+PVColumn = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}PVPanels"{}\mbox{]}.split("{},"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01044}{1044}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac805ba3d188465f3e0bfcd2552cf16cb}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!PVDC@{PVDC}}
+\index{PVDC@{PVDC}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{PVDC}{PVDC}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac805ba3d188465f3e0bfcd2552cf16cb} 
+PVDC = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}\mbox{[}"{}PVEfficiency"{}\mbox{]}\mbox{]}.resample("{}1h"{}).mean().interpolate().sort\+\_\+values("{}PVEfficiency"{},ascending=False).reset\+\_\+index(drop=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd}{True}})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01057}{1057}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a02b27bc6080387afdccdfcaaa7e20afd}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!regressor@{regressor}}
+\index{regressor@{regressor}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{regressor}{regressor}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a02b27bc6080387afdccdfcaaa7e20afd} 
+regressor = Linear\+Regression()}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01071}{1071}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a68664b85ab66ee545e09b003f570d965}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!RevertArray@{RevertArray}}
+\index{RevertArray@{RevertArray}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{RevertArray}{RevertArray}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a68664b85ab66ee545e09b003f570d965} 
+list Revert\+Array = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00920}{920}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a411b4055c15d54c130bb7d43cba668b3}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!ScaleArray@{ScaleArray}}
+\index{ScaleArray@{ScaleArray}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{ScaleArray}{ScaleArray}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a411b4055c15d54c130bb7d43cba668b3} 
+list Scale\+Array = \mbox{[}100\texorpdfstring{$\ast$}{*}100.,1.\+0\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00919}{919}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acc2bd8f09bb88b5dd20f9b432631b8ca}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!sd@{sd}}
+\index{sd@{sd}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{sd}{sd}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acc2bd8f09bb88b5dd20f9b432631b8ca} 
+sd}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01007}{1007}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2491aeeb0d7f7b4ded74cd65a48aafe3}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!shortWindow@{shortWindow}}
+\index{shortWindow@{shortWindow}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{shortWindow}{shortWindow}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2491aeeb0d7f7b4ded74cd65a48aafe3} 
+short\+Window}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01007}{1007}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1c40db1d9b56c27240e420765695f1c4}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Size@{Size}}
+\index{Size@{Size}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a1c40db1d9b56c27240e420765695f1c4} 
+Size}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01402}{1402}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a01e13f4fbebdaf9845a886b047422fb0}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!SummerDetection@{SummerDetection}}
+\index{SummerDetection@{SummerDetection}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{SummerDetection}{SummerDetection}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a01e13f4fbebdaf9845a886b047422fb0} 
+Summer\+Detection = pd.\+pivot\+\_\+table(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}}=\mbox{[}"{}hour"{}\mbox{]}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=\mbox{[}"{}day"{}\mbox{]}, values= \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0f4f3d3ce8dd876d85863080bcaaafad}{Thermal\+Columns}})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01310}{1310}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa7255c4bc0e9fa663f62fbafe1026daa}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!T1@{T1}}
+\index{T1@{T1}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{T1}{T1}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_aa7255c4bc0e9fa663f62fbafe1026daa} 
+T1}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01298}{1298}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a5a30d530a77bc992810b0c24a3e8f550}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!T2@{T2}}
+\index{T2@{T2}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{T2}{T2}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a5a30d530a77bc992810b0c24a3e8f550} 
+T2}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01298}{1298}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8185d012ca9fccb0e82894d6268051e1}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!T\_Columns@{T\_Columns}}
+\index{T\_Columns@{T\_Columns}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{T\_Columns}{T\_Columns}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8185d012ca9fccb0e82894d6268051e1} 
+list T\+\_\+\+Columns = \mbox{[}"{} Q"{},"{} RH"{}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00918}{918}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab4383970452a1434d45847c8c2560b15}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!TDC@{TDC}}
+\index{TDC@{TDC}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{TDC}{TDC}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab4383970452a1434d45847c8c2560b15} 
+TDC = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}Ts\mbox{]}.resample("{}1h"{}).mean().interpolate().sort\+\_\+values("{}d\+T"{},ascending=False).reset\+\_\+index(drop=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd}{True}})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01367}{1367}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a05a671c66aefea124cc08b76ea6d30bb}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!test@{test}}
+\index{test@{test}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{test}{test}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a05a671c66aefea124cc08b76ea6d30bb} 
+test = py2tex(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a4e721c2d345d18d80d240cbaf1597be5}{tex}},print\+\_\+formula=False, print\+\_\+latex=False, output="{}tex"{}).replace("{}\$"{},"{}"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01129}{1129}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a4e721c2d345d18d80d240cbaf1597be5}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!tex@{tex}}
+\index{tex@{tex}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{tex}{tex}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a4e721c2d345d18d80d240cbaf1597be5} 
+tex = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a9677202f505710d2296b91bd116a9f6e}{Lambda2\+Tex}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e8bfd5caf83689e42ef179314fc19a}{lambda\+Dict}}\mbox{[}\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}\mbox{]})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01124}{1124}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0f4f3d3ce8dd876d85863080bcaaafad}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!ThermalColumns@{ThermalColumns}}
+\index{ThermalColumns@{ThermalColumns}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{ThermalColumns}{ThermalColumns}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0f4f3d3ce8dd876d85863080bcaaafad} 
+Thermal\+Columns = config\mbox{[}"{}preprocessing"{}\mbox{]}\mbox{[}"{}Thermal\+Columns"{}\mbox{]}.split("{},"{})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01013}{1013}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac999cab977824adc7574f9904ff7143b}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!ThermallambdaDict@{ThermallambdaDict}}
+\index{ThermallambdaDict@{ThermallambdaDict}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{ThermallambdaDict}{ThermallambdaDict}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac999cab977824adc7574f9904ff7143b} 
+dict Thermallambda\+Dict}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{\textcolor{stringliteral}{"{}Qtr"{}}:\ \textcolor{keyword}{lambda}\ Tamb,\ Tavg,\ U:\ (Tamb-\/Tavg)*0.001/\ U,}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}HeatInput"{}}:\ \textcolor{keyword}{lambda}\ dT,\ C,\ dt,\ Qtr,\ Qsol:\ ((dT*C/dt)\ -\/\ Qtr\ -\/\ Qsol)*0.001,}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qsol"{}}:\ \textcolor{keyword}{lambda}\ P\_sun,\ Ag,\ Ga:\ P\_sun*0.001*Ag*Ga,}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}dTobj"{}}:\ \textcolor{keyword}{lambda}\ dTobj:\ dTobj,\ \textcolor{comment}{\#\ (Qtr+HeatInput+Qsol)*dt/C\ =\ dT,}}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Tavg"{}}:\ \textcolor{keyword}{lambda}\ Tavg,\ dTobj:\ Tavg\ +\ dTobj\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01110}{1110}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a55f420ef76f2b72e537126ce6d679fce}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!ThermallambdaMap@{ThermallambdaMap}}
+\index{ThermallambdaMap@{ThermallambdaMap}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{ThermallambdaMap}{ThermallambdaMap}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a55f420ef76f2b72e537126ce6d679fce} 
+dict Thermallambda\+Map}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{\textcolor{stringliteral}{"{}Qtr"{}}:\ [\textcolor{stringliteral}{"{}Tamb"{}},\textcolor{stringliteral}{"{}Tavg"{}},\textcolor{stringliteral}{"{}\$U"{}}],}
+\DoxyCodeLine{00002\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}HeatInput"{}}:[\textcolor{stringliteral}{"{}dT"{}},\ \textcolor{stringliteral}{"{}\$C"{}},\ \textcolor{stringliteral}{"{}dt"{}},\ \textcolor{stringliteral}{"{}Qtr"{}},\ \textcolor{stringliteral}{"{}Qsol"{}}],}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qsol"{}}:[\textcolor{stringliteral}{"{}P-\/sun"{}},\textcolor{stringliteral}{"{}*Ag"{}},\textcolor{stringliteral}{"{}\$Ga"{}}],\ \textcolor{comment}{\#\ where\ Ag\ =\ glass\ area\ and\ Ga\ =\ solar\ irradiance\ factor,\ for\ solver!}}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}dTobj"{}}:[\textcolor{stringliteral}{"{}dTobj"{}}],}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Tavg"{}}:[\textcolor{stringliteral}{"{}Tavg"{}},\textcolor{stringliteral}{"{}dTobj"{}}]\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01104}{1104}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a051e403214cb6872ad3fe4e50302a6ee}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!title@{title}}
+\index{title@{title}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{title}{title}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a051e403214cb6872ad3fe4e50302a6ee} 
+title}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01264}{1264}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8a1eb1db6dc99f82114ae4594b3593ea}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!tp@{tp}}
+\index{tp@{tp}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{tp}{tp}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a8a1eb1db6dc99f82114ae4594b3593ea} 
+tp = \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter}{Multi\+Fitter}}(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a86244c5fd1a9e478af20a7ebed03f7e4}{Instance}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a12152b2cffe15a1d5fe0a13c0d37dd2d}{lambda\+Map}}=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a55f420ef76f2b72e537126ce6d679fce}{Thermallambda\+Map}},\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a43e8bfd5caf83689e42ef179314fc19a}{lambda\+Dict}}=\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac999cab977824adc7574f9904ff7143b}{Thermallambda\+Dict}},verbose=2)}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01168}{1168}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!True@{True}}
+\index{True@{True}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{True}{True}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a643a20c0c59588a0f741a6095e2025fd} 
+True}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01060}{1060}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7aead736a07eaf25623ad7bfa1f0ee2d}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!type@{type}}
+\index{type@{type}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a7aead736a07eaf25623ad7bfa1f0ee2d} 
+type}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00092}{92}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab00944552a5ef41ef0c18de744dd8207}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!Verbosity@{Verbosity}}
+\index{Verbosity@{Verbosity}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{Verbosity}{Verbosity}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ab00944552a5ef41ef0c18de744dd8207} 
+int Verbosity = 1}
+
+
+
+For which level of knowledge to generate a report.\+ssss. 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00730}{730}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a376a8f74499c7db65e21effee3e6a563}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!verbosityLimit@{verbosityLimit}}
+\index{verbosityLimit@{verbosityLimit}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{verbosityLimit}{verbosityLimit}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a376a8f74499c7db65e21effee3e6a563} 
+verbosity\+Limit}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01160}{1160}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a5ccda5a9527d60260eda95ad946bb749}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!white@{white}}
+\index{white@{white}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{white}{white}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a5ccda5a9527d60260eda95ad946bb749} 
+tuple white = (255, 255, 255, 255)}
+
+
+
+Defining the color white for latex. 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00619}{619}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac51b57a703ba1c5869228690c93e1701}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!X@{X}}
+\index{X@{X}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac51b57a703ba1c5869228690c93e1701} 
+X = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}\mbox{[}"{}d\+T"{}\mbox{]}\mbox{]}.interpolate().bfill().ffill()}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01069}{1069}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2fb1c5cf58867b5bbc9a1b145a86f3a0}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!y@{y}}
+\index{y@{y}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2fb1c5cf58867b5bbc9a1b145a86f3a0} 
+y = \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}\mbox{[}\mbox{[}"{}Heat\+Input"{}\mbox{]}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01070}{1070}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6567d292f257b0b28cdf1bb56f568312}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!y\_pred@{y\_pred}}
+\index{y\_pred@{y\_pred}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{y\_pred}{y\_pred}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6567d292f257b0b28cdf1bb56f568312} 
+y\+\_\+pred = regressor.\+predict(\mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_ac51b57a703ba1c5869228690c93e1701}{X}})}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01073}{1073}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0745af922737ddf9b3fe2496b859809d}\index{TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}!year@{year}}
+\index{year@{year}!TracknTrace.preprocessor.preProcessor@{TracknTrace.preprocessor.preProcessor}}
+\doxysubsubsection{\texorpdfstring{year}{year}}
+{\footnotesize\ttfamily \label{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a0745af922737ddf9b3fe2496b859809d} 
+list year = data.\+index\mbox{[}0\mbox{]}.year}
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l01294}{1294}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+

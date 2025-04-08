@@ -1,0 +1,429 @@
+\doxysection{Eventor Class Reference}
+\hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor}{}\label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor}\index{Eventor@{Eventor}}
+
+
+Inheritance diagram for Eventor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Eventor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_afdf9661afa42b771086c9ce4abf8d1e0}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}}, \mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a9cfcb724bbf4bae5f97bc17cf58cf522}{metadata}}=None, \mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a03169c2c7e2ff706233c78422b0daf3a}{VERBOSE}}=0)
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor}{Eventor} base class initializer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a29c2b08808d77e48be221fcda1458658}{Event\+Categorizer}} (self, categories)
+\begin{DoxyCompactList}\small\item\em Summarizes all detected events to a limited group of categories. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_ab7c5606b85cca4a525b7e0fca4a05ae4}{Event\+Indicer}} (self, threshold=0.\+5, trend="{}normevents"{})
+\begin{DoxyCompactList}\small\item\em Detect events for all columns in self.\+data, runs running\+Averages and sliding\+Window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a733478597a579f9b274b842d151d636f}{Generic\+Events}} (self, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2491aeeb0d7f7b4ded74cd65a48aafe3}{short\+Window}}=8, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a65198d70e065cc75a935e8213de6d4cb}{long\+Window}}=48, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acc2bd8f09bb88b5dd20f9b432631b8ca}{sd}}=2, \mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}}=None)
+\begin{DoxyCompactList}\small\item\em Detect events for all columns in self.\+data, runs running\+Averages and sliding\+Window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_ad1ce0dfe08dd47cac948e75d44012f9a}{Resample}} (self, New\+Delta="{}30m"{})
+\begin{DoxyCompactList}\small\item\em Resample the loaded data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a6b3646948fe672006e262a9de546ea08}{running\+Averages}} (self, trend, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a65198d70e065cc75a935e8213de6d4cb}{long\+Window}}=42, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a2491aeeb0d7f7b4ded74cd65a48aafe3}{short\+Window}}=6, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acc2bd8f09bb88b5dd20f9b432631b8ca}{sd}}=2)
+\begin{DoxyCompactList}\small\item\em Load a dictionary of variables and add in dt. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a73a67dad1d84046cc45cd1164afafb63}{sliding\+Window}} (self, trend, size=6, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_acc2bd8f09bb88b5dd20f9b432631b8ca}{sd}}=2)
+\begin{DoxyCompactList}\small\item\em Load a dictionary of variables and add in dt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_aa4a83a601d2bc4262ac464442e12edb7}{Cat\+Data}} = pd.\+Data\+Frame(\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}} = categories\mbox{[}0\mbox{]}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}} = self.\+data.\+index)
+\begin{DoxyCompactList}\small\item\em Categorial filter applied to detected events. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}} = list(data.\+columns)
+\begin{DoxyCompactList}\small\item\em list of columns in data \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a511ae0b1c13f95e5f08f1a0dd3da3d93}{data}} = data.\+copy()
+\begin{DoxyCompactList}\small\item\em input data loaded at initialization \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a770f288d3048ff6cbee9faa0969fd6b0}{dt}} = self.\+statistics\mbox{[}"{}dt"{}\mbox{]}\mbox{[}"{}mean"{}\mbox{]}
+\begin{DoxyCompactList}\small\item\em timestep in dataset, column must be named dt \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_aa156f1eabfe232337d6b497f49941619}{eventcolumns}} = \mbox{[}x for x in self.\+columns if "{}event"{} in x\mbox{]}
+\begin{DoxyCompactList}\small\item\em list of columns describing detected events \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a9cfcb724bbf4bae5f97bc17cf58cf522}{metadata}} = metadata
+\begin{DoxyCompactList}\small\item\em metadata of data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a0bb9ced98effdb433e3e2fafd98932fd}{statistics}} = data.\+describe()
+\begin{DoxyCompactList}\small\item\em stores statistical description of input data \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a03169c2c7e2ff706233c78422b0daf3a}{VERBOSE}} = VERBOSE
+\begin{DoxyCompactList}\small\item\em internal verbosity switch, for testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Provides Generic math and statistic based event detection methods.\end{DoxyVerb}
+ 
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00107}{107}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_afdf9661afa42b771086c9ce4abf8d1e0}\index{Eventor@{Eventor}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_afdf9661afa42b771086c9ce4abf8d1e0} 
+\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{data}{, }\item[{}]{metadata}{ = {\ttfamily None}, }\item[{}]{VERBOSE}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+The \doxylink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor}{Eventor} base class initializer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to fingerprint on events \\
+\hline
+{\em metadata} & Metadata describing the data, is not required \\
+\hline
+{\em VERBOSE} & verbose integer generates more output for debugging\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An instance of the eventor class initialized. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00109}{109}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a29c2b08808d77e48be221fcda1458658}\index{Eventor@{Eventor}!EventCategorizer@{EventCategorizer}}
+\index{EventCategorizer@{EventCategorizer}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{EventCategorizer()}{EventCategorizer()}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a29c2b08808d77e48be221fcda1458658} 
+Event\+Categorizer (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{categories}{}\end{DoxyParamCaption})}
+
+
+
+Summarizes all detected events to a limited group of categories. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em categories} & a list of name\+:category to translate any column to a new category\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new dataframe with events linked to categories 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00220}{220}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_ab7c5606b85cca4a525b7e0fca4a05ae4}\index{Eventor@{Eventor}!EventIndicer@{EventIndicer}}
+\index{EventIndicer@{EventIndicer}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{EventIndicer()}{EventIndicer()}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_ab7c5606b85cca4a525b7e0fca4a05ae4} 
+Event\+Indicer (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{threshold}{ = {\ttfamily 0.5}, }\item[{}]{trend}{ = {\ttfamily "{}normevents"{}}}\end{DoxyParamCaption})}
+
+
+
+Detect events for all columns in self.\+data, runs running\+Averages and sliding\+Window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em threshold} & threshold value of the sum of detections on any moment, if bigger then this value it is counted as an event \\
+\hline
+{\em trend} & the suffix or prefix that is filtered out and summed for each index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new event based on existing events 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00199}{199}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{pre_processor_8py_source_l00121}{data}}.
+
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a733478597a579f9b274b842d151d636f}\index{Eventor@{Eventor}!GenericEvents@{GenericEvents}}
+\index{GenericEvents@{GenericEvents}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{GenericEvents()}{GenericEvents()}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a733478597a579f9b274b842d151d636f} 
+Generic\+Events (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{short\+Window}{ = {\ttfamily 8}, }\item[{}]{long\+Window}{ = {\ttfamily 48}, }\item[{}]{sd}{ = {\ttfamily 2}, }\item[{}]{columns}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Detect events for all columns in self.\+data, runs running\+Averages and sliding\+Window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em long\+Window} & Length of the long window which is the base for comparison \\
+\hline
+{\em short\+Window} & Length of the short window, if this sd is x times higher it is detected as an event \\
+\hline
+{\em sd} & standard deviation exceedance which is considered an event \\
+\hline
+{\em columns} & Which dwstate\+Columns from the data to check for events\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new dataframe with ones where events are detected 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00175}{175}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00137}{Multi\+Fitter.\+columns}}, \mbox{\hyperlink{pre_processor_8py_source_l00127}{columns}}, \mbox{\hyperlink{pre_processor_8py_source_l00121}{data}}, \mbox{\hyperlink{pre_processor_8py_source_l00155}{running\+Averages()}}, and \mbox{\hyperlink{pre_processor_8py_source_l00144}{sliding\+Window()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a733478597a579f9b274b842d151d636f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_ad1ce0dfe08dd47cac948e75d44012f9a}\index{Eventor@{Eventor}!Resample@{Resample}}
+\index{Resample@{Resample}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{Resample()}{Resample()}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_ad1ce0dfe08dd47cac948e75d44012f9a} 
+Resample (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{New\+Delta}{ = {\ttfamily "{}30m"{}}}\end{DoxyParamCaption})}
+
+
+
+Resample the loaded data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em New\+Delta} & string which indicates to what interval to resample the data towards. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00136}{136}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{pre_processor_8py_source_l00121}{data}}, and \mbox{\hyperlink{pre_processor_8py_source_l00123}{statistics}}.
+
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a6b3646948fe672006e262a9de546ea08}\index{Eventor@{Eventor}!runningAverages@{runningAverages}}
+\index{runningAverages@{runningAverages}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{runningAverages()}{runningAverages()}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a6b3646948fe672006e262a9de546ea08} 
+running\+Averages (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{trend}{, }\item[{}]{long\+Window}{ = {\ttfamily 42}, }\item[{}]{short\+Window}{ = {\ttfamily 6}, }\item[{}]{sd}{ = {\ttfamily 2}}\end{DoxyParamCaption})}
+
+
+
+Load a dictionary of variables and add in dt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trend} & Which column from the data to check for events \\
+\hline
+{\em long\+Window} & Length of the long window which is the base for comparison \\
+\hline
+{\em short\+Window} & Length of the short window, if this sd is x times higher \\
+\hline
+{\em sd} & standard deviation exceedance which is considered an event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new dataframe with ones where events are detected 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00155}{155}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{pre_processor_8py_source_l00121}{data}}, and \mbox{\hyperlink{pre_processor_8py_source_l00123}{statistics}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00175}{Generic\+Events()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a6b3646948fe672006e262a9de546ea08_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a73a67dad1d84046cc45cd1164afafb63}\index{Eventor@{Eventor}!slidingWindow@{slidingWindow}}
+\index{slidingWindow@{slidingWindow}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{slidingWindow()}{slidingWindow()}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a73a67dad1d84046cc45cd1164afafb63} 
+sliding\+Window (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{trend}{, }\item[{}]{size}{ = {\ttfamily 6}, }\item[{}]{sd}{ = {\ttfamily 2}}\end{DoxyParamCaption})}
+
+
+
+Load a dictionary of variables and add in dt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trend} & Which column from the data to check for events \\
+\hline
+{\em size} & Size of the window over which to calculate the standard deviation \\
+\hline
+{\em sd} & standard deviation exceedance which is considered an event\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new dataframe with ones where events are detected 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00144}{144}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+References \mbox{\hyperlink{pre_processor_8py_source_l00121}{data}}, and \mbox{\hyperlink{pre_processor_8py_source_l00123}{statistics}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00175}{Generic\+Events()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a73a67dad1d84046cc45cd1164afafb63_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_aa4a83a601d2bc4262ac464442e12edb7}\index{Eventor@{Eventor}!CatData@{CatData}}
+\index{CatData@{CatData}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{CatData}{CatData}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_aa4a83a601d2bc4262ac464442e12edb7} 
+Cat\+Data = pd.\+Data\+Frame(\mbox{\hyperlink{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}} = categories\mbox{[}0\mbox{]}, \mbox{\hyperlink{namespace_trackn_trace_1_1preprocessor_1_1pre_processor_a6784e1c334dfceb8f017667c0b0f6a3e}{index}} = self.\+data.\+index)}
+
+
+
+Categorial filter applied to detected events. 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00228}{228}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a2236b72f560276e1c4ca3409b8b3ecb5}\index{Eventor@{Eventor}!columns@{columns}}
+\index{columns@{columns}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a2236b72f560276e1c4ca3409b8b3ecb5} 
+columns = list(data.\+columns)}
+
+
+
+list of columns in data 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00127}{127}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00175}{Generic\+Events()}}.
+
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a511ae0b1c13f95e5f08f1a0dd3da3d93}\index{Eventor@{Eventor}!data@{data}}
+\index{data@{data}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a511ae0b1c13f95e5f08f1a0dd3da3d93} 
+data = data.\+copy()}
+
+
+
+input data loaded at initialization 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00121}{121}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00199}{Event\+Indicer()}}, \mbox{\hyperlink{pre_processor_8py_source_l00175}{Generic\+Events()}}, \mbox{\hyperlink{pre_processor_8py_source_l00136}{Resample()}}, \mbox{\hyperlink{pre_processor_8py_source_l00155}{running\+Averages()}}, and \mbox{\hyperlink{pre_processor_8py_source_l00144}{sliding\+Window()}}.
+
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a770f288d3048ff6cbee9faa0969fd6b0}\index{Eventor@{Eventor}!dt@{dt}}
+\index{dt@{dt}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a770f288d3048ff6cbee9faa0969fd6b0} 
+dt = self.\+statistics\mbox{[}"{}dt"{}\mbox{]}\mbox{[}"{}mean"{}\mbox{]}}
+
+
+
+timestep in dataset, column must be named dt 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00125}{125}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_aa156f1eabfe232337d6b497f49941619}\index{Eventor@{Eventor}!eventcolumns@{eventcolumns}}
+\index{eventcolumns@{eventcolumns}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{eventcolumns}{eventcolumns}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_aa156f1eabfe232337d6b497f49941619} 
+list eventcolumns = \mbox{[}x for x in self.\+columns if "{}event"{} in x\mbox{]}}
+
+
+
+list of columns describing detected events 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00193}{193}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a9cfcb724bbf4bae5f97bc17cf58cf522}\index{Eventor@{Eventor}!metadata@{metadata}}
+\index{metadata@{metadata}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{metadata}{metadata}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a9cfcb724bbf4bae5f97bc17cf58cf522} 
+metadata = metadata}
+
+
+
+metadata of data. 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00130}{130}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a0bb9ced98effdb433e3e2fafd98932fd}\index{Eventor@{Eventor}!statistics@{statistics}}
+\index{statistics@{statistics}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{statistics}{statistics}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a0bb9ced98effdb433e3e2fafd98932fd} 
+statistics = data.\+describe()}
+
+
+
+stores statistical description of input data 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00123}{123}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00136}{Resample()}}, \mbox{\hyperlink{pre_processor_8py_source_l00155}{running\+Averages()}}, and \mbox{\hyperlink{pre_processor_8py_source_l00144}{sliding\+Window()}}.
+
+\Hypertarget{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a03169c2c7e2ff706233c78422b0daf3a}\index{Eventor@{Eventor}!VERBOSE@{VERBOSE}}
+\index{VERBOSE@{VERBOSE}!Eventor@{Eventor}}
+\doxysubsubsection{\texorpdfstring{VERBOSE}{VERBOSE}}
+{\footnotesize\ttfamily \label{class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor_a03169c2c7e2ff706233c78422b0daf3a} 
+VERBOSE = VERBOSE}
+
+
+
+internal verbosity switch, for testing. 
+
+
+
+Definition at line \mbox{\hyperlink{pre_processor_8py_source_l00119}{119}} of file \mbox{\hyperlink{pre_processor_8py_source}{pre\+Processor.\+py}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Trackn\+Trace/\+Trackn\+Trace/preprocessor/\mbox{\hyperlink{pre_processor_8py}{pre\+Processor.\+py}}\end{DoxyCompactItemize}

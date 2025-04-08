@@ -1,0 +1,7 @@
+<map id="ArrayToConstants" name="ArrayToConstants">
+<area shape="rect" id="Node000001" title="load an array of constants; expects same length and order as internal dictionary!" alt="" coords="5,5,132,32"/>
+<area shape="rect" id="Node000002" href="$classmufit_1_1main_1_1_multi_fitter.html#a3f72d7407994cf55924f941b72dd0ae3" title="Load a dictionary of constants and update solvelist too." alt="" coords="180,5,285,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,16,164,16,164,21,132,21"/>
+<area shape="rect" id="Node000003" href="$classmufit_1_1main_1_1_multi_fitter.html#af8f9384caf99f3ade1fdf0335d5ac218" title=" " alt="" coords="333,5,411,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="286,16,317,16,317,21,286,21"/>
+</map>

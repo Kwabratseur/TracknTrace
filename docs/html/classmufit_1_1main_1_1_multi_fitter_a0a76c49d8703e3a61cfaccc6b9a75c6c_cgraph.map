@@ -1,0 +1,29 @@
+<map id="SimSolve" name="SimSolve">
+<area shape="rect" id="Node000001" title="Subsequent simulating and evolution based algorithm to test results." alt="" coords="5,132,83,159"/>
+<area shape="rect" id="Node000002" href="$classmufit_1_1main_1_1_multi_fitter.html#a56d5756c3daa13635c818f93766d4273" title="Evolution inspired parameter search algorithm." alt="" coords="131,107,196,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,135,115,127,116,133,83,140"/>
+<area shape="rect" id="Node000004" href="$classmufit_1_1main_1_1_multi_fitter.html#a47d4d4f9470094b25c3e9b306d5fce27" title="Apply the model (Calculate) to the loaded data, does not strictly need a DF." alt="" coords="244,157,316,184"/>
+<area shape="poly" id="edge14_Node000001_Node000004" title=" " alt="" coords="83,147,229,163,228,168,83,152"/>
+<area shape="rect" id="Node000003" href="$classmufit_1_1main_1_1_multi_fitter.html#a646dc98802fc70130102410a34acfecf" title="Parameter transformer/gradient descent algorithm." alt="" coords="250,107,310,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="196,117,234,117,234,123,196,123"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="197,131,235,148,233,153,195,136"/>
+<area shape="rect" id="Node000005" href="$classmufit_1_1main_1_1_multi_fitter.html#ad9a1fb640ed33354bc50776b061e237c" title="Retrieves all current variables, constants and predictors, filles them into lambdafunctions and puts ..." alt="" coords="370,5,446,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="302,155,314,144,330,117,337,93,345,69,362,42,364,40,368,44,366,46,350,71,342,95,335,120,318,147,306,159"/>
+<area shape="rect" id="Node000007" href="$classmufit_1_1main_1_1_multi_fitter.html#ab3053982897eddb5a92ebf129115a3b3" title="return a dictionary slice from the loaded dataframe" alt="" coords="372,56,444,83"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="300,155,315,143,338,118,363,93,367,90,370,94,366,97,342,121,318,147,304,159"/>
+<area shape="rect" id="Node000008" href="$classmufit_1_1main_1_1_multi_fitter.html#afce0fd16d20d4a39250136ab10fa45d2" title="convert dictionary to array" alt="" coords="364,107,452,133"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="315,154,357,137,359,142,317,159"/>
+<area shape="rect" id="Node000009" href="$classmufit_1_1main_1_1_multi_fitter.html#ab888df0346bb59a4de071cdc656c7bf3" title="Load a dictionary of variables and add in dt." alt="" coords="503,157,601,184"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="317,168,487,168,487,173,317,173"/>
+<area shape="rect" id="Node000010" href="$classmufit_1_1main_1_1_multi_fitter.html#acfdf32734331854123227f27f388f96e" title="reset the index to 0 and reset predictors and variables from SDF[0] IF SDF is defined" alt="" coords="367,208,449,235"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="317,182,359,199,357,204,315,187"/>
+<area shape="rect" id="Node000012" href="$classmufit_1_1main_1_1_multi_fitter.html#ae1d6e3030b2700893bcd69432340c2d9" title="Step through the index and reset it once datalength is exceeded." alt="" coords="369,259,447,285"/>
+<area shape="poly" id="edge12_Node000004_Node000012" title=" " alt="" coords="297,183,327,212,366,245,371,248,367,252,363,249,324,216,293,186"/>
+<area shape="rect" id="Node000013" href="$classmufit_1_1main_1_1_multi_fitter.html#ae33a2b1c2a1bf47a1a237cda45ec1fbd" title="write the current predictors to SDF simulation dataframe" alt="" coords="369,309,447,336"/>
+<area shape="poly" id="edge13_Node000004_Node000013" title=" " alt="" coords="290,183,319,236,341,267,366,295,369,298,366,302,362,299,337,270,315,239,285,186"/>
+<area shape="rect" id="Node000006" href="$classmufit_1_1main_1_1_multi_fitter.html#afabe0eeecd44eacaf3ff9a91865884ef" title="Retrieves all current variables, constants and predictors." alt="" coords="509,5,595,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="447,16,493,16,493,21,447,21"/>
+<area shape="poly" id="edge11_Node000010_Node000009" title=" " alt="" coords="447,205,497,187,499,192,449,210"/>
+<area shape="rect" id="Node000011" href="$classmufit_1_1main_1_1_multi_fitter.html#a74056280c28f6e8fa7eb29dac1c7889f" title="Load a dictionary of predictors." alt="" coords="500,208,604,235"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="450,219,484,219,484,224,450,224"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="writeSlice" name="writeSlice">
+<area shape="rect" id="Node000001" title="write the current predictors to SDF simulation dataframe" alt="" coords="401,81,480,108"/>
+<area shape="rect" id="Node000002" href="$classmufit_1_1main_1_1_multi_fitter.html#a47d4d4f9470094b25c3e9b306d5fce27" title="Apply the model (Calculate) to the loaded data, does not strictly need a DF." alt="" coords="281,81,353,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="386,97,354,97,354,92,386,92"/>
+<area shape="rect" id="Node000003" href="$classmufit_1_1main_1_1_multi_fitter.html#ad69c6ba21edffaf797661ae8d49bcc6a" title="Do optimization run for scipy solver." alt="" coords="158,56,233,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="265,87,233,80,234,75,266,81"/>
+<area shape="rect" id="Node000004" href="$classmufit_1_1main_1_1_multi_fitter.html#aeea45739f34d6fd05d3589779aa48198" title=" " alt="" coords="12,5,103,32"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="284,74,259,59,232,47,165,30,103,23,104,18,166,25,234,41,262,54,287,70"/>
+<area shape="rect" id="Node000006" href="$classmufit_1_1main_1_1_multi_fitter.html#a56d5756c3daa13635c818f93766d4273" title="Evolution inspired parameter search algorithm." alt="" coords="163,107,228,133"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="267,108,229,116,228,111,266,103"/>
+<area shape="rect" id="Node000007" href="$classmufit_1_1main_1_1_multi_fitter.html#a0a76c49d8703e3a61cfaccc6b9a75c6c" title="Subsequent simulating and evolution based algorithm to test results." alt="" coords="19,132,96,159"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="289,120,263,136,234,148,198,155,161,157,97,154,97,148,161,152,197,150,232,143,261,131,286,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="142,53,95,35,97,30,144,48"/>
+<area shape="rect" id="Node000005" href="$classmufit_1_1main_1_1_multi_fitter.html#ad0c7c03a772799c36476d8f0276e2bf8" title="Do parameter optimization with scipy.optimize." alt="" coords="5,56,110,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="142,72,110,72,110,67,142,67"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="148,131,97,141,96,136,147,126"/>
+</map>

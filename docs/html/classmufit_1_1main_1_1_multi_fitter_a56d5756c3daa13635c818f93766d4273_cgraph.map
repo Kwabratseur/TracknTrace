@@ -1,0 +1,26 @@
+<map id="Evolver" name="Evolver">
+<area shape="rect" id="Node000001" title="Evolution inspired parameter search algorithm." alt="" coords="5,132,71,159"/>
+<area shape="rect" id="Node000002" href="$classmufit_1_1main_1_1_multi_fitter.html#a646dc98802fc70130102410a34acfecf" title="Parameter transformer/gradient descent algorithm." alt="" coords="125,107,185,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,136,109,127,110,132,72,141"/>
+<area shape="rect" id="Node000003" href="$classmufit_1_1main_1_1_multi_fitter.html#a47d4d4f9470094b25c3e9b306d5fce27" title="Apply the model (Calculate) to the loaded data, does not strictly need a DF." alt="" coords="119,157,191,184"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="72,150,104,157,103,162,71,155"/>
+<area shape="rect" id="Node000004" href="$classmufit_1_1main_1_1_multi_fitter.html#ad9a1fb640ed33354bc50776b061e237c" title="Retrieves all current variables, constants and predictors, filles them into lambdafunctions and puts ..." alt="" coords="244,5,321,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="177,155,189,144,205,117,212,93,219,69,237,42,239,40,243,44,241,46,224,71,217,95,210,120,193,147,180,159"/>
+<area shape="rect" id="Node000006" href="$classmufit_1_1main_1_1_multi_fitter.html#ab3053982897eddb5a92ebf129115a3b3" title="return a dictionary slice from the loaded dataframe" alt="" coords="247,56,318,83"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="175,155,189,143,213,118,237,93,241,90,245,94,241,97,217,121,193,147,178,159"/>
+<area shape="rect" id="Node000007" href="$classmufit_1_1main_1_1_multi_fitter.html#afce0fd16d20d4a39250136ab10fa45d2" title="convert dictionary to array" alt="" coords="239,107,326,133"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="190,154,232,137,234,142,192,159"/>
+<area shape="rect" id="Node000008" href="$classmufit_1_1main_1_1_multi_fitter.html#ab888df0346bb59a4de071cdc656c7bf3" title="Load a dictionary of variables and add in dt." alt="" coords="377,157,476,184"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="191,168,362,168,362,173,191,173"/>
+<area shape="rect" id="Node000009" href="$classmufit_1_1main_1_1_multi_fitter.html#acfdf32734331854123227f27f388f96e" title="reset the index to 0 and reset predictors and variables from SDF[0] IF SDF is defined" alt="" coords="242,208,324,235"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="192,182,234,199,232,204,190,187"/>
+<area shape="rect" id="Node000011" href="$classmufit_1_1main_1_1_multi_fitter.html#ae1d6e3030b2700893bcd69432340c2d9" title="Step through the index and reset it once datalength is exceeded." alt="" coords="244,259,322,285"/>
+<area shape="poly" id="edge11_Node000003_Node000011" title=" " alt="" coords="171,183,202,212,241,245,245,248,242,252,237,249,199,216,168,186"/>
+<area shape="rect" id="Node000012" href="$classmufit_1_1main_1_1_multi_fitter.html#ae33a2b1c2a1bf47a1a237cda45ec1fbd" title="write the current predictors to SDF simulation dataframe" alt="" coords="244,309,322,336"/>
+<area shape="poly" id="edge12_Node000003_Node000012" title=" " alt="" coords="165,183,194,236,216,267,241,295,244,298,240,302,237,299,211,270,189,239,160,186"/>
+<area shape="rect" id="Node000005" href="$classmufit_1_1main_1_1_multi_fitter.html#afabe0eeecd44eacaf3ff9a91865884ef" title="Retrieves all current variables, constants and predictors." alt="" coords="383,5,470,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="321,16,368,16,368,21,321,21"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="322,205,371,187,373,192,324,210"/>
+<area shape="rect" id="Node000010" href="$classmufit_1_1main_1_1_multi_fitter.html#a74056280c28f6e8fa7eb29dac1c7889f" title="Load a dictionary of predictors." alt="" coords="374,208,479,235"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="324,219,359,219,359,224,324,224"/>
+</map>

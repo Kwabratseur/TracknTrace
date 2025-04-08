@@ -1,0 +1,9 @@
+<map id="Fiddler" name="Fiddler">
+<area shape="rect" id="Node000001" title="Parameter transformer/gradient descent algorithm." alt="" coords="270,31,330,57"/>
+<area shape="rect" id="Node000002" href="$classmufit_1_1main_1_1_multi_fitter.html#aeea45739f34d6fd05d3589779aa48198" title=" " alt="" coords="131,5,222,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="254,37,222,31,223,25,255,32"/>
+<area shape="rect" id="Node000003" href="$classmufit_1_1main_1_1_multi_fitter.html#a56d5756c3daa13635c818f93766d4273" title="Evolution inspired parameter search algorithm." alt="" coords="144,56,209,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="255,56,210,65,209,60,254,51"/>
+<area shape="rect" id="Node000004" href="$classmufit_1_1main_1_1_multi_fitter.html#a0a76c49d8703e3a61cfaccc6b9a75c6c" title="Subsequent simulating and evolution based algorithm to test results." alt="" coords="5,56,83,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="129,72,83,72,83,67,129,67"/>
+</map>

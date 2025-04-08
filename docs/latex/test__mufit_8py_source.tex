@@ -1,0 +1,95 @@
+\doxysection{test\+\_\+mufit.\+py}
+\hypertarget{test__mufit_8py_source}{}\label{test__mufit_8py_source}\index{TracknTrace/TracknTrace/fimufit/tests/test\_mufit.py@{TracknTrace/TracknTrace/fimufit/tests/test\_mufit.py}}
+\mbox{\hyperlink{test__mufit_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00001}\mbox{\hyperlink{namespacetest__mufit}{00001}}\ \textcolor{keyword}{from}\ mufit\ \textcolor{keyword}{import}\ *}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00002}00002\ \textcolor{keyword}{import}\ pytest}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00004}\mbox{\hyperlink{namespacetest__mufit_af33a2f06b2d03d17a7f07c5784512a6c}{00004}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacetest__mufit_af33a2f06b2d03d17a7f07c5784512a6c}{setupLinear}}(a=33.298490,b=-\/7.5483425):}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00005}00005\ \ \ \ \ x\ =\ [i\ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ range(100)]}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00006}00006\ \ \ \ \ y\ =\ [a*i+b\ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ x]}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00007}00007\ \ \ \ \ df\ =\ pd.DataFrame([y,x]).T}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00008}00008\ \ \ \ \ df.columns=[\textcolor{stringliteral}{"{}y"{}},\textcolor{stringliteral}{"{}x"{}}]}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{return}\ df}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00011}00011\ \textcolor{preprocessor}{@pytest.fixture}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00012}\mbox{\hyperlink{namespacetest__mufit_abeafab449d0910742d9b61b885c3cda8}{00012}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacetest__mufit_abeafab449d0910742d9b61b885c3cda8}{TI}}():}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00013}00013\ \ \ \ \ lambdaMap\ =\ \{\textcolor{stringliteral}{"{}y"{}}:\ [\textcolor{stringliteral}{"{}x"{}},\ \textcolor{stringliteral}{"{}\$a"{}},\ \textcolor{stringliteral}{"{}\$b"{}}]\}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00014}00014\ \ \ \ \ lambdaDict\ =\ \{\textcolor{stringliteral}{"{}y"{}}:\ \textcolor{keyword}{lambda}\ x,\ a,\ b:\ (x*a)+b\}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00015}00015\ \ \ \ \ a\ =\ \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter}{MultiFitter}}(lambdaMap\ =\ lambdaMap,\ lambdaDict\ =\ lambdaDict)}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00016}00016\ \ \ \ \ a.dt\ =\ 1}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{return}\ a}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00019}00019\ \textcolor{preprocessor}{@pytest.fixture}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00020}\mbox{\hyperlink{namespacetest__mufit_ae8062d142ce596bb670cc74f7aceac54}{00020}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacetest__mufit_ae8062d142ce596bb670cc74f7aceac54}{TI2}}():}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00021}00021\ \ \ \ \ a\ =\ \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter}{MultiFitter}}(verbose=1)}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00022}00022\ \ \ \ \ a.loadData(SimThis,initPredictors=\textcolor{keyword}{True})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{return}\ a}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00024}\mbox{\hyperlink{namespacetest__mufit_ab52c96bea30646abf8170f333bbd42b9}{00024}}\ df\ =\ \mbox{\hyperlink{namespacetest__mufit_af33a2f06b2d03d17a7f07c5784512a6c}{setupLinear}}()}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00025}00025\ \textcolor{comment}{\#TI\ =\ setupTestInstance(dflin)}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00028}\mbox{\hyperlink{namespacetest__mufit_a18161bdf7940b003d09c970ffb498cb6}{00028}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacetest__mufit_a18161bdf7940b003d09c970ffb498cb6}{test\_Loading}}(TI):}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00029}00029\ \ \ \ \ TI.loadData(df,initPredictors=\textcolor{keyword}{True})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{assert}\ TI.DF.equals(df),\ \textcolor{stringliteral}{"{}FAIL\ input\ df\ does\ not\ matches\ output"{}}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00031}00031\ \ \ \ \ print(\textcolor{stringliteral}{"{}PASS\ data\ loading"{}})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ TI.predictors:}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{assert}\ TI.predictors[i]\ \textcolor{keywordflow}{is}\ \textcolor{keywordflow}{not}\ \textcolor{keywordtype}{None},\ \textcolor{stringliteral}{"{}FAIL\ predictor\ \{\}\ not\ properly\ set\ from\ DF!"{}}.format(i)}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00034}00034\ \ \ \ \ print(\textcolor{stringliteral}{"{}PASS\ predictor\ initialization"{}})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00035}00035\ \ \ \ \ constants\ =\ \{\textcolor{stringliteral}{"{}a"{}}:33.3,\textcolor{stringliteral}{"{}b"{}}:-\/7.54\}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00036}00036\ \ \ \ \ TI.loadConstants(constDict\ =\ constants)}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00037}00037\ \ \ \ \ constants\ =\ TI.constants}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00038}00038\ \ \ \ \ \textcolor{keyword}{assert}\ TI.constants[\textcolor{stringliteral}{"{}a"{}}]\ ==\ constants[\textcolor{stringliteral}{"{}a"{}}],\ \textcolor{stringliteral}{"{}FAIL\ Constant\ a\ not\ loaded\ properly"{}}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00039}00039\ \ \ \ \ \textcolor{keyword}{assert}\ TI.constants[\textcolor{stringliteral}{"{}b"{}}]\ ==\ constants[\textcolor{stringliteral}{"{}b"{}}],\ \textcolor{stringliteral}{"{}FAIL\ Constant\ b\ not\ loaded\ properly"{}}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00040}00040\ \ \ \ \ print(\textcolor{stringliteral}{"{}PASS\ constant\ loading"{}})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00043}\mbox{\hyperlink{namespacetest__mufit_a3f36d18c435b6cbc3e4c1ec7f3c107ed}{00043}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacetest__mufit_a3f36d18c435b6cbc3e4c1ec7f3c107ed}{test\_Evolving}}(TI):}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00044}00044\ \ \ \ \ TI.loadData(df,initPredictors=\textcolor{keyword}{True})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00045}00045\ \ \ \ \ init\ =\ TI.Simulate(1,err=\textcolor{stringliteral}{"{}y"{}})\ \textcolor{comment}{\#\ serves\ to\ initialize\ error\ frame,\ 1\ iteration}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00046}00046\ \ \ \ \ \textcolor{keyword}{assert}\ len(init)\ ==\ 1,\ \textcolor{stringliteral}{"{}FAIL\ simulate\ makes\ more\ frames\ then\ expected!\ \{\}"{}}.format(len(init))}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00047}00047\ \ \ \ \ print(\textcolor{stringliteral}{"{}PASS\ simulate\ initialization"{}})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00048}00048\ \ \ \ \ constants\ =\ TI.constants}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00049}00049\ \ \ \ \ output\ =\ TI.Evolver(\textcolor{stringliteral}{"{}y"{}},N=100)\ \textcolor{comment}{\#\ for\ each\ \ parameter\ 100\ iterations;\ so\ 200\ +\ 2\ init\ +\ what\ came\ before\ expected\ error\ length}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{assert}\ len(output)\ ==\ 100*2\ +\ 1,\ \textcolor{stringliteral}{"{}FAIL!\ length\ of\ evolver\ does\ not\ equal\ intention!\ \{\}"{}}.format(len(output))}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00051}00051\ \ \ \ \ print(\textcolor{stringliteral}{"{}PASS\ evolver\ output\ length"{}})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ constants:}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{assert}\ TI.solveList[i]\ !=\ constants[i],\ \textcolor{stringliteral}{"{}FAIL\ constant\ \{\}\ did\ not\ change\ after\ 100\ evolution\ steps"{}}.format(i)}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00054}00054\ \ \ \ \ print(\textcolor{stringliteral}{"{}PASS\ evolver\ changing"{}})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00056}\mbox{\hyperlink{namespacetest__mufit_a14fa5bb4b3d52e51f195f2e6929be3b7}{00056}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacetest__mufit_a14fa5bb4b3d52e51f195f2e6929be3b7}{test\_SearchMap}}(TI):}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00057}00057\ \ \ \ \ TI.loadData(df,initPredictors=\textcolor{keyword}{True})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00058}00058\ \ \ \ \ \textcolor{comment}{\#TI.error\ =\ []}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00059}00059\ \ \ \ \ SMap\ =\ \{\textcolor{stringliteral}{"{}a"{}}:[1.0,100.0],\textcolor{stringliteral}{"{}b"{}}:[-\/10.0,10.0]\}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00060}00060\ \ \ \ \ constants\ =\ TI.constants}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00061}00061\ \ \ \ \ errors\ =\ TI.parameterSearchMap(constraints=SMap,err=\textcolor{stringliteral}{"{}y"{}},ims=4,steps=25)}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00062}00062\ \ \ \ \ \textcolor{keyword}{assert}\ len(errors)\ ==\ 25*4*4*2,\ \textcolor{stringliteral}{"{}FAIL\ not\ expected\ searchmap\ space\ \{\}"{}}.format(len(errors))}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00063}00063\ \ \ \ \ print(\textcolor{stringliteral}{"{}PASS\ parameterSearchMap\ looks\ in\ correct\ solution\ space"{}})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00064}00064\ \ \ \ \ \textcolor{keyword}{assert}\ hasattr(TI,\textcolor{stringliteral}{"{}pSearchMap"{}}),\ \textcolor{stringliteral}{"{}FAIL\ pSearchMap\ not\ internally\ defined!"{}}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ TI.pSearchMap:}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00066}00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{assert}\ len(TI.pSearchMap)\ ==\ 4*4,\ \textcolor{stringliteral}{"{}FAIL\ amount\ of\ generated\ intermediates\ is\ not\ correct!\{\}"{}}.format(len(TI.pSearchMap))}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00067}00067\ \ \ \ \ print(\textcolor{stringliteral}{"{}PASS\ searchmap\ is\ correctly\ initialized"{}})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00070}\mbox{\hyperlink{namespacetest__mufit_a3be12178c803af6b42c1dc89da10ba80}{00070}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacetest__mufit_a3be12178c803af6b42c1dc89da10ba80}{test\_analyzeErrors}}(TI):}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00071}00071\ \ \ \ \ TI.loadData(df,initPredictors=\textcolor{keyword}{True})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00072}00072\ \ \ \ \ init\ =\ TI.Simulate(1,err=\textcolor{stringliteral}{"{}y"{}})\ \textcolor{comment}{\#\ serves\ to\ initialize\ error\ frame,\ 1\ iteration}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00073}00073\ \ \ \ \ output\ =\ TI.Evolver(\textcolor{stringliteral}{"{}y"{}},N=100)}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00074}00074\ \ \ \ \ errors\ =\ TI.AnalyzeErrors()}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00075}00075\ \ \ \ \ \textcolor{keyword}{assert}\ len(errors)\ ==\ TI.dataLength,\ \textcolor{stringliteral}{"{}FAIL\ AnalysError\ does\ not\ expected\ amount\ of\ errors\ \{\}"{}}.format(len(errors))}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00076}00076\ \ \ \ \ print(\textcolor{stringliteral}{"{}PASS\ datalength\ analyzeErrors"{}})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00077}00077\ \ \ \ \ \textcolor{keyword}{assert}\ errors[0][1]\ <\ errors\ [-\/1][1],\ \textcolor{stringliteral}{"{}FAIL\ Errors\ were\ not\ sorted\ out\ properly"{}}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00078}00078\ \ \ \ \ print(\textcolor{stringliteral}{"{}PASS\ sorting\ analyzeErrors"{}})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ errors:}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00080}00080\ \ \ \ \ \ \ \ \ print(i)}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00082}\mbox{\hyperlink{namespacetest__mufit_a316f20d1331f131de0ab6b70dfafcd97}{00082}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacetest__mufit_a316f20d1331f131de0ab6b70dfafcd97}{test\_AnalyzeBulkEvolver}}(TI2):}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00083}00083\ \ \ \ \ SMap\ =\ \{\textcolor{stringliteral}{"{}U"{}}:[0.01,50.0],\textcolor{stringliteral}{"{}C"{}}:[10,2000]\}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00084}00084\ \ \ \ \ \textcolor{comment}{\#error\ =\ TI2.BulkError([25.0,1200],"{}Tobj"{})}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00085}00085\ \ \ \ \ \textcolor{comment}{\#assert\ type(error)\ ==\ type(100.0),\ "{}FAIL,\ BulkError\ does\ not\ return\ a\ float!:\{\}"{}.format(error)}}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00086}00086\ \ \ \ \ errors\ =\ TI2.BulkEvolver(\textcolor{stringliteral}{"{}Tobj"{}},constraints=SMap)}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00087}00087\ \ \ \ \ \textcolor{keyword}{assert}\ errors[0][0]\ <\ errors[-\/1][0],\textcolor{stringliteral}{"{}FAIL,\ BulkEvolver\ did\ not\ optimize\ errors!:\{\}"{}}.format(errors)}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00088}00088\ \ \ \ \ error\ =\ TI2.BulkError([25.0,1200],\textcolor{stringliteral}{"{}Tobj"{}})}
+\DoxyCodeLine{\Hypertarget{test__mufit_8py_source_l00089}00089\ \ \ \ \ \textcolor{keyword}{assert}\ type(error)\ ==\ type(100.0),\ \textcolor{stringliteral}{"{}FAIL,\ BulkError\ does\ not\ return\ a\ float!:\{\}"{}}.form}
+
+\end{DoxyCode}

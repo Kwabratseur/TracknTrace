@@ -1,0 +1,21 @@
+<map id="loadVariables" name="loadVariables">
+<area shape="rect" id="Node000001" title="Load a dictionary of variables and add in dt." alt="" coords="532,31,630,57"/>
+<area shape="rect" id="Node000002" href="$classmufit_1_1main_1_1_multi_fitter.html#acfdf32734331854123227f27f388f96e" title="reset the index to 0 and reset predictors and variables from SDF[0] IF SDF is defined" alt="" coords="401,5,484,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="516,35,484,29,485,24,517,30"/>
+<area shape="rect" id="Node000006" href="$classmufit_1_1main_1_1_multi_fitter.html#a47d4d4f9470094b25c3e9b306d5fce27" title="Apply the model (Calculate) to the loaded data, does not strictly need a DF." alt="" coords="281,56,353,83"/>
+<area shape="poly" id="edge11_Node000001_Node000006" title=" " alt="" coords="516,53,354,69,354,63,516,48"/>
+<area shape="rect" id="Node000003" href="$classmufit_1_1main_1_1_multi_fitter.html#ad69c6ba21edffaf797661ae8d49bcc6a" title="Do optimization run for scipy solver." alt="" coords="158,5,233,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="386,21,233,21,233,16,386,16"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="395,41,353,58,351,53,393,36"/>
+<area shape="rect" id="Node000004" href="$classmufit_1_1main_1_1_multi_fitter.html#aeea45739f34d6fd05d3589779aa48198" title=" " alt="" coords="12,56,103,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="144,40,97,58,95,53,142,35"/>
+<area shape="rect" id="Node000005" href="$classmufit_1_1main_1_1_multi_fitter.html#ad0c7c03a772799c36476d8f0276e2bf8" title="Do parameter optimization with scipy.optimize." alt="" coords="5,5,110,32"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="142,21,110,21,110,16,142,16"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="268,52,228,35,230,30,270,47"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="266,72,104,72,104,67,266,67"/>
+<area shape="rect" id="Node000007" href="$classmufit_1_1main_1_1_multi_fitter.html#a56d5756c3daa13635c818f93766d4273" title="Evolution inspired parameter search algorithm." alt="" coords="163,107,228,133"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="270,92,229,109,227,104,268,87"/>
+<area shape="rect" id="Node000008" href="$classmufit_1_1main_1_1_multi_fitter.html#a0a76c49d8703e3a61cfaccc6b9a75c6c" title="Subsequent simulating and evolution based algorithm to test results." alt="" coords="19,132,96,159"/>
+<area shape="poly" id="edge10_Node000006_Node000008" title=" " alt="" coords="298,97,270,125,234,148,199,157,162,160,96,156,97,150,162,155,198,152,232,143,267,121,295,93"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="148,131,97,141,96,136,147,126"/>
+</map>

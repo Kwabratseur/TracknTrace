@@ -1,0 +1,47 @@
+.TH "TracknTrace.analysis" 3 "Smart Meter Interpreter Documentation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TracknTrace.analysis
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDegreeDays\fP (data, Log)"
+.br
+.RI "Calculate Degreedays based on outside temperature and livingroom temperature\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "DegreeDays ( data,  Log)"
+
+.PP
+Calculate Degreedays based on outside temperature and livingroom temperature\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Standardized input (pandas)dataframe\&. It's content can be derived from <input_data>\&.metadata 
+.br
+\fILog\fP This Log will be compiled to \&.html, you can add results to this\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+data A new dataframe with the applied transformations 
+
+.PP
+Log The log with new entries 
+
+.PP
+columns New columns added to the dataframe 
+.RE
+.PP
+
+.PP
+Definition at line \fB9\fP of file \fBanalysis\&.py\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Smart Meter Interpreter Documentation from the source code\&.

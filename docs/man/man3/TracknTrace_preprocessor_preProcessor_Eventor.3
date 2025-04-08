@@ -1,0 +1,310 @@
+.TH "Eventor" 3 "Smart Meter Interpreter Documentation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Eventor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__init__\fP (self, \fBdata\fP, \fBmetadata\fP=None, \fBVERBOSE\fP=0)"
+.br
+.RI "The \fBEventor\fP base class initializer\&. "
+.ti -1c
+.RI "\fBEventCategorizer\fP (self, categories)"
+.br
+.RI "Summarizes all detected events to a limited group of categories\&. "
+.ti -1c
+.RI "\fBEventIndicer\fP (self, threshold=0\&.5, trend='normevents')"
+.br
+.RI "Detect events for all columns in self\&.data, runs runningAverages and slidingWindow\&. "
+.ti -1c
+.RI "\fBGenericEvents\fP (self, \fBshortWindow\fP=8, \fBlongWindow\fP=48, \fBsd\fP=2, \fBcolumns\fP=None)"
+.br
+.RI "Detect events for all columns in self\&.data, runs runningAverages and slidingWindow\&. "
+.ti -1c
+.RI "\fBResample\fP (self, NewDelta='30m')"
+.br
+.RI "Resample the loaded data\&. "
+.ti -1c
+.RI "\fBrunningAverages\fP (self, trend, \fBlongWindow\fP=42, \fBshortWindow\fP=6, \fBsd\fP=2)"
+.br
+.RI "Load a dictionary of variables and add in dt\&. "
+.ti -1c
+.RI "\fBslidingWindow\fP (self, trend, size=6, \fBsd\fP=2)"
+.br
+.RI "Load a dictionary of variables and add in dt\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCatData\fP = pd\&.DataFrame(\fBcolumns\fP = categories[0], \fBindex\fP = self\&.data\&.index)"
+.br
+.RI "Categorial filter applied to detected events\&. "
+.ti -1c
+.RI "\fBcolumns\fP = list(data\&.columns)"
+.br
+.RI "list of columns in data "
+.ti -1c
+.RI "\fBdata\fP = data\&.copy()"
+.br
+.RI "input data loaded at initialization "
+.ti -1c
+.RI "\fBdt\fP = self\&.statistics['dt']['mean']"
+.br
+.RI "timestep in dataset, column must be named dt "
+.ti -1c
+.RI "list \fBeventcolumns\fP = [x for x in self\&.columns if 'event' in x]"
+.br
+.RI "list of columns describing detected events "
+.ti -1c
+.RI "\fBmetadata\fP = metadata"
+.br
+.RI "metadata of data\&. "
+.ti -1c
+.RI "\fBstatistics\fP = data\&.describe()"
+.br
+.RI "stores statistical description of input data "
+.ti -1c
+.RI "\fBVERBOSE\fP = VERBOSE"
+.br
+.RI "internal verbosity switch, for testing\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Provides Generic math and statistic based event detection methods\&.
+.fi
+.PP
+ 
+.PP
+Definition at line \fB107\fP of file \fBpreProcessor\&.py\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__init__ ( self,  data,  metadata = \fRNone\fP,  VERBOSE = \fR0\fP)"
+
+.PP
+The \fBEventor\fP base class initializer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata\fP Data to fingerprint on events 
+.br
+\fImetadata\fP Metadata describing the data, is not required 
+.br
+\fIVERBOSE\fP verbose integer generates more output for debugging
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An instance of the eventor class initialized\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB109\fP of file \fBpreProcessor\&.py\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "EventCategorizer ( self,  categories)"
+
+.PP
+Summarizes all detected events to a limited group of categories\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcategories\fP a list of name:category to translate any column to a new category
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A new dataframe with events linked to categories 
+.RE
+.PP
+
+.PP
+Definition at line \fB220\fP of file \fBpreProcessor\&.py\fP\&.
+.SS "EventIndicer ( self,  threshold = \fR0\&.5\fP,  trend = \fR'normevents'\fP)"
+
+.PP
+Detect events for all columns in self\&.data, runs runningAverages and slidingWindow\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIthreshold\fP threshold value of the sum of detections on any moment, if bigger then this value it is counted as an event 
+.br
+\fItrend\fP the suffix or prefix that is filtered out and summed for each index
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A new event based on existing events 
+.RE
+.PP
+
+.PP
+Definition at line \fB199\fP of file \fBpreProcessor\&.py\fP\&.
+.PP
+References \fBdata\fP\&.
+.SS "GenericEvents ( self,  shortWindow = \fR8\fP,  longWindow = \fR48\fP,  sd = \fR2\fP,  columns = \fRNone\fP)"
+
+.PP
+Detect events for all columns in self\&.data, runs runningAverages and slidingWindow\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlongWindow\fP Length of the long window which is the base for comparison 
+.br
+\fIshortWindow\fP Length of the short window, if this sd is x times higher it is detected as an event 
+.br
+\fIsd\fP standard deviation exceedance which is considered an event 
+.br
+\fIcolumns\fP Which dwstateColumns from the data to check for events
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A new dataframe with ones where events are detected 
+.RE
+.PP
+
+.PP
+Definition at line \fB175\fP of file \fBpreProcessor\&.py\fP\&.
+.PP
+References \fBMultiFitter\&.columns\fP, \fBcolumns\fP, \fBdata\fP, \fBrunningAverages()\fP, and \fBslidingWindow()\fP\&.
+.SS "Resample ( self,  NewDelta = \fR'30m'\fP)"
+
+.PP
+Resample the loaded data\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fINewDelta\fP string which indicates to what interval to resample the data towards\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB136\fP of file \fBpreProcessor\&.py\fP\&.
+.PP
+References \fBdata\fP, and \fBstatistics\fP\&.
+.SS "runningAverages ( self,  trend,  longWindow = \fR42\fP,  shortWindow = \fR6\fP,  sd = \fR2\fP)"
+
+.PP
+Load a dictionary of variables and add in dt\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrend\fP Which column from the data to check for events 
+.br
+\fIlongWindow\fP Length of the long window which is the base for comparison 
+.br
+\fIshortWindow\fP Length of the short window, if this sd is x times higher 
+.br
+\fIsd\fP standard deviation exceedance which is considered an event
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A new dataframe with ones where events are detected 
+.RE
+.PP
+
+.PP
+Definition at line \fB155\fP of file \fBpreProcessor\&.py\fP\&.
+.PP
+References \fBdata\fP, and \fBstatistics\fP\&.
+.PP
+Referenced by \fBGenericEvents()\fP\&.
+.SS "slidingWindow ( self,  trend,  size = \fR6\fP,  sd = \fR2\fP)"
+
+.PP
+Load a dictionary of variables and add in dt\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItrend\fP Which column from the data to check for events 
+.br
+\fIsize\fP Size of the window over which to calculate the standard deviation 
+.br
+\fIsd\fP standard deviation exceedance which is considered an event
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A new dataframe with ones where events are detected 
+.RE
+.PP
+
+.PP
+Definition at line \fB144\fP of file \fBpreProcessor\&.py\fP\&.
+.PP
+References \fBdata\fP, and \fBstatistics\fP\&.
+.PP
+Referenced by \fBGenericEvents()\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "CatData = pd\&.DataFrame(\fBcolumns\fP = categories[0], \fBindex\fP = self\&.data\&.index)"
+
+.PP
+Categorial filter applied to detected events\&. 
+.PP
+Definition at line \fB228\fP of file \fBpreProcessor\&.py\fP\&.
+.SS "columns = list(data\&.columns)"
+
+.PP
+list of columns in data 
+.PP
+Definition at line \fB127\fP of file \fBpreProcessor\&.py\fP\&.
+.PP
+Referenced by \fBGenericEvents()\fP\&.
+.SS "data = data\&.copy()"
+
+.PP
+input data loaded at initialization 
+.PP
+Definition at line \fB121\fP of file \fBpreProcessor\&.py\fP\&.
+.PP
+Referenced by \fBEventIndicer()\fP, \fBGenericEvents()\fP, \fBResample()\fP, \fBrunningAverages()\fP, and \fBslidingWindow()\fP\&.
+.SS "dt = self\&.statistics['dt']['mean']"
+
+.PP
+timestep in dataset, column must be named dt 
+.PP
+Definition at line \fB125\fP of file \fBpreProcessor\&.py\fP\&.
+.SS "list eventcolumns = [x for x in self\&.columns if 'event' in x]"
+
+.PP
+list of columns describing detected events 
+.PP
+Definition at line \fB193\fP of file \fBpreProcessor\&.py\fP\&.
+.SS "metadata = metadata"
+
+.PP
+metadata of data\&. 
+.PP
+Definition at line \fB130\fP of file \fBpreProcessor\&.py\fP\&.
+.SS "statistics = data\&.describe()"
+
+.PP
+stores statistical description of input data 
+.PP
+Definition at line \fB123\fP of file \fBpreProcessor\&.py\fP\&.
+.PP
+Referenced by \fBResample()\fP, \fBrunningAverages()\fP, and \fBslidingWindow()\fP\&.
+.SS "VERBOSE = VERBOSE"
+
+.PP
+internal verbosity switch, for testing\&. 
+.PP
+Definition at line \fB119\fP of file \fBpreProcessor\&.py\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Smart Meter Interpreter Documentation from the source code\&.

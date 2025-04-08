@@ -1,0 +1,87 @@
+\doxysection{bulkglassfit.\+py}
+\hypertarget{bulkglassfit_8py_source}{}\label{bulkglassfit_8py_source}\index{TracknTrace/TracknTrace/fimufit/mufit/bulkglassfit.py@{TracknTrace/TracknTrace/fimufit/mufit/bulkglassfit.py}}
+\mbox{\hyperlink{bulkglassfit_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00001}\mbox{\hyperlink{namespacemufit_1_1bulkglassfit}{00001}}\ \textcolor{keyword}{from}\ mufit\ \textcolor{keyword}{import}\ *}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00003}\mbox{\hyperlink{namespacemufit_1_1bulkglassfit_a51af30a60f9f02777c6396b8247e356f}{00003}}\ \textcolor{keyword}{def\ }main():}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00004}00004\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00014}00014\ \textcolor{comment}{\#\ \ \ \ \ \#\#\ if/else\ statement\ in\ Qtransmission.}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00015}00015\ \textcolor{comment}{\#\ \ \ \ \ lambdaDict\ =\ \{"{}Tavg"{}:\ lambda\ Tview,\ Tenv:\ (Tview+Tenv)/2,}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00016}00016\ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Qtr"{}:\ lambda\ Tobj,\ Tavg,\ Pe,\ Uh,\ Uc:\ (Tobj-\/Tavg)*0.001/\ Uh\ if\ Pe\ >\ 0\ else\ (Tobj-\/Tavg)*0.001/\ Uc,}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00017}00017\ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Qrad"{}:\ lambda\ Tobj,\ Tview,\ Uhr:\ (((Tobj+273.15)**4)-\/((Tview+273.15)**4))*0.001*(5.670374419*10**-\/8)/Uhr,}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00018}00018\ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Qsol"{}:\ lambda\ Psol:\ Psol*0.001,}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00019}00019\ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Qel"{}:\ lambda\ Pe:\ Pe*0.001,}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00020}00020\ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}dTobj"{}:\ lambda\ Qtr,\ Qsol,\ Qel,\ Qrad,\ dt,\ C:\ (-\/Qtr+Qsol+Qel-\/Qrad)*dt/C,}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00021}00021\ \textcolor{comment}{\#\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}Tobj"{}:\ lambda\ Tobj,\ dTobj:\ Tobj\ +\ dTobj\}}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00022}00022\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00023}00023\ \ \ \ \ lambdaMap\ =\ \{\textcolor{stringliteral}{"{}Tavg"{}}:\ [\textcolor{stringliteral}{"{}Tview"{}},\ \textcolor{stringliteral}{"{}Tenv"{}}],}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qtr"{}}:\ [\textcolor{stringliteral}{"{}Tobj"{}},\textcolor{stringliteral}{"{}Tavg"{}},\textcolor{stringliteral}{"{}Pe"{}},\textcolor{stringliteral}{"{}\$Uh"{}},\textcolor{stringliteral}{"{}\$Uc"{}}],}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qrad"{}}:\ [\textcolor{stringliteral}{"{}Tobj"{}},\textcolor{stringliteral}{"{}Tview"{}},\textcolor{stringliteral}{"{}\$Uhr"{}},\textcolor{stringliteral}{"{}Pe"{}},\textcolor{stringliteral}{"{}\$Ucr"{}}],}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qsol"{}}:[\textcolor{stringliteral}{"{}Psol"{}},\textcolor{stringliteral}{"{}\$Csol"{}}],}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qel"{}}:[\textcolor{stringliteral}{"{}Pe"{}}],}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}dTobj"{}}:[\textcolor{stringliteral}{"{}Qtr"{}},\textcolor{stringliteral}{"{}Qsol"{}},\textcolor{stringliteral}{"{}Qel"{}},\textcolor{stringliteral}{"{}Qrad"{}},\textcolor{stringliteral}{"{}dt"{}},\textcolor{stringliteral}{"{}\$C"{}}],}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Tobj"{}}:[\textcolor{stringliteral}{"{}Tobj"{}},\textcolor{stringliteral}{"{}dTobj"{}}]\}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00030}00030\ \ \ \ \ print(\textcolor{stringliteral}{"{}Parameter\ map:\{\}"{}}.format(lambdaMap))}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00032}00032\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00033}00033\ \ \ \ \ lambdaDict\ =\ \{\textcolor{stringliteral}{"{}Tavg"{}}:\ \textcolor{keyword}{lambda}\ Tview,\ Tenv:\ (Tview+Tenv)/2,}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qtr"{}}:\ \textcolor{keyword}{lambda}\ Tobj,\ Tavg,\ Pe,\ Uh,\ Uc:\ (Tobj-\/Tavg)*0.001*\ Uh\ \textcolor{keywordflow}{if}\ Pe\ >\ 0\ \textcolor{keywordflow}{else}\ (Tobj-\/Tavg)*0.001*\ Uc,}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qrad"{}}:\ \textcolor{keyword}{lambda}\ Tobj,\ Tview,\ Uhr,\ Pe,\ Ucr:\ (((Tobj+273.15)**4)-\/((Tview+273.15)**4))*0.001*(5.670374419*10**-\/8)*Uhr\ \textcolor{keywordflow}{if}\ Pe\ >\ 0\ \textcolor{keywordflow}{else}\ (((Tobj+273.15)**4)-\/((Tview+273.15)**4))*0.001*(5.670374419*10**-\/8)*Ucr,}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qsol"{}}:\ \textcolor{keyword}{lambda}\ Psol,Csol:\ Psol*Csol*0.001,}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Qel"{}}:\ \textcolor{keyword}{lambda}\ Pe:\ Pe*0.001,}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}dTobj"{}}:\ \textcolor{keyword}{lambda}\ Qtr,\ Qsol,\ Qel,\ Qrad,\ dt,\ C:\ (-\/Qtr+Qsol+Qel-\/Qrad)*dt/C,}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Tobj"{}}:\ \textcolor{keyword}{lambda}\ Tobj,\ dTobj:\ Tobj\ +\ dTobj\}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00040}00040\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00041}00041\ \ \ \ \ dateparser\ =\ \textcolor{keyword}{lambda}\ x:\ datetime.strptime(x,\ \textcolor{stringliteral}{'\%Y-\/\%m-\/\%d\ \%H:\%M:\%S'})}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00042}00042\ \ \ \ \ droplist\ =\ [\textcolor{stringliteral}{'\ \ \ DD'},\textcolor{stringliteral}{'Samples'},\textcolor{stringliteral}{'Lux\ (Lux)'},\textcolor{stringliteral}{'\ \ \ FH'},\textcolor{stringliteral}{'\ \ \ SQ'},\textcolor{stringliteral}{'\ \ \ RH'},\textcolor{stringliteral}{'\ \ \ \ U'}]\ \textcolor{comment}{\#\ we\ don't\ need\ rain,\ wind,\ wind\ direction,\ humidity,\ sun\ hours\ and\ lux.}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00043}00043\ \ \ \ \ RunData\ =\ pd.read\_csv(\textcolor{stringliteral}{"{}Hoeveler\_All\_118\_519.csv"{}},sep=\textcolor{stringliteral}{"{},"{}},\ index\_col=[0],\ parse\_dates=[0],\ date\_parser=dateparser).drop(droplist,axis=1)\textcolor{comment}{\#,encoding='ANSI')}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00044}00044\ \ \ \ \ RunData.columns\ =\ [\textcolor{stringliteral}{'Pt'},\textcolor{stringliteral}{'Tenv'},\textcolor{stringliteral}{'Tview'},\textcolor{stringliteral}{'Pe'},\textcolor{stringliteral}{'Tobj'},\textcolor{stringliteral}{'T23'},\textcolor{stringliteral}{'Te2'},\textcolor{stringliteral}{'Psol'}]}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00045}00045\ \ \ \ \ Dataset1\ =\ RunData.iloc[58:\ 1337]}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00046}00046\ \ \ \ \ print(\textcolor{stringliteral}{"{}Input\ dataset:"{}})}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00047}00047\ \ \ \ \ Dataset1.head()}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00049}00049\ \ \ \ \ print(\textcolor{stringliteral}{"{}Initializing\ multifitter\ class"{}})}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00050}00050\ \ \ \ \ a\ =\ \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter}{MultiFitter}}(lambdaMap\ =\ lambdaMap,lambdaDict=lambdaDict,\ verbose=2)}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00051}00051\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00052}00052\ \ \ \ \ print(\textcolor{stringliteral}{"{}Load\ input\ data\ and\ initialize\ predictors\ (left\ side\ of\ lambdaMap)"{}})}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00053}00053\ \ \ \ \ a.loadData(Dataset1[:600],initPredictors=\textcolor{keyword}{True})}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00054}00054\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00055}00055\ \ \ \ \ print(\textcolor{stringliteral}{"{}resample\ loaded\ data\ to\ 5\ minute\ interval;\ only\ works\ for\ datetime\ indexed\ datasets!"{}})}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00056}00056\ \ \ \ \ a.resampleData(60*5)}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00057}00057\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00058}00058\ \ \ \ \ print(\textcolor{stringliteral}{"{}Plot\ internal\ dataset"{}})}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00059}00059\ \ \ \ \ a.DF.plot()}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00060}00060\ \ \ \ \ plt.show()}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00061}00061\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00062}00062\ \ \ \ \ print(\textcolor{stringliteral}{"{}Initializing\ initial\ guess\ for\ predictors"{}})}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00063}00063\ \ \ \ \ a.loadConstants(\{\textcolor{stringliteral}{"{}C"{}}:120.0,\textcolor{stringliteral}{"{}Uh"{}}:36.0,\textcolor{stringliteral}{"{}Uc"{}}:1.0,\textcolor{stringliteral}{"{}Uhr"{}}:0.4,\textcolor{stringliteral}{"{}Ucr"{}}:1.0,\textcolor{stringliteral}{"{}Csol"{}}:1.0\})}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00064}00064\ \ \ \ \ print(a.parameters())}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00065}00065\ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00066}00066\ \ \ \ \ print(\textcolor{stringliteral}{"{}The\ output\ format\ in\ error\ plot\ will\ be\ as\ follows:\{\}"{}}.format(a.columns))}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00067}00067\ \ \ \ \ a.dt\ =\ 5*60.0}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00070}00070\ \ \ \ \ print(\textcolor{stringliteral}{"{}Below\ plot\ shows\ a\ simulation/prediction\ effort\ for\ 100\ timesteps\ and\ error\ calculated\ based\ on\ 'Tobj'"{}})}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00071}00071\ \ \ \ \ pd.DataFrame(a.Simulate(100,\textcolor{stringliteral}{"{}Tobj"{}}),\ columns=a.columns).plot()}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00072}00072\ \ \ \ \ plt.show()}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00073}00073\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00074}00074\ \ \ \ \ SMap\ =\ \{\textcolor{stringliteral}{"{}Uh"{}}:(0.001,45.0),\textcolor{stringliteral}{"{}Uc"{}}:(0.0001,45),\textcolor{stringliteral}{"{}Uhr"{}}:(0.0001,10),\textcolor{stringliteral}{"{}C"{}}:[80,1000],\textcolor{stringliteral}{"{}Ucr"{}}:[0.001,25.0],\textcolor{stringliteral}{"{}Csol"{}}:[0.001,25.0]\}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00075}00075\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00076}00076\ \ \ \ \ errs\ =\ a.BulkEvolver(\textcolor{stringliteral}{"{}Tobj"{}},constraints=SMap)}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{for}\ i\ \textcolor{keywordflow}{in}\ errs:}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00078}00078\ \ \ \ \ \ \ \ \ print(i)}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00079}00079\ \ \ \ \ \textcolor{comment}{\#\ print(a.scipyOptimize(err="{}Tobj"{}))}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00080}00080\ \ \ \ \ \textcolor{comment}{\#\ BestConstants\ =\ a.AnalyzeErrors()}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00081}00081\ \ \ \ \ \textcolor{comment}{\#\ pd.DataFrame(BestConstants,\ columns=columns).to\_csv("{}error-\/constants-\/scipy.csv"{})}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00082}00082\ \ \ \ \ \textcolor{comment}{\#\ pd.DataFrame(BestConstants,\ columns=columns).plot()}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00083}00083\ \ \ \ \ \textcolor{comment}{\#\ plt.show()}}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00085}00085\ \ \ \ \ a.plotError(All=\textcolor{keyword}{True})}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00086}00086\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00087}00087\ \ \ \ \ a.SDF.plot()}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00088}00088\ \ \ \ \ plt.show()}
+\DoxyCodeLine{\Hypertarget{bulkglassfit_8py_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{return}\ a}
+
+\end{DoxyCode}

@@ -1,0 +1,89 @@
+.TH "TracknTrace/TracknTrace/categorizer/categorizer.py" 3 "Smart Meter Interpreter Documentation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TracknTrace/TracknTrace/categorizer/categorizer.py
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBTracknTrace\fP"
+.br
+.ti -1c
+.RI "namespace \fBTracknTrace\&.categorizer\fP"
+.br
+.ti -1c
+.RI "namespace \fBTracknTrace\&.categorizer\&.categorizer\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDoAllCategories\fP (categories, data, cats, ScanList=None)"
+.br
+.ti -1c
+.RI "\fBEventCategorizerFcn\fP (categories, data, cats, target)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBargs\fP = parser\&.parse_args()"
+.br
+.ti -1c
+.RI "\fBauto_open\fP"
+.br
+.ti -1c
+.RI "\fBbackend\fP"
+.br
+.ti -1c
+.RI "\fBchained_assignment\fP"
+.br
+.ti -1c
+.RI "\fBconfig\fP = configparser\&.ConfigParser()"
+.br
+.ti -1c
+.RI "\fBdf\fP = \fBDoAllCategories\fP([list(\fBFinalcategories\fP),Finalcategories\&.values\&.tolist()], \fBEventData\fP, \fBFinalcategories\fP, ScanList = \fBScanlist\fP)"
+.br
+.ti -1c
+.RI "\fBdfnorm\fP = \fBdf\fP/df\&.max()"
+.br
+.ti -1c
+.RI "\fBEventData\fP = pd\&.read_csv('{}_Events_Export\&.csv'\&.format(args\&.instance))"
+.br
+.ti -1c
+.RI "\fBfig\fP = df\&.plot()"
+.br
+.ti -1c
+.RI "\fBFinalcategories\fP = pd\&.read_csv('{}_categories_Export\&.csv'\&.format(args\&.instance))"
+.br
+.ti -1c
+.RI "\fBhelp\fP"
+.br
+.ti -1c
+.RI "\fBinplace\fP"
+.br
+.ti -1c
+.RI "\fBoptionxform\fP"
+.br
+.ti -1c
+.RI "\fBparser\fP = argparse\&.ArgumentParser()"
+.br
+.ti -1c
+.RI "\fBresult_list\fP = config\&.read('{}\&.metadata'\&.format(args\&.instance))"
+.br
+.ti -1c
+.RI "\fBScanlist\fP = \fBconfig\fP['eventdetection']['Scanlist']\&.split(',')"
+.br
+.ti -1c
+.RI "\fBtype\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Smart Meter Interpreter Documentation from the source code\&.

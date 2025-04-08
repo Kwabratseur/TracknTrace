@@ -1,0 +1,7 @@
+<map id="loadConstants" name="loadConstants">
+<area shape="rect" id="Node000001" title="Load a dictionary of constants and update solvelist too." alt="" coords="319,5,424,32"/>
+<area shape="rect" id="Node000002" href="$classmufit_1_1main_1_1_multi_fitter.html#a74303c44a72649099fae3fd750d04db9" title="load an array of constants; expects same length and order as internal dictionary!" alt="" coords="145,5,271,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="303,21,272,21,272,16,303,16"/>
+<area shape="rect" id="Node000003" href="$classmufit_1_1main_1_1_multi_fitter.html#aeea45739f34d6fd05d3589779aa48198" title=" " alt="" coords="5,5,97,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="129,21,97,21,97,16,129,16"/>
+</map>

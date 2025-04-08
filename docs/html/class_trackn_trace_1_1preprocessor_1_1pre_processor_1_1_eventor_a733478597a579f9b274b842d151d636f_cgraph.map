@@ -1,0 +1,7 @@
+<map id="GenericEvents" name="GenericEvents">
+<area shape="rect" id="Node000001" title="Detect events for all columns in self.data, runs runningAverages and slidingWindow." alt="" coords="5,31,113,57"/>
+<area shape="rect" id="Node000002" href="$class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor.html#a6b3646948fe672006e262a9de546ea08" title="Load a dictionary of variables and add in dt." alt="" coords="161,5,279,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,33,145,28,145,33,113,38"/>
+<area shape="rect" id="Node000003" href="$class_trackn_trace_1_1preprocessor_1_1pre_processor_1_1_eventor.html#a73a67dad1d84046cc45cd1164afafb63" title="Load a dictionary of variables and add in dt." alt="" coords="167,56,272,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,50,152,56,151,61,113,55"/>
+</map>

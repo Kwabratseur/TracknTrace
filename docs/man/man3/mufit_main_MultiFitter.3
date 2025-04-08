@@ -1,0 +1,785 @@
+.TH "MultiFitter" 3 "Smart Meter Interpreter Documentation" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MultiFitter \- The \fBMultiFitter\fP base class\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB__init__\fP (self, \fBInstance\fP, \fBlambdaMap\fP=None, \fBlambdaDict\fP=None, verbose=0)"
+.br
+.RI "The multifitter base class initializer\&. "
+.ti -1c
+.RI "\fBAnalyzeErrors\fP (self)"
+.br
+.RI "Error analysis and sorting function, puts best found parameters in constants\&. "
+.ti -1c
+.RI "\fBArrayToConstants\fP (self, Array)"
+.br
+.RI "load an array of constants; expects same length and order as internal dictionary! "
+.ti -1c
+.RI "\fBBulkError\fP (self, params, err, Iterations=None)"
+.br
+.RI "Do optimization run for scipy solver\&. "
+.ti -1c
+.RI "\fBBulkEvolver\fP (self, err, \fBconstraints\fP=None, N=10, repeats=25, Iterations=None)"
+.br
+.ti -1c
+.RI "\fBCalculate\fP (self)"
+.br
+.RI "Retrieves all current variables, constants and predictors, filles them into lambdafunctions and puts the results into predictors\&. "
+.ti -1c
+.RI "\fBdictSlice\fP (self, \fBindex\fP)"
+.br
+.RI "return a dictionary slice from the loaded dataframe "
+.ti -1c
+.RI "\fBdictToArray\fP (self, Dict)"
+.br
+.RI "convert dictionary to array "
+.ti -1c
+.RI "\fBEvolver\fP (self, err, N=10)"
+.br
+.RI "Evolution inspired parameter search algorithm\&. "
+.ti -1c
+.RI "\fBFiddler\fP (self, curr, previousR, currentR, constantIndex)"
+.br
+.RI "Parameter transformer/gradient descent algorithm\&. "
+.ti -1c
+.RI "\fBloadConstants\fP (self, constDict=None)"
+.br
+.RI "Load a dictionary of constants and update solvelist too\&. "
+.ti -1c
+.RI "\fBloadData\fP (self, df, initPredictors=True)"
+.br
+.RI "Load pandas dataframe for simulation/prediction/parameter fitting\&. "
+.ti -1c
+.RI "\fBloadPredictors\fP (self, constDict=None)"
+.br
+.RI "Load a dictionary of predictors\&. "
+.ti -1c
+.RI "\fBloadVariables\fP (self, varDict=None)"
+.br
+.RI "Load a dictionary of variables and add in dt\&. "
+.ti -1c
+.RI "\fBparameters\fP (self)"
+.br
+.RI "Retrieves all current variables, constants and predictors\&. "
+.ti -1c
+.RI "\fBparameterSearchMap\fP (self, \fBconstraints\fP=None, err=None, ims=4, steps=None)"
+.br
+.RI "Do parameter search over a defined area, results in steps*(constants^ims) iterations\&. "
+.ti -1c
+.RI "\fBplotError\fP (self, All=False)"
+.br
+.RI "Plots the internal error array of shape [index, error, c0, c1, cn\&.\&.\&.\&. "
+.ti -1c
+.RI "\fBresampleData\fP (self, timeStep)"
+.br
+.RI "Internal dataframe resampler; this is not a smart function! "
+.ti -1c
+.RI "\fBresetIndex\fP (self)"
+.br
+.RI "reset the index to 0 and reset predictors and variables from SDF[0] IF SDF is defined "
+.ti -1c
+.RI "\fBscipyOptimize\fP (self, \fBconstraints\fP=None, err=None, steps=None, iterations=1000, solver=None, lsq=False)"
+.br
+.RI "Do parameter optimization with scipy\&.optimize\&. "
+.ti -1c
+.RI "\fBsetSolveList\fP (self, Array=None, Dict=None)"
+.br
+.RI "Set the constants to solve, can take an array of indexes/names or dict with new values\&. "
+.ti -1c
+.RI "\fBSimSolve\fP (self, steps, repeats, err)"
+.br
+.RI "Subsequent simulating and evolution based algorithm to test results\&. "
+.ti -1c
+.RI "\fBSimulate\fP (self, steps, err=None, write=True)"
+.br
+.RI "Apply the model (Calculate) to the loaded data, does not strictly need a DF\&. "
+.ti -1c
+.RI "\fBstepIndex\fP (self)"
+.br
+.RI "Step through the index and reset it once datalength is exceeded\&. "
+.ti -1c
+.RI "\fBstoreJson\fP (self, data=None)"
+.br
+.ti -1c
+.RI "\fBwriteSlice\fP (self)"
+.br
+.RI "write the current predictors to SDF simulation dataframe "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBcolumns\fP = columns"
+.br
+.ti -1c
+.RI "dict \fBconstants\fP = {}"
+.br
+.RI "The constants stay constant unless fitted\&. "
+.ti -1c
+.RI "\fBconstraints\fP = constraints"
+.br
+.ti -1c
+.RI "int \fBdataLength\fP"
+.br
+.RI "The loaded dataFrame length\&. "
+.ti -1c
+.RI "\fBDF\fP = df"
+.br
+.RI "The loaded pandas dataFrame\&. "
+.ti -1c
+.RI "int \fBdt\fP = 1"
+.br
+.ti -1c
+.RI "list \fBerror\fP = []"
+.br
+.ti -1c
+.RI "int \fBindex\fP = 0"
+.br
+.RI "The error array contains [index, error, [constants]]\&. "
+.ti -1c
+.RI "str \fBInstance\fP = '{}\&.json'\&.format(Instance)"
+.br
+.ti -1c
+.RI "dict \fBlambdaDict\fP = lambdaDict"
+.br
+.ti -1c
+.RI "dict \fBlambdaMap\fP = lambdaMap"
+.br
+.ti -1c
+.RI "\fBLoadedInstance\fP = self\&.storeJson()"
+.br
+.ti -1c
+.RI "dict \fBpredictors\fP = {}"
+.br
+.RI "The predictors calculated by applying lambdafunctions\&. "
+.ti -1c
+.RI "\fBpSearchMap\fP = pSearchMap"
+.br
+.ti -1c
+.RI "\fBSDF\fP = pd\&.concat([self\&.SDF,pd\&.Series(self\&.predictors)\&.to_frame()\&.T], ignore_index=True)"
+.br
+.RI "The loaded dataFrame length\&. "
+.ti -1c
+.RI "dict \fBsolveList\fP = {}"
+.br
+.RI "The solvelist so that not all constants have to be fitted\&. "
+.ti -1c
+.RI "dict \fBvariables\fP = {'dt': 1\&.0}"
+.br
+.RI "The variables change every step\&. "
+.ti -1c
+.RI "\fBVerbose\fP = verbose"
+.br
+.RI "The verbose boolean\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The \fBMultiFitter\fP base class\&. 
+
+Defines the base class which enables parameter fitting, loading data, visualization, simulation 
+.PP
+Definition at line \fB73\fP of file \fBmain\&.py\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "__init__ ( self,  Instance,  lambdaMap = \fRNone\fP,  lambdaDict = \fRNone\fP,  verbose = \fR0\fP)"
+
+.PP
+The multifitter base class initializer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlambdaMap\fP lambdaMap dictionary with array of variables, constants have a prefix of $ when they have to be fitted, * if they are truly constant 
+.br
+\fIlambdaDict\fP lambdaDict dictionary with lambdafunctions 
+.br
+\fIverbose\fP verbose boolean generates more output for debugging
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An instance of the Sensor class initialized with the specified name\&. 
+.RE
+.PP
+
+.PP
+Definition at line \fB78\fP of file \fBmain\&.py\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "AnalyzeErrors ( self)"
+
+.PP
+Error analysis and sorting function, puts best found parameters in constants\&. 
+.PP
+\fBReturns\fP
+.RS 4
+An array with errors in the format of [index,error,yreal,ypred,c0,c1,cn\&.\&.\&.\&.] 
+.RE
+.PP
+
+.PP
+Definition at line \fB571\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBconstants\fP, \fBdataLength\fP, \fBerror\fP, \fBstoreJson()\fP, and \fBVerbose\fP\&.
+.PP
+Referenced by \fBplotError()\fP\&.
+.SS "ArrayToConstants ( self,  Array)"
+
+.PP
+load an array of constants; expects same length and order as internal dictionary! 
+.PP
+\fBParameters\fP
+.RS 4
+\fIArray\fP An array formatted to the same format as self\&.Constants 
+.RE
+.PP
+
+.PP
+Definition at line \fB249\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBconstants\fP, \fBloadConstants()\fP, \fBsolveList\fP, and \fBVerbose\fP\&.
+.PP
+Referenced by \fBBulkEvolver()\fP\&.
+.SS "BulkError ( self,  params,  err,  Iterations = \fRNone\fP)"
+
+.PP
+Do optimization run for scipy solver\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIparams\fP parameter array, generated by scipy\&. 
+.br
+\fIerr\fP error objective
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The accumulated error for the last simulation run 
+.RE
+.PP
+
+.PP
+Definition at line \fB333\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBconstants\fP, \fBdataLength\fP, \fBresetIndex()\fP, \fBSimulate()\fP, \fBsolveList\fP, and \fBVerbose\fP\&.
+.PP
+Referenced by \fBBulkEvolver()\fP, and \fBscipyOptimize()\fP\&.
+.SS "BulkEvolver ( self,  err,  constraints = \fRNone\fP,  N = \fR10\fP,  repeats = \fR25\fP,  Iterations = \fRNone\fP)"
+
+.PP
+Definition at line \fB437\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBArrayToConstants()\fP, \fBBulkError()\fP, \fBconstants\fP, \fBdictToArray()\fP, \fBFiddler()\fP, \fBSimulate()\fP, \fBsolveList\fP, \fBstoreJson()\fP, and \fBVerbose\fP\&.
+.SS "Calculate ( self)"
+
+.PP
+Retrieves all current variables, constants and predictors, filles them into lambdafunctions and puts the results into predictors\&. 
+.PP
+Definition at line \fB179\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBlambdaDict\fP, \fBlambdaMap\fP, \fBparameters()\fP, \fBpredictors\fP, and \fBVerbose\fP\&.
+.PP
+Referenced by \fBSimulate()\fP\&.
+.SS "dictSlice ( self,  index)"
+
+.PP
+return a dictionary slice from the loaded dataframe 
+.PP
+\fBParameters\fP
+.RS 4
+\fIindex\fP index from DF to return
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A dictionary with parameters found at DF[index] 
+.RE
+.PP
+
+.PP
+Definition at line \fB273\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBDF\fP\&.
+.PP
+Referenced by \fBSimulate()\fP\&.
+.SS "dictToArray ( self,  Dict)"
+
+.PP
+convert dictionary to array 
+.PP
+\fBParameters\fP
+.RS 4
+\fIDict\fP dictionary to convert
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An array with the dictionaries values 
+.RE
+.PP
+
+.PP
+Definition at line \fB264\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBBulkEvolver()\fP, and \fBSimulate()\fP\&.
+.SS "Evolver ( self,  err,  N = \fR10\fP)"
+
+.PP
+Evolution inspired parameter search algorithm\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIerr\fP name of predictor (and dataframe column) that will be used for error determination; prediction target\&. 
+.br
+\fIN\fP amount of iteration to optimize each parameter that is in the solveList
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An array with errors in the format of [index,error,c0,c1,cn\&.\&.\&.\&.] 
+.RE
+.PP
+
+.PP
+Definition at line \fB482\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBconstants\fP, \fBerror\fP, \fBFiddler()\fP, \fBindex\fP, \fBpredictors\fP, \fBSimulate()\fP, \fBsolveList\fP, \fBvariables\fP, and \fBVerbose\fP\&.
+.PP
+Referenced by \fBSimSolve()\fP\&.
+.SS "Fiddler ( self,  curr,  previousR,  currentR,  constantIndex)"
+
+.PP
+Parameter transformer/gradient descent algorithm\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcurr\fP current parameter that will be transformed, change is proportional to this\&. 
+.br
+\fIpreviousR\fP previous error array, this is used to determine the best direction to change towards 
+.br
+\fIcurrentR\fP current error array, as mentioned, to implement some form of gradient descent 
+.br
+\fIconstantIndex\fP index of the current constant that is modified, needed to know what parameter in error array to look at
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A new constant to try 
+.RE
+.PP
+
+.PP
+Definition at line \fB401\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBVerbose\fP\&.
+.PP
+Referenced by \fBBulkEvolver()\fP, and \fBEvolver()\fP\&.
+.SS "loadConstants ( self,  constDict = \fRNone\fP)"
+
+.PP
+Load a dictionary of constants and update solvelist too\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconstDict\fP dictionary with new constants and values 
+.RE
+.PP
+
+.PP
+Definition at line \fB211\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBconstants\fP, \fBLoadedInstance\fP, \fBsolveList\fP, \fBstoreJson()\fP, and \fBVerbose\fP\&.
+.PP
+Referenced by \fBArrayToConstants()\fP\&.
+.SS "loadData ( self,  df,  initPredictors = \fRTrue\fP)"
+
+.PP
+Load pandas dataframe for simulation/prediction/parameter fitting\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdf\fP pandas dataframe to load, this will also define SDF and datalength 
+.br
+\fIinitPredictors\fP Boolean which fills the predictor dictionary with initial values from the dataframe 
+.RE
+.PP
+
+.PP
+Definition at line \fB536\fP of file \fBmain\&.py\fP\&.
+.SS "loadPredictors ( self,  constDict = \fRNone\fP)"
+
+.PP
+Load a dictionary of predictors\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconstDict\fP a dictionary with new predictors 
+.RE
+.PP
+
+.PP
+Definition at line \fB235\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBconstants\fP, \fBpredictors\fP, and \fBVerbose\fP\&.
+.PP
+Referenced by \fBresetIndex()\fP\&.
+.SS "loadVariables ( self,  varDict = \fRNone\fP)"
+
+.PP
+Load a dictionary of variables and add in dt\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIvarDict\fP dictionary with new variables and values 
+.RE
+.PP
+
+.PP
+Definition at line \fB197\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBdt\fP, \fBvariables\fP, and \fBVerbose\fP\&.
+.PP
+Referenced by \fBresetIndex()\fP, and \fBSimulate()\fP\&.
+.SS "parameters ( self)"
+
+.PP
+Retrieves all current variables, constants and predictors\&. 
+.PP
+\fBReturns\fP
+.RS 4
+A dictionary with variables, constants and predictors 
+.RE
+.PP
+
+.PP
+Definition at line \fB171\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBconstants\fP, \fBpredictors\fP, and \fBvariables\fP\&.
+.PP
+Referenced by \fBCalculate()\fP\&.
+.SS "parameterSearchMap ( self,  constraints = \fRNone\fP,  err = \fRNone\fP,  ims = \fR4\fP,  steps = \fRNone\fP)"
+
+.PP
+Do parameter search over a defined area, results in steps*(constants^ims) iterations\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconstraints\fP dictionary of arrays with [min,max] values to constraint the parameter search to example: SMap = {"U":[0\&.01,45\&.0],"C":[100,200]} 
+.br
+\fIerr\fP Name of variable to track as error, make sure this is in the predictors and in the loaded data 
+.br
+\fIims\fP Intermediate steps to generate, if 0 and 1 are given, a parameter search for 0, 0\&.25, 0\&.5 and 1 will be executed
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An array with errors in the format of [index,error,c0,c1,cn\&.\&.\&.\&.] 
+.RE
+.PP
+
+.PP
+Definition at line \fB357\fP of file \fBmain\&.py\fP\&.
+.SS "plotError ( self,  All = \fRFalse\fP)"
+
+.PP
+Plots the internal error array of shape [index, error, c0, c1, cn\&.\&.\&.\&. ]
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIAll\fP if set to true, all errors are shown\&. Otherwise only best parameters for each timestep\&. Plotly plot 
+.RE
+.PP
+
+.PP
+Definition at line \fB597\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBAnalyzeErrors()\fP, \fBcolumns\fP, \fBerror\fP, and \fBsolveList\fP\&.
+.SS "resampleData ( self,  timeStep)"
+
+.PP
+Internal dataframe resampler; this is not a smart function! make sure data is time dependent\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fItimeStep\fP Resample step in seconds; only works when the loaded data uses a datetime index! 
+.RE
+.PP
+
+.PP
+Definition at line \fB558\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBdataLength\fP, \fBDF\fP, \fBdt\fP, and \fBVerbose\fP\&.
+.SS "resetIndex ( self)"
+
+.PP
+reset the index to 0 and reset predictors and variables from SDF[0] IF SDF is defined 
+.PP
+Definition at line \fB289\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBindex\fP, \fBloadPredictors()\fP, \fBloadVariables()\fP, and \fBSDF\fP\&.
+.PP
+Referenced by \fBBulkError()\fP, and \fBSimulate()\fP\&.
+.SS "scipyOptimize ( self,  constraints = \fRNone\fP,  err = \fRNone\fP,  steps = \fRNone\fP,  iterations = \fR1000\fP,  solver = \fRNone\fP,  lsq = \fRFalse\fP)"
+
+.PP
+Do parameter optimization with scipy\&.optimize\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIconstraints\fP dictionary of arrays with [min,max] values to constraint the parameter search to example: SMap = {"U":[0\&.01,45\&.0],"C":[100,200]}\&. If not given, all in solveList will be optimized without constraints 
+.br
+\fIerr\fP Name of variable to track as error, make sure this is in the predictors and in the loaded data 
+.br
+\fIsteps\fP amount of dataset steps to calculate in the error function 
+.br
+\fIiterations\fP amount of allowed solver iterations, default set to 1000 
+.br
+\fIsolver\fP solving algorithm to be used, default nelder-mead 
+.br
+\fIlsq\fP treat problem as least-squares problem
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An array with the best parameters found 
+.RE
+.PP
+
+.PP
+Definition at line \fB297\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBBulkError()\fP, \fBsolveList\fP, and \fBVerbose\fP\&.
+.SS "setSolveList ( self,  Array = \fRNone\fP,  Dict = \fRNone\fP)"
+
+.PP
+Set the constants to solve, can take an array of indexes/names or dict with new values\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIArray\fP An array with indexes or string names which can be found in constants and should be solved 
+.br
+\fIDict\fP A dictionary with key:value pairs where key=name and value = initial value 
+.RE
+.PP
+
+.PP
+Definition at line \fB616\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBconstants\fP, and \fBsolveList\fP\&.
+.SS "SimSolve ( self,  steps,  repeats,  err)"
+
+.PP
+Subsequent simulating and evolution based algorithm to test results\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsteps\fP amount of iteration to optimize each parameter that is in the solveList and steps to simulate 
+.br
+\fIrepeats\fP amount of times to repeat this loop of simulate -> evolve 
+.br
+\fIerr\fP name of predictor (and dataframe column) that will be used for error determination; prediction target\&.
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An array with errors in the format of [index,error,c0,c1,cn\&.\&.\&.\&.] 
+.RE
+.PP
+
+.PP
+Definition at line \fB672\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBerror\fP, \fBEvolver()\fP, and \fBSimulate()\fP\&.
+.SS "Simulate ( self,  steps,  err = \fRNone\fP,  write = \fRTrue\fP)"
+
+.PP
+Apply the model (Calculate) to the loaded data, does not strictly need a DF\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsteps\fP amount of steps to simulate 
+.br
+\fIerr\fP name of predictor (and dataframe column) that will be used for error determination; prediction target\&. 
+.br
+\fIwrite\fP if set to false, no data is written to SDF\&. This is used internally to test errors without tainting SDF
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An array with errors in the format of [index,error,c0,c1,cn\&.\&.\&.\&.] if err is defined, otherwise True 
+.RE
+.PP
+
+.PP
+Definition at line \fB638\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBCalculate()\fP, \fBconstants\fP, \fBdictSlice()\fP, \fBdictToArray()\fP, \fBerror\fP, \fBindex\fP, \fBloadVariables()\fP, \fBpredictors\fP, \fBresetIndex()\fP, \fBstepIndex()\fP, and \fBwriteSlice()\fP\&.
+.PP
+Referenced by \fBBulkError()\fP, \fBBulkEvolver()\fP, \fBEvolver()\fP, and \fBSimSolve()\fP\&.
+.SS "stepIndex ( self)"
+
+.PP
+Step through the index and reset it once datalength is exceeded\&. 
+.PP
+Definition at line \fB529\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBindex\fP\&.
+.PP
+Referenced by \fBSimulate()\fP\&.
+.SS "storeJson ( self,  data = \fRNone\fP)"
+
+.PP
+Definition at line \fB156\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBindex\fP, and \fBInstance\fP\&.
+.PP
+Referenced by \fBAnalyzeErrors()\fP, \fBBulkEvolver()\fP, and \fBloadConstants()\fP\&.
+.SS "writeSlice ( self)"
+
+.PP
+write the current predictors to SDF simulation dataframe 
+.PP
+Definition at line \fB282\fP of file \fBmain\&.py\fP\&.
+.PP
+References \fBpredictors\fP\&.
+.PP
+Referenced by \fBSimulate()\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "columns = columns"
+
+.PP
+Definition at line \fB137\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBEventor\&.GenericEvents()\fP, and \fBplotError()\fP\&.
+.SS "constants = {}"
+
+.PP
+The constants stay constant unless fitted\&. 
+.PP
+Definition at line \fB112\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBAnalyzeErrors()\fP, \fBArrayToConstants()\fP, \fBBulkError()\fP, \fBBulkEvolver()\fP, \fBEvolver()\fP, \fBloadConstants()\fP, \fBloadPredictors()\fP, \fBparameters()\fP, \fBsetSolveList()\fP, and \fBSimulate()\fP\&.
+.SS "constraints = constraints"
+
+.PP
+Definition at line \fB368\fP of file \fBmain\&.py\fP\&.
+.SS "dataLength"
+
+.PP
+The loaded dataFrame length\&. 
+.PP
+Definition at line \fB533\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBAnalyzeErrors()\fP, \fBBulkError()\fP, and \fBresampleData()\fP\&.
+.SS "DF = df"
+
+.PP
+The loaded pandas dataFrame\&. 
+.PP
+Definition at line \fB543\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBdictSlice()\fP, and \fBresampleData()\fP\&.
+.SS "int dt = 1"
+
+.PP
+Definition at line \fB120\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBloadVariables()\fP, and \fBresampleData()\fP\&.
+.SS "list error = []"
+
+.PP
+Definition at line \fB119\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBAnalyzeErrors()\fP, \fBEvolver()\fP, \fBplotError()\fP, \fBSimSolve()\fP, and \fBSimulate()\fP\&.
+.SS "index = 0"
+
+.PP
+The error array contains [index, error, [constants]]\&. 
+.PP
+Definition at line \fB118\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBEvolver()\fP, \fBresetIndex()\fP, \fBSimulate()\fP, \fBstepIndex()\fP, and \fBstoreJson()\fP\&.
+.SS "Instance = '{}\&.json'\&.format(Instance)"
+
+.PP
+Definition at line \fB121\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBstoreJson()\fP\&.
+.SS "dict lambdaDict = lambdaDict"
+
+.PP
+Definition at line \fB100\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBCalculate()\fP\&.
+.SS "dict lambdaMap = lambdaMap"
+
+.PP
+Definition at line \fB90\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBCalculate()\fP\&.
+.SS "LoadedInstance = self\&.storeJson()"
+
+.PP
+Definition at line \fB143\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBloadConstants()\fP\&.
+.SS "predictors = {}"
+
+.PP
+The predictors calculated by applying lambdafunctions\&. 
+.PP
+Definition at line \fB116\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBCalculate()\fP, \fBEvolver()\fP, \fBloadPredictors()\fP, \fBparameters()\fP, \fBSimulate()\fP, and \fBwriteSlice()\fP\&.
+.SS "pSearchMap = pSearchMap"
+
+.PP
+Definition at line \fB387\fP of file \fBmain\&.py\fP\&.
+.SS "SDF = pd\&.concat([self\&.SDF,pd\&.Series(self\&.predictors)\&.to_frame()\&.T], ignore_index=True)"
+
+.PP
+The loaded dataFrame length\&. The Simulated model, predictor values are written to here 
+.PP
+Definition at line \fB287\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBresetIndex()\fP\&.
+.SS "solveList = {}"
+
+.PP
+The solvelist so that not all constants have to be fitted\&. Instantiation of errorlist\&. 
+.PP
+Definition at line \fB114\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBArrayToConstants()\fP, \fBBulkError()\fP, \fBBulkEvolver()\fP, \fBEvolver()\fP, \fBloadConstants()\fP, \fBplotError()\fP, \fBscipyOptimize()\fP, and \fBsetSolveList()\fP\&.
+.SS "variables = {'dt': 1\&.0}"
+
+.PP
+The variables change every step\&. 
+.PP
+Definition at line \fB110\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBEvolver()\fP, \fBloadVariables()\fP, and \fBparameters()\fP\&.
+.SS "Verbose = verbose"
+
+.PP
+The verbose boolean\&. 
+.PP
+Definition at line \fB88\fP of file \fBmain\&.py\fP\&.
+.PP
+Referenced by \fBAnalyzeErrors()\fP, \fBArrayToConstants()\fP, \fBBulkError()\fP, \fBBulkEvolver()\fP, \fBCalculate()\fP, \fBEvolver()\fP, \fBFiddler()\fP, \fBloadConstants()\fP, \fBloadPredictors()\fP, \fBloadVariables()\fP, \fBresampleData()\fP, and \fBscipyOptimize()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Smart Meter Interpreter Documentation from the source code\&.

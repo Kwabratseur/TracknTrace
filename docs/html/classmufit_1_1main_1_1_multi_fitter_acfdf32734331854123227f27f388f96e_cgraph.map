@@ -1,0 +1,7 @@
+<map id="resetIndex" name="resetIndex">
+<area shape="rect" id="Node000001" title="reset the index to 0 and reset predictors and variables from SDF[0] IF SDF is defined" alt="" coords="5,31,88,57"/>
+<area shape="rect" id="Node000002" href="$classmufit_1_1main_1_1_multi_fitter.html#a74056280c28f6e8fa7eb29dac1c7889f" title="Load a dictionary of predictors." alt="" coords="136,5,240,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,34,120,28,121,33,89,39"/>
+<area shape="rect" id="Node000003" href="$classmufit_1_1main_1_1_multi_fitter.html#ab888df0346bb59a4de071cdc656c7bf3" title="Load a dictionary of variables and add in dt." alt="" coords="139,56,237,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="89,49,124,55,123,60,88,54"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="plotError" name="plotError">
+<area shape="rect" id="Node000001" title="Plots the internal error array of shape [index, error, c0, c1, cn...." alt="" coords="5,5,76,32"/>
+<area shape="rect" id="Node000002" href="$classmufit_1_1main_1_1_multi_fitter.html#a0b009968e6dae18f593ded40c48aca13" title="Error analysis and sorting function, puts best found parameters in constants." alt="" coords="124,5,227,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,16,108,16,108,21,76,21"/>
+<area shape="rect" id="Node000003" href="$classmufit_1_1main_1_1_multi_fitter.html#af8f9384caf99f3ade1fdf0335d5ac218" title=" " alt="" coords="275,5,353,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="227,16,259,16,259,21,227,21"/>
+</map>

@@ -1,0 +1,1338 @@
+\doxysection{Multi\+Fitter Class Reference}
+\hypertarget{classmufit_1_1main_1_1_multi_fitter}{}\label{classmufit_1_1main_1_1_multi_fitter}\index{MultiFitter@{MultiFitter}}
+
+
+The \doxylink{classmufit_1_1main_1_1_multi_fitter}{Multi\+Fitter} base class.  
+
+
+
+
+Inheritance diagram for Multi\+Fitter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{classmufit_1_1main_1_1_multi_fitter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Multi\+Fitter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{classmufit_1_1main_1_1_multi_fitter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_ad92a9df5be5e8b1c178fcf87ed68c09e}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a86244c5fd1a9e478af20a7ebed03f7e4}{Instance}}, \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a12152b2cffe15a1d5fe0a13c0d37dd2d}{lambda\+Map}}=None, \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a43e8bfd5caf83689e42ef179314fc19a}{lambda\+Dict}}=None, verbose=0)
+\begin{DoxyCompactList}\small\item\em The multifitter base class initializer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a0b009968e6dae18f593ded40c48aca13}{Analyze\+Errors}} (self)
+\begin{DoxyCompactList}\small\item\em Error analysis and sorting function, puts best found parameters in constants. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a74303c44a72649099fae3fd750d04db9}{Array\+To\+Constants}} (self, Array)
+\begin{DoxyCompactList}\small\item\em load an array of constants; expects same length and order as internal dictionary! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_ad69c6ba21edffaf797661ae8d49bcc6a}{Bulk\+Error}} (self, params, err, Iterations=None)
+\begin{DoxyCompactList}\small\item\em Do optimization run for scipy solver. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_aeea45739f34d6fd05d3589779aa48198}{Bulk\+Evolver}} (self, err, \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a516d171854a08808880d42484fa737a1}{constraints}}=None, N=10, repeats=25, Iterations=None)
+\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_ad9a1fb640ed33354bc50776b061e237c}{Calculate}} (self)
+\begin{DoxyCompactList}\small\item\em Retrieves all current variables, constants and predictors, filles them into lambdafunctions and puts the results into predictors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_ab3053982897eddb5a92ebf129115a3b3}{dict\+Slice}} (self, \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a6784e1c334dfceb8f017667c0b0f6a3e}{index}})
+\begin{DoxyCompactList}\small\item\em return a dictionary slice from the loaded dataframe \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_afce0fd16d20d4a39250136ab10fa45d2}{dict\+To\+Array}} (self, Dict)
+\begin{DoxyCompactList}\small\item\em convert dictionary to array \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a56d5756c3daa13635c818f93766d4273}{Evolver}} (self, err, N=10)
+\begin{DoxyCompactList}\small\item\em Evolution inspired parameter search algorithm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a646dc98802fc70130102410a34acfecf}{Fiddler}} (self, curr, previousR, currentR, constant\+Index)
+\begin{DoxyCompactList}\small\item\em Parameter transformer/gradient descent algorithm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a3f72d7407994cf55924f941b72dd0ae3}{load\+Constants}} (self, const\+Dict=None)
+\begin{DoxyCompactList}\small\item\em Load a dictionary of constants and update solvelist too. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a845392881ea3e95f002cb21d7ef417a9}{load\+Data}} (self, df, init\+Predictors=True)
+\begin{DoxyCompactList}\small\item\em Load pandas dataframe for simulation/prediction/parameter fitting. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a74056280c28f6e8fa7eb29dac1c7889f}{load\+Predictors}} (self, const\+Dict=None)
+\begin{DoxyCompactList}\small\item\em Load a dictionary of predictors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_ab888df0346bb59a4de071cdc656c7bf3}{load\+Variables}} (self, var\+Dict=None)
+\begin{DoxyCompactList}\small\item\em Load a dictionary of variables and add in dt. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_afabe0eeecd44eacaf3ff9a91865884ef}{parameters}} (self)
+\begin{DoxyCompactList}\small\item\em Retrieves all current variables, constants and predictors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_afccef6c29c32202ae75f217f0e983b4d}{parameter\+Search\+Map}} (self, \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a516d171854a08808880d42484fa737a1}{constraints}}=None, err=None, ims=4, steps=None)
+\begin{DoxyCompactList}\small\item\em Do parameter search over a defined area, results in steps\texorpdfstring{$\ast$}{*}(constants\texorpdfstring{$^\wedge$}{\string^}ims) iterations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_ae4c22776b1efeb03d898bb5c624dac45}{plot\+Error}} (self, All=False)
+\begin{DoxyCompactList}\small\item\em Plots the internal error array of shape \mbox{[}index, error, c0, c1, cn.... \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_acd3baae5a04f481ac6b3a0466c5db669}{resample\+Data}} (self, time\+Step)
+\begin{DoxyCompactList}\small\item\em Internal dataframe resampler; this is not a smart function! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_acfdf32734331854123227f27f388f96e}{reset\+Index}} (self)
+\begin{DoxyCompactList}\small\item\em reset the index to 0 and reset predictors and variables from SDF\mbox{[}0\mbox{]} IF SDF is defined \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_ad0c7c03a772799c36476d8f0276e2bf8}{scipy\+Optimize}} (self, \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a516d171854a08808880d42484fa737a1}{constraints}}=None, err=None, steps=None, iterations=1000, solver=None, lsq=False)
+\begin{DoxyCompactList}\small\item\em Do parameter optimization with scipy.\+optimize. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a196acd1d5c1540ceb84e7b7acb9b8733}{set\+Solve\+List}} (self, Array=None, Dict=None)
+\begin{DoxyCompactList}\small\item\em Set the constants to solve, can take an array of indexes/names or dict with new values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a0a76c49d8703e3a61cfaccc6b9a75c6c}{Sim\+Solve}} (self, steps, repeats, err)
+\begin{DoxyCompactList}\small\item\em Subsequent simulating and evolution based algorithm to test results. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a47d4d4f9470094b25c3e9b306d5fce27}{Simulate}} (self, steps, err=None, write=True)
+\begin{DoxyCompactList}\small\item\em Apply the model (Calculate) to the loaded data, does not strictly need a DF. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_ae1d6e3030b2700893bcd69432340c2d9}{step\+Index}} (self)
+\begin{DoxyCompactList}\small\item\em Step through the index and reset it once datalength is exceeded. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_af8f9384caf99f3ade1fdf0335d5ac218}{store\+Json}} (self, data=None)
+\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_ae33a2b1c2a1bf47a1a237cda45ec1fbd}{write\+Slice}} (self)
+\begin{DoxyCompactList}\small\item\em write the current predictors to SDF simulation dataframe \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a2236b72f560276e1c4ca3409b8b3ecb5}{columns}} = columns
+\item 
+dict \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a28dba3bf7b4e38c36a6d8a537c14bad1}{constants}} = \{\}
+\begin{DoxyCompactList}\small\item\em The constants stay constant unless fitted. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a516d171854a08808880d42484fa737a1}{constraints}} = constraints
+\item 
+int \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a1123732bec1a10d0bbdd4c7bffe57473}{data\+Length}}
+\begin{DoxyCompactList}\small\item\em The loaded data\+Frame length. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_ad457ccc058d82f9d901de91c3ecd1629}{DF}} = df
+\begin{DoxyCompactList}\small\item\em The loaded pandas data\+Frame. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a8e935675ee83a2516c575de3e892b12e}{dt}} = 1
+\item 
+list \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a047e5616224163ec4f7b8ce1328f142f}{error}} = \mbox{[}$\,$\mbox{]}
+\item 
+int \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a6784e1c334dfceb8f017667c0b0f6a3e}{index}} = 0
+\begin{DoxyCompactList}\small\item\em The error array contains \mbox{[}index, error, \mbox{[}constants\mbox{]}\mbox{]}. \end{DoxyCompactList}\item 
+str \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a86244c5fd1a9e478af20a7ebed03f7e4}{Instance}} = "{}\{\}.json"{}.\+format(Instance)
+\item 
+dict \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a43e8bfd5caf83689e42ef179314fc19a}{lambda\+Dict}} = lambda\+Dict
+\item 
+dict \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a12152b2cffe15a1d5fe0a13c0d37dd2d}{lambda\+Map}} = lambda\+Map
+\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a31e8dcc1354a53973b0c4546a89b79f8}{Loaded\+Instance}} = self.\+store\+Json()
+\item 
+dict \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a0d201dc21218cdcaec7b287c1e882dbb}{predictors}} = \{\}
+\begin{DoxyCompactList}\small\item\em The predictors calculated by applying lambdafunctions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_ad0648a8f395980c134caa007ff35fd53}{p\+Search\+Map}} = p\+Search\+Map
+\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a2cf1f73f3e1245b2e34d4998024772c2}{SDF}} = pd.\+concat(\mbox{[}self.\+SDF,pd.\+Series(self.\+predictors).to\+\_\+frame().T\mbox{]}, ignore\+\_\+index=True)
+\begin{DoxyCompactList}\small\item\em The loaded data\+Frame length. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a77bb4bc6beba45b3885e441dd3135a9e}{solve\+List}} = \{\}
+\begin{DoxyCompactList}\small\item\em The solvelist so that not all constants have to be fitted. \end{DoxyCompactList}\item 
+dict \mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_a626e63c7be6e71872233832cce1dccc0}{variables}} = \{"{}dt"{}\+: 1.\+0\}
+\begin{DoxyCompactList}\small\item\em The variables change every step. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmufit_1_1main_1_1_multi_fitter_ab95b2bf068cfe461f5b13a95191219a9}{Verbose}} = verbose
+\begin{DoxyCompactList}\small\item\em The verbose boolean. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{classmufit_1_1main_1_1_multi_fitter}{Multi\+Fitter} base class. 
+
+Defines the base class which enables parameter fitting, loading data, visualization, simulation 
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00073}{73}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_ad92a9df5be5e8b1c178fcf87ed68c09e}\index{MultiFitter@{MultiFitter}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_ad92a9df5be5e8b1c178fcf87ed68c09e} 
+\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{Instance}{, }\item[{}]{lambda\+Map}{ = {\ttfamily None}, }\item[{}]{lambda\+Dict}{ = {\ttfamily None}, }\item[{}]{verbose}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+The multifitter base class initializer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lambda\+Map} & lambda\+Map dictionary with array of variables, constants have a prefix of \$ when they have to be fitted, \texorpdfstring{$\ast$}{*} if they are truly constant \\
+\hline
+{\em lambda\+Dict} & lambda\+Dict dictionary with lambdafunctions \\
+\hline
+{\em verbose} & verbose boolean generates more output for debugging\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An instance of the Sensor class initialized with the specified name. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00078}{78}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a0b009968e6dae18f593ded40c48aca13}\index{MultiFitter@{MultiFitter}!AnalyzeErrors@{AnalyzeErrors}}
+\index{AnalyzeErrors@{AnalyzeErrors}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{AnalyzeErrors()}{AnalyzeErrors()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a0b009968e6dae18f593ded40c48aca13} 
+Analyze\+Errors (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Error analysis and sorting function, puts best found parameters in constants. 
+
+\begin{DoxyReturn}{Returns}
+An array with errors in the format of \mbox{[}index,error,yreal,ypred,c0,c1,cn....\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00571}{571}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00112}{constants}}, \mbox{\hyperlink{main_8py_source_l00533}{data\+Length}}, \mbox{\hyperlink{main_8py_source_l00119}{error}}, \mbox{\hyperlink{main_8py_source_l00156}{store\+Json()}}, and \mbox{\hyperlink{main_8py_source_l00088}{Verbose}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00597}{plot\+Error()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{classmufit_1_1main_1_1_multi_fitter_a0b009968e6dae18f593ded40c48aca13_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classmufit_1_1main_1_1_multi_fitter_a0b009968e6dae18f593ded40c48aca13_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a74303c44a72649099fae3fd750d04db9}\index{MultiFitter@{MultiFitter}!ArrayToConstants@{ArrayToConstants}}
+\index{ArrayToConstants@{ArrayToConstants}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{ArrayToConstants()}{ArrayToConstants()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a74303c44a72649099fae3fd750d04db9} 
+Array\+To\+Constants (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{Array}{}\end{DoxyParamCaption})}
+
+
+
+load an array of constants; expects same length and order as internal dictionary! 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Array} & An array formatted to the same format as self.\+Constants \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00249}{249}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00112}{constants}}, \mbox{\hyperlink{main_8py_source_l00211}{load\+Constants()}}, \mbox{\hyperlink{main_8py_source_l00114}{solve\+List}}, and \mbox{\hyperlink{main_8py_source_l00088}{Verbose}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00437}{Bulk\+Evolver()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_a74303c44a72649099fae3fd750d04db9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{classmufit_1_1main_1_1_multi_fitter_a74303c44a72649099fae3fd750d04db9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_ad69c6ba21edffaf797661ae8d49bcc6a}\index{MultiFitter@{MultiFitter}!BulkError@{BulkError}}
+\index{BulkError@{BulkError}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{BulkError()}{BulkError()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_ad69c6ba21edffaf797661ae8d49bcc6a} 
+Bulk\+Error (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{params}{, }\item[{}]{err}{, }\item[{}]{Iterations}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Do optimization run for scipy solver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em params} & parameter array, generated by scipy. \\
+\hline
+{\em err} & error objective\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The accumulated error for the last simulation run 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00333}{333}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00112}{constants}}, \mbox{\hyperlink{main_8py_source_l00533}{data\+Length}}, \mbox{\hyperlink{main_8py_source_l00289}{reset\+Index()}}, \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}, \mbox{\hyperlink{main_8py_source_l00114}{solve\+List}}, and \mbox{\hyperlink{main_8py_source_l00088}{Verbose}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00437}{Bulk\+Evolver()}}, and \mbox{\hyperlink{main_8py_source_l00297}{scipy\+Optimize()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_ad69c6ba21edffaf797661ae8d49bcc6a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{classmufit_1_1main_1_1_multi_fitter_ad69c6ba21edffaf797661ae8d49bcc6a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_aeea45739f34d6fd05d3589779aa48198}\index{MultiFitter@{MultiFitter}!BulkEvolver@{BulkEvolver}}
+\index{BulkEvolver@{BulkEvolver}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{BulkEvolver()}{BulkEvolver()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_aeea45739f34d6fd05d3589779aa48198} 
+Bulk\+Evolver (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{err}{, }\item[{}]{constraints}{ = {\ttfamily None}, }\item[{}]{N}{ = {\ttfamily 10}, }\item[{}]{repeats}{ = {\ttfamily 25}, }\item[{}]{Iterations}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00437}{437}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00249}{Array\+To\+Constants()}}, \mbox{\hyperlink{main_8py_source_l00333}{Bulk\+Error()}}, \mbox{\hyperlink{main_8py_source_l00112}{constants}}, \mbox{\hyperlink{main_8py_source_l00264}{dict\+To\+Array()}}, \mbox{\hyperlink{main_8py_source_l00401}{Fiddler()}}, \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}, \mbox{\hyperlink{main_8py_source_l00114}{solve\+List}}, \mbox{\hyperlink{main_8py_source_l00156}{store\+Json()}}, and \mbox{\hyperlink{main_8py_source_l00088}{Verbose}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_aeea45739f34d6fd05d3589779aa48198_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_ad9a1fb640ed33354bc50776b061e237c}\index{MultiFitter@{MultiFitter}!Calculate@{Calculate}}
+\index{Calculate@{Calculate}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{Calculate()}{Calculate()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_ad9a1fb640ed33354bc50776b061e237c} 
+Calculate (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all current variables, constants and predictors, filles them into lambdafunctions and puts the results into predictors. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00179}{179}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00100}{lambda\+Dict}}, \mbox{\hyperlink{main_8py_source_l00090}{lambda\+Map}}, \mbox{\hyperlink{main_8py_source_l00171}{parameters()}}, \mbox{\hyperlink{main_8py_source_l00116}{predictors}}, and \mbox{\hyperlink{main_8py_source_l00088}{Verbose}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classmufit_1_1main_1_1_multi_fitter_ad9a1fb640ed33354bc50776b061e237c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_ad9a1fb640ed33354bc50776b061e237c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_ab3053982897eddb5a92ebf129115a3b3}\index{MultiFitter@{MultiFitter}!dictSlice@{dictSlice}}
+\index{dictSlice@{dictSlice}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{dictSlice()}{dictSlice()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_ab3053982897eddb5a92ebf129115a3b3} 
+dict\+Slice (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{index}{}\end{DoxyParamCaption})}
+
+
+
+return a dictionary slice from the loaded dataframe 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & index from DF to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary with parameters found at DF\mbox{[}index\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00273}{273}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00543}{DF}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_ab3053982897eddb5a92ebf129115a3b3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_afce0fd16d20d4a39250136ab10fa45d2}\index{MultiFitter@{MultiFitter}!dictToArray@{dictToArray}}
+\index{dictToArray@{dictToArray}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{dictToArray()}{dictToArray()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_afce0fd16d20d4a39250136ab10fa45d2} 
+dict\+To\+Array (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{Dict}{}\end{DoxyParamCaption})}
+
+
+
+convert dictionary to array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Dict} & dictionary to convert\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array with the dictionaries values 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00264}{264}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00437}{Bulk\+Evolver()}}, and \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_afce0fd16d20d4a39250136ab10fa45d2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a56d5756c3daa13635c818f93766d4273}\index{MultiFitter@{MultiFitter}!Evolver@{Evolver}}
+\index{Evolver@{Evolver}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{Evolver()}{Evolver()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a56d5756c3daa13635c818f93766d4273} 
+Evolver (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{err}{, }\item[{}]{N}{ = {\ttfamily 10}}\end{DoxyParamCaption})}
+
+
+
+Evolution inspired parameter search algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em err} & name of predictor (and dataframe column) that will be used for error determination; prediction target. \\
+\hline
+{\em N} & amount of iteration to optimize each parameter that is in the solve\+List\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array with errors in the format of \mbox{[}index,error,c0,c1,cn....\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00482}{482}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00112}{constants}}, \mbox{\hyperlink{main_8py_source_l00119}{error}}, \mbox{\hyperlink{main_8py_source_l00401}{Fiddler()}}, \mbox{\hyperlink{main_8py_source_l00118}{index}}, \mbox{\hyperlink{main_8py_source_l00116}{predictors}}, \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}, \mbox{\hyperlink{main_8py_source_l00114}{solve\+List}}, \mbox{\hyperlink{main_8py_source_l00110}{variables}}, and \mbox{\hyperlink{main_8py_source_l00088}{Verbose}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00672}{Sim\+Solve()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_a56d5756c3daa13635c818f93766d4273_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classmufit_1_1main_1_1_multi_fitter_a56d5756c3daa13635c818f93766d4273_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a646dc98802fc70130102410a34acfecf}\index{MultiFitter@{MultiFitter}!Fiddler@{Fiddler}}
+\index{Fiddler@{Fiddler}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{Fiddler()}{Fiddler()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a646dc98802fc70130102410a34acfecf} 
+Fiddler (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{curr}{, }\item[{}]{previousR}{, }\item[{}]{currentR}{, }\item[{}]{constant\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Parameter transformer/gradient descent algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em curr} & current parameter that will be transformed, change is proportional to this. \\
+\hline
+{\em previousR} & previous error array, this is used to determine the best direction to change towards \\
+\hline
+{\em currentR} & current error array, as mentioned, to implement some form of gradient descent \\
+\hline
+{\em constant\+Index} & index of the current constant that is modified, needed to know what parameter in error array to look at\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new constant to try 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00401}{401}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00088}{Verbose}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00437}{Bulk\+Evolver()}}, and \mbox{\hyperlink{main_8py_source_l00482}{Evolver()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{classmufit_1_1main_1_1_multi_fitter_a646dc98802fc70130102410a34acfecf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a3f72d7407994cf55924f941b72dd0ae3}\index{MultiFitter@{MultiFitter}!loadConstants@{loadConstants}}
+\index{loadConstants@{loadConstants}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{loadConstants()}{loadConstants()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a3f72d7407994cf55924f941b72dd0ae3} 
+load\+Constants (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{const\+Dict}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Load a dictionary of constants and update solvelist too. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const\+Dict} & dictionary with new constants and values \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00211}{211}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00112}{constants}}, \mbox{\hyperlink{main_8py_source_l00143}{Loaded\+Instance}}, \mbox{\hyperlink{main_8py_source_l00114}{solve\+List}}, \mbox{\hyperlink{main_8py_source_l00156}{store\+Json()}}, and \mbox{\hyperlink{main_8py_source_l00088}{Verbose}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00249}{Array\+To\+Constants()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classmufit_1_1main_1_1_multi_fitter_a3f72d7407994cf55924f941b72dd0ae3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_a3f72d7407994cf55924f941b72dd0ae3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a845392881ea3e95f002cb21d7ef417a9}\index{MultiFitter@{MultiFitter}!loadData@{loadData}}
+\index{loadData@{loadData}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{loadData()}{loadData()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a845392881ea3e95f002cb21d7ef417a9} 
+load\+Data (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{df}{, }\item[{}]{init\+Predictors}{ = {\ttfamily True}}\end{DoxyParamCaption})}
+
+
+
+Load pandas dataframe for simulation/prediction/parameter fitting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em df} & pandas dataframe to load, this will also define SDF and datalength \\
+\hline
+{\em init\+Predictors} & Boolean which fills the predictor dictionary with initial values from the dataframe \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00536}{536}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a74056280c28f6e8fa7eb29dac1c7889f}\index{MultiFitter@{MultiFitter}!loadPredictors@{loadPredictors}}
+\index{loadPredictors@{loadPredictors}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{loadPredictors()}{loadPredictors()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a74056280c28f6e8fa7eb29dac1c7889f} 
+load\+Predictors (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{const\+Dict}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Load a dictionary of predictors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const\+Dict} & a dictionary with new predictors \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00235}{235}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00112}{constants}}, \mbox{\hyperlink{main_8py_source_l00116}{predictors}}, and \mbox{\hyperlink{main_8py_source_l00088}{Verbose}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00289}{reset\+Index()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_a74056280c28f6e8fa7eb29dac1c7889f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_ab888df0346bb59a4de071cdc656c7bf3}\index{MultiFitter@{MultiFitter}!loadVariables@{loadVariables}}
+\index{loadVariables@{loadVariables}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{loadVariables()}{loadVariables()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_ab888df0346bb59a4de071cdc656c7bf3} 
+load\+Variables (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{var\+Dict}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Load a dictionary of variables and add in dt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var\+Dict} & dictionary with new variables and values \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00197}{197}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00120}{dt}}, \mbox{\hyperlink{main_8py_source_l00110}{variables}}, and \mbox{\hyperlink{main_8py_source_l00088}{Verbose}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00289}{reset\+Index()}}, and \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_ab888df0346bb59a4de071cdc656c7bf3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_afabe0eeecd44eacaf3ff9a91865884ef}\index{MultiFitter@{MultiFitter}!parameters@{parameters}}
+\index{parameters@{parameters}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{parameters()}{parameters()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_afabe0eeecd44eacaf3ff9a91865884ef} 
+parameters (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all current variables, constants and predictors. 
+
+\begin{DoxyReturn}{Returns}
+A dictionary with variables, constants and predictors 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00171}{171}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00112}{constants}}, \mbox{\hyperlink{main_8py_source_l00116}{predictors}}, and \mbox{\hyperlink{main_8py_source_l00110}{variables}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00179}{Calculate()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_afabe0eeecd44eacaf3ff9a91865884ef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_afccef6c29c32202ae75f217f0e983b4d}\index{MultiFitter@{MultiFitter}!parameterSearchMap@{parameterSearchMap}}
+\index{parameterSearchMap@{parameterSearchMap}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{parameterSearchMap()}{parameterSearchMap()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_afccef6c29c32202ae75f217f0e983b4d} 
+parameter\+Search\+Map (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{constraints}{ = {\ttfamily None}, }\item[{}]{err}{ = {\ttfamily None}, }\item[{}]{ims}{ = {\ttfamily 4}, }\item[{}]{steps}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Do parameter search over a defined area, results in steps\texorpdfstring{$\ast$}{*}(constants\texorpdfstring{$^\wedge$}{\string^}ims) iterations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraints} & dictionary of arrays with \mbox{[}min,max\mbox{]} values to constraint the parameter search to example\+: SMap = \{"{}\+U"{}\+:\mbox{[}0.\+01,45.\+0\mbox{]},"{}\+C"{}\+:\mbox{[}100,200\mbox{]}\} \\
+\hline
+{\em err} & Name of variable to track as error, make sure this is in the predictors and in the loaded data \\
+\hline
+{\em ims} & Intermediate steps to generate, if 0 and 1 are given, a parameter search for 0, 0.\+25, 0.\+5 and 1 will be executed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array with errors in the format of \mbox{[}index,error,c0,c1,cn....\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00357}{357}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_ae4c22776b1efeb03d898bb5c624dac45}\index{MultiFitter@{MultiFitter}!plotError@{plotError}}
+\index{plotError@{plotError}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{plotError()}{plotError()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_ae4c22776b1efeb03d898bb5c624dac45} 
+plot\+Error (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{All}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+
+
+Plots the internal error array of shape \mbox{[}index, error, c0, c1, cn.... 
+
+\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em All} & if set to true, all errors are shown. Otherwise only best parameters for each timestep. Plotly plot \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00597}{597}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00571}{Analyze\+Errors()}}, \mbox{\hyperlink{main_8py_source_l00137}{columns}}, \mbox{\hyperlink{main_8py_source_l00119}{error}}, and \mbox{\hyperlink{main_8py_source_l00114}{solve\+List}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classmufit_1_1main_1_1_multi_fitter_ae4c22776b1efeb03d898bb5c624dac45_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_acd3baae5a04f481ac6b3a0466c5db669}\index{MultiFitter@{MultiFitter}!resampleData@{resampleData}}
+\index{resampleData@{resampleData}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{resampleData()}{resampleData()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_acd3baae5a04f481ac6b3a0466c5db669} 
+resample\+Data (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{time\+Step}{}\end{DoxyParamCaption})}
+
+
+
+Internal dataframe resampler; this is not a smart function! 
+
+make sure data is time dependent.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Step} & Resample step in seconds; only works when the loaded data uses a datetime index! \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00558}{558}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00533}{data\+Length}}, \mbox{\hyperlink{main_8py_source_l00543}{DF}}, \mbox{\hyperlink{main_8py_source_l00120}{dt}}, and \mbox{\hyperlink{main_8py_source_l00088}{Verbose}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_acfdf32734331854123227f27f388f96e}\index{MultiFitter@{MultiFitter}!resetIndex@{resetIndex}}
+\index{resetIndex@{resetIndex}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{resetIndex()}{resetIndex()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_acfdf32734331854123227f27f388f96e} 
+reset\+Index (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+reset the index to 0 and reset predictors and variables from SDF\mbox{[}0\mbox{]} IF SDF is defined 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00289}{289}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00118}{index}}, \mbox{\hyperlink{main_8py_source_l00235}{load\+Predictors()}}, \mbox{\hyperlink{main_8py_source_l00197}{load\+Variables()}}, and \mbox{\hyperlink{main_8py_source_l00287}{SDF}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00333}{Bulk\+Error()}}, and \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classmufit_1_1main_1_1_multi_fitter_acfdf32734331854123227f27f388f96e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_acfdf32734331854123227f27f388f96e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_ad0c7c03a772799c36476d8f0276e2bf8}\index{MultiFitter@{MultiFitter}!scipyOptimize@{scipyOptimize}}
+\index{scipyOptimize@{scipyOptimize}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{scipyOptimize()}{scipyOptimize()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_ad0c7c03a772799c36476d8f0276e2bf8} 
+scipy\+Optimize (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{constraints}{ = {\ttfamily None}, }\item[{}]{err}{ = {\ttfamily None}, }\item[{}]{steps}{ = {\ttfamily None}, }\item[{}]{iterations}{ = {\ttfamily 1000}, }\item[{}]{solver}{ = {\ttfamily None}, }\item[{}]{lsq}{ = {\ttfamily False}}\end{DoxyParamCaption})}
+
+
+
+Do parameter optimization with scipy.\+optimize. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraints} & dictionary of arrays with \mbox{[}min,max\mbox{]} values to constraint the parameter search to example\+: SMap = \{"{}\+U"{}\+:\mbox{[}0.\+01,45.\+0\mbox{]},"{}\+C"{}\+:\mbox{[}100,200\mbox{]}\}. If not given, all in solve\+List will be optimized without constraints \\
+\hline
+{\em err} & Name of variable to track as error, make sure this is in the predictors and in the loaded data \\
+\hline
+{\em steps} & amount of dataset steps to calculate in the error function \\
+\hline
+{\em iterations} & amount of allowed solver iterations, default set to 1000 \\
+\hline
+{\em solver} & solving algorithm to be used, default nelder-\/mead \\
+\hline
+{\em lsq} & treat problem as least-\/squares problem\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array with the best parameters found 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00297}{297}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00333}{Bulk\+Error()}}, \mbox{\hyperlink{main_8py_source_l00114}{solve\+List}}, and \mbox{\hyperlink{main_8py_source_l00088}{Verbose}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_ad0c7c03a772799c36476d8f0276e2bf8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a196acd1d5c1540ceb84e7b7acb9b8733}\index{MultiFitter@{MultiFitter}!setSolveList@{setSolveList}}
+\index{setSolveList@{setSolveList}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{setSolveList()}{setSolveList()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a196acd1d5c1540ceb84e7b7acb9b8733} 
+set\+Solve\+List (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{Array}{ = {\ttfamily None}, }\item[{}]{Dict}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Set the constants to solve, can take an array of indexes/names or dict with new values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Array} & An array with indexes or string names which can be found in constants and should be solved \\
+\hline
+{\em Dict} & A dictionary with key\+:value pairs where key=name and value = initial value \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00616}{616}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00112}{constants}}, and \mbox{\hyperlink{main_8py_source_l00114}{solve\+List}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a0a76c49d8703e3a61cfaccc6b9a75c6c}\index{MultiFitter@{MultiFitter}!SimSolve@{SimSolve}}
+\index{SimSolve@{SimSolve}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{SimSolve()}{SimSolve()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a0a76c49d8703e3a61cfaccc6b9a75c6c} 
+Sim\+Solve (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{steps}{, }\item[{}]{repeats}{, }\item[{}]{err}{}\end{DoxyParamCaption})}
+
+
+
+Subsequent simulating and evolution based algorithm to test results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em steps} & amount of iteration to optimize each parameter that is in the solve\+List and steps to simulate \\
+\hline
+{\em repeats} & amount of times to repeat this loop of simulate -\/\texorpdfstring{$>$}{>} evolve \\
+\hline
+{\em err} & name of predictor (and dataframe column) that will be used for error determination; prediction target.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array with errors in the format of \mbox{[}index,error,c0,c1,cn....\mbox{]} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00672}{672}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00119}{error}}, \mbox{\hyperlink{main_8py_source_l00482}{Evolver()}}, and \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_a0a76c49d8703e3a61cfaccc6b9a75c6c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a47d4d4f9470094b25c3e9b306d5fce27}\index{MultiFitter@{MultiFitter}!Simulate@{Simulate}}
+\index{Simulate@{Simulate}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{Simulate()}{Simulate()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a47d4d4f9470094b25c3e9b306d5fce27} 
+Simulate (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{steps}{, }\item[{}]{err}{ = {\ttfamily None}, }\item[{}]{write}{ = {\ttfamily True}}\end{DoxyParamCaption})}
+
+
+
+Apply the model (Calculate) to the loaded data, does not strictly need a DF. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em steps} & amount of steps to simulate \\
+\hline
+{\em err} & name of predictor (and dataframe column) that will be used for error determination; prediction target. \\
+\hline
+{\em write} & if set to false, no data is written to SDF. This is used internally to test errors without tainting SDF\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An array with errors in the format of \mbox{[}index,error,c0,c1,cn....\mbox{]} if err is defined, otherwise True 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00638}{638}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00179}{Calculate()}}, \mbox{\hyperlink{main_8py_source_l00112}{constants}}, \mbox{\hyperlink{main_8py_source_l00273}{dict\+Slice()}}, \mbox{\hyperlink{main_8py_source_l00264}{dict\+To\+Array()}}, \mbox{\hyperlink{main_8py_source_l00119}{error}}, \mbox{\hyperlink{main_8py_source_l00118}{index}}, \mbox{\hyperlink{main_8py_source_l00197}{load\+Variables()}}, \mbox{\hyperlink{main_8py_source_l00116}{predictors}}, \mbox{\hyperlink{main_8py_source_l00289}{reset\+Index()}}, \mbox{\hyperlink{main_8py_source_l00529}{step\+Index()}}, and \mbox{\hyperlink{main_8py_source_l00282}{write\+Slice()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00333}{Bulk\+Error()}}, \mbox{\hyperlink{main_8py_source_l00437}{Bulk\+Evolver()}}, \mbox{\hyperlink{main_8py_source_l00482}{Evolver()}}, and \mbox{\hyperlink{main_8py_source_l00672}{Sim\+Solve()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_a47d4d4f9470094b25c3e9b306d5fce27_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classmufit_1_1main_1_1_multi_fitter_a47d4d4f9470094b25c3e9b306d5fce27_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_ae1d6e3030b2700893bcd69432340c2d9}\index{MultiFitter@{MultiFitter}!stepIndex@{stepIndex}}
+\index{stepIndex@{stepIndex}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{stepIndex()}{stepIndex()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_ae1d6e3030b2700893bcd69432340c2d9} 
+step\+Index (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+Step through the index and reset it once datalength is exceeded. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00529}{529}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00118}{index}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_ae1d6e3030b2700893bcd69432340c2d9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_af8f9384caf99f3ade1fdf0335d5ac218}\index{MultiFitter@{MultiFitter}!storeJson@{storeJson}}
+\index{storeJson@{storeJson}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{storeJson()}{storeJson()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_af8f9384caf99f3ade1fdf0335d5ac218} 
+store\+Json (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{data}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00156}{156}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00118}{index}}, and \mbox{\hyperlink{main_8py_source_l00121}{Instance}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00571}{Analyze\+Errors()}}, \mbox{\hyperlink{main_8py_source_l00437}{Bulk\+Evolver()}}, and \mbox{\hyperlink{main_8py_source_l00211}{load\+Constants()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_af8f9384caf99f3ade1fdf0335d5ac218_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_ae33a2b1c2a1bf47a1a237cda45ec1fbd}\index{MultiFitter@{MultiFitter}!writeSlice@{writeSlice}}
+\index{writeSlice@{writeSlice}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{writeSlice()}{writeSlice()}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_ae33a2b1c2a1bf47a1a237cda45ec1fbd} 
+write\+Slice (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+write the current predictors to SDF simulation dataframe 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00282}{282}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+References \mbox{\hyperlink{main_8py_source_l00116}{predictors}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmufit_1_1main_1_1_multi_fitter_ae33a2b1c2a1bf47a1a237cda45ec1fbd_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a2236b72f560276e1c4ca3409b8b3ecb5}\index{MultiFitter@{MultiFitter}!columns@{columns}}
+\index{columns@{columns}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a2236b72f560276e1c4ca3409b8b3ecb5} 
+columns = columns}
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00137}{137}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{pre_processor_8py_source_l00175}{Eventor.\+Generic\+Events()}}, and \mbox{\hyperlink{main_8py_source_l00597}{plot\+Error()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a28dba3bf7b4e38c36a6d8a537c14bad1}\index{MultiFitter@{MultiFitter}!constants@{constants}}
+\index{constants@{constants}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{constants}{constants}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a28dba3bf7b4e38c36a6d8a537c14bad1} 
+constants = \{\}}
+
+
+
+The constants stay constant unless fitted. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00112}{112}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00571}{Analyze\+Errors()}}, \mbox{\hyperlink{main_8py_source_l00249}{Array\+To\+Constants()}}, \mbox{\hyperlink{main_8py_source_l00333}{Bulk\+Error()}}, \mbox{\hyperlink{main_8py_source_l00437}{Bulk\+Evolver()}}, \mbox{\hyperlink{main_8py_source_l00482}{Evolver()}}, \mbox{\hyperlink{main_8py_source_l00211}{load\+Constants()}}, \mbox{\hyperlink{main_8py_source_l00235}{load\+Predictors()}}, \mbox{\hyperlink{main_8py_source_l00171}{parameters()}}, \mbox{\hyperlink{main_8py_source_l00616}{set\+Solve\+List()}}, and \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a516d171854a08808880d42484fa737a1}\index{MultiFitter@{MultiFitter}!constraints@{constraints}}
+\index{constraints@{constraints}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{constraints}{constraints}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a516d171854a08808880d42484fa737a1} 
+constraints = constraints}
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00368}{368}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a1123732bec1a10d0bbdd4c7bffe57473}\index{MultiFitter@{MultiFitter}!dataLength@{dataLength}}
+\index{dataLength@{dataLength}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{dataLength}{dataLength}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a1123732bec1a10d0bbdd4c7bffe57473} 
+data\+Length}
+
+
+
+The loaded data\+Frame length. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00533}{533}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00571}{Analyze\+Errors()}}, \mbox{\hyperlink{main_8py_source_l00333}{Bulk\+Error()}}, and \mbox{\hyperlink{main_8py_source_l00558}{resample\+Data()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_ad457ccc058d82f9d901de91c3ecd1629}\index{MultiFitter@{MultiFitter}!DF@{DF}}
+\index{DF@{DF}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{DF}{DF}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_ad457ccc058d82f9d901de91c3ecd1629} 
+DF = df}
+
+
+
+The loaded pandas data\+Frame. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00543}{543}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00273}{dict\+Slice()}}, and \mbox{\hyperlink{main_8py_source_l00558}{resample\+Data()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a8e935675ee83a2516c575de3e892b12e}\index{MultiFitter@{MultiFitter}!dt@{dt}}
+\index{dt@{dt}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a8e935675ee83a2516c575de3e892b12e} 
+int dt = 1}
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00120}{120}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00197}{load\+Variables()}}, and \mbox{\hyperlink{main_8py_source_l00558}{resample\+Data()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a047e5616224163ec4f7b8ce1328f142f}\index{MultiFitter@{MultiFitter}!error@{error}}
+\index{error@{error}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a047e5616224163ec4f7b8ce1328f142f} 
+list error = \mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00119}{119}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00571}{Analyze\+Errors()}}, \mbox{\hyperlink{main_8py_source_l00482}{Evolver()}}, \mbox{\hyperlink{main_8py_source_l00597}{plot\+Error()}}, \mbox{\hyperlink{main_8py_source_l00672}{Sim\+Solve()}}, and \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a6784e1c334dfceb8f017667c0b0f6a3e}\index{MultiFitter@{MultiFitter}!index@{index}}
+\index{index@{index}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{index}{index}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a6784e1c334dfceb8f017667c0b0f6a3e} 
+index = 0}
+
+
+
+The error array contains \mbox{[}index, error, \mbox{[}constants\mbox{]}\mbox{]}. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00118}{118}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00482}{Evolver()}}, \mbox{\hyperlink{main_8py_source_l00289}{reset\+Index()}}, \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}, \mbox{\hyperlink{main_8py_source_l00529}{step\+Index()}}, and \mbox{\hyperlink{main_8py_source_l00156}{store\+Json()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a86244c5fd1a9e478af20a7ebed03f7e4}\index{MultiFitter@{MultiFitter}!Instance@{Instance}}
+\index{Instance@{Instance}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a86244c5fd1a9e478af20a7ebed03f7e4} 
+Instance = "{}\{\}.json"{}.\+format(Instance)}
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00121}{121}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00156}{store\+Json()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a43e8bfd5caf83689e42ef179314fc19a}\index{MultiFitter@{MultiFitter}!lambdaDict@{lambdaDict}}
+\index{lambdaDict@{lambdaDict}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{lambdaDict}{lambdaDict}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a43e8bfd5caf83689e42ef179314fc19a} 
+dict lambda\+Dict = lambda\+Dict}
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00100}{100}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00179}{Calculate()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a12152b2cffe15a1d5fe0a13c0d37dd2d}\index{MultiFitter@{MultiFitter}!lambdaMap@{lambdaMap}}
+\index{lambdaMap@{lambdaMap}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{lambdaMap}{lambdaMap}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a12152b2cffe15a1d5fe0a13c0d37dd2d} 
+dict lambda\+Map = lambda\+Map}
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00090}{90}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00179}{Calculate()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a31e8dcc1354a53973b0c4546a89b79f8}\index{MultiFitter@{MultiFitter}!LoadedInstance@{LoadedInstance}}
+\index{LoadedInstance@{LoadedInstance}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{LoadedInstance}{LoadedInstance}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a31e8dcc1354a53973b0c4546a89b79f8} 
+Loaded\+Instance = self.\+store\+Json()}
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00143}{143}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00211}{load\+Constants()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a0d201dc21218cdcaec7b287c1e882dbb}\index{MultiFitter@{MultiFitter}!predictors@{predictors}}
+\index{predictors@{predictors}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{predictors}{predictors}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a0d201dc21218cdcaec7b287c1e882dbb} 
+predictors = \{\}}
+
+
+
+The predictors calculated by applying lambdafunctions. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00116}{116}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00179}{Calculate()}}, \mbox{\hyperlink{main_8py_source_l00482}{Evolver()}}, \mbox{\hyperlink{main_8py_source_l00235}{load\+Predictors()}}, \mbox{\hyperlink{main_8py_source_l00171}{parameters()}}, \mbox{\hyperlink{main_8py_source_l00638}{Simulate()}}, and \mbox{\hyperlink{main_8py_source_l00282}{write\+Slice()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_ad0648a8f395980c134caa007ff35fd53}\index{MultiFitter@{MultiFitter}!pSearchMap@{pSearchMap}}
+\index{pSearchMap@{pSearchMap}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{pSearchMap}{pSearchMap}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_ad0648a8f395980c134caa007ff35fd53} 
+p\+Search\+Map = p\+Search\+Map}
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00387}{387}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a2cf1f73f3e1245b2e34d4998024772c2}\index{MultiFitter@{MultiFitter}!SDF@{SDF}}
+\index{SDF@{SDF}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{SDF}{SDF}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a2cf1f73f3e1245b2e34d4998024772c2} 
+SDF = pd.\+concat(\mbox{[}self.\+SDF,pd.\+Series(self.\+predictors).to\+\_\+frame().T\mbox{]}, ignore\+\_\+index=True)}
+
+
+
+The loaded data\+Frame length. 
+
+The Simulated model, predictor values are written to here 
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00287}{287}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00289}{reset\+Index()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a77bb4bc6beba45b3885e441dd3135a9e}\index{MultiFitter@{MultiFitter}!solveList@{solveList}}
+\index{solveList@{solveList}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{solveList}{solveList}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a77bb4bc6beba45b3885e441dd3135a9e} 
+solve\+List = \{\}}
+
+
+
+The solvelist so that not all constants have to be fitted. 
+
+Instantiation of errorlist. 
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00114}{114}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00249}{Array\+To\+Constants()}}, \mbox{\hyperlink{main_8py_source_l00333}{Bulk\+Error()}}, \mbox{\hyperlink{main_8py_source_l00437}{Bulk\+Evolver()}}, \mbox{\hyperlink{main_8py_source_l00482}{Evolver()}}, \mbox{\hyperlink{main_8py_source_l00211}{load\+Constants()}}, \mbox{\hyperlink{main_8py_source_l00597}{plot\+Error()}}, \mbox{\hyperlink{main_8py_source_l00297}{scipy\+Optimize()}}, and \mbox{\hyperlink{main_8py_source_l00616}{set\+Solve\+List()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_a626e63c7be6e71872233832cce1dccc0}\index{MultiFitter@{MultiFitter}!variables@{variables}}
+\index{variables@{variables}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{variables}{variables}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_a626e63c7be6e71872233832cce1dccc0} 
+variables = \{"{}dt"{}\+: 1.\+0\}}
+
+
+
+The variables change every step. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00110}{110}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00482}{Evolver()}}, \mbox{\hyperlink{main_8py_source_l00197}{load\+Variables()}}, and \mbox{\hyperlink{main_8py_source_l00171}{parameters()}}.
+
+\Hypertarget{classmufit_1_1main_1_1_multi_fitter_ab95b2bf068cfe461f5b13a95191219a9}\index{MultiFitter@{MultiFitter}!Verbose@{Verbose}}
+\index{Verbose@{Verbose}!MultiFitter@{MultiFitter}}
+\doxysubsubsection{\texorpdfstring{Verbose}{Verbose}}
+{\footnotesize\ttfamily \label{classmufit_1_1main_1_1_multi_fitter_ab95b2bf068cfe461f5b13a95191219a9} 
+Verbose = verbose}
+
+
+
+The verbose boolean. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8py_source_l00088}{88}} of file \mbox{\hyperlink{main_8py_source}{main.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8py_source_l00571}{Analyze\+Errors()}}, \mbox{\hyperlink{main_8py_source_l00249}{Array\+To\+Constants()}}, \mbox{\hyperlink{main_8py_source_l00333}{Bulk\+Error()}}, \mbox{\hyperlink{main_8py_source_l00437}{Bulk\+Evolver()}}, \mbox{\hyperlink{main_8py_source_l00179}{Calculate()}}, \mbox{\hyperlink{main_8py_source_l00482}{Evolver()}}, \mbox{\hyperlink{main_8py_source_l00401}{Fiddler()}}, \mbox{\hyperlink{main_8py_source_l00211}{load\+Constants()}}, \mbox{\hyperlink{main_8py_source_l00235}{load\+Predictors()}}, \mbox{\hyperlink{main_8py_source_l00197}{load\+Variables()}}, \mbox{\hyperlink{main_8py_source_l00558}{resample\+Data()}}, and \mbox{\hyperlink{main_8py_source_l00297}{scipy\+Optimize()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Trackn\+Trace/\+Trackn\+Trace/fimufit/mufit/\mbox{\hyperlink{main_8py}{main.\+py}}\end{DoxyCompactItemize}
