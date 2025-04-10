@@ -59,6 +59,7 @@ import configparser
 import warnings
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
+import numpy as np
 from mufit.main import *
 import inspect
 from pytexit import py2tex
