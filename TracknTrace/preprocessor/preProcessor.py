@@ -898,6 +898,7 @@ def ProcessData():
             data[["Vdhw"]] = RepairCumulatives(data[["Vdhw"]])
 
 ###############~~~~~~~~~~~~~~~~~~Milestone!
+    LogReport(data)
     data = data.resample(config["preprocessing"]["ResampleTime"]).mean().interpolate()
 ###############~~~~~~~~~~~~~~~~~~Milestone!
 
