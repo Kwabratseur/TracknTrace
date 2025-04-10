@@ -13,7 +13,12 @@ NegativePower = Pol,Poh,P1wp,P2wp
 DHWColumns = T1dhw,T2dhw,Pdhw
 ResampleTime = 30T
 format = Excel
+Timeformat = csvonlynone
 dataYear = 2020
+
+[slice]
+start = 200
+end = 0
 
 
 [CategoryWeights]
@@ -163,3 +168,4 @@ SanityCheckThese = 1
 dataCoverage = 0
 COP = 0
 FastSim = 1
+DataSlicer = 1

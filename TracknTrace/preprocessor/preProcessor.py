@@ -905,6 +905,12 @@ def ProcessData():
 ###############~~~~~~~~~~~~~~~~~~Milestone!
     LogReport(data)
     data = data.resample(config["preprocessing"]["ResampleTime"]).mean().interpolate()
+    MODULE = "DataSlicer"
+    if modules[MODULE] == str(1):
+        startslice = int(config["slice"]["start"])
+        endslice = int(config["slice"]["end"])
+        data = data.iloc[startslice:]
+        data = data.iloc[:endslice]
 ###############~~~~~~~~~~~~~~~~~~Milestone!
 
     MODULE = "EtoP"
