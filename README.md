@@ -81,7 +81,12 @@ NegativePower = Po,Pwp            # All electric columns that are negative <loss
 DHWColumns = Pdhw                 # Domestic Hot Water Power Column
 ResampleTime = 30T                # Delta Time to resample all data towards
 format = Excel                    # linear**: chronologic data or ordered **csv**
+Timeformat = %%d-%%m-%%Y %%H:%%M:%%s # Time format, only applicable for csv format
 dataYear = 2020
+
+[slice]
+start = 50 # data cutoff at the start
+end = -1  # data cutoff at the end
 
 [CategoryUnits]                   # Each column in RenamedColumns need to be described according to below standard
 Tlv = °C,gebouwdata,"temperatuur woonkamer"
@@ -216,6 +221,7 @@ SanityCheckThese = 1                  # Check the Scanlist data extensively on e
 dataCoverage = 0                      # Do a data coverage check, this DOES NOT execute the code. Gives insight in data coverage over the dataset!
 COP = 0                               # Do Coefficient of Performance calculation
 FastSim = 1                           # Run a simplified short simulation, to do tests or if you already have good coefficients
+DataSlicer = 1                        # Slice off the start and end as specified. This might aid fitting models in certain cases.
 ```
 
 ### Custom Analysis functions in analysis.py
