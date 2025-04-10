@@ -809,11 +809,11 @@ def ProcessData():
         data = data.drop(["Date","Time"], axis=1)
         data = data.set_index("DateTime")
     if dataformat == "csv":
-        data = pd.read_csv(config["preprocessing"]["Filename"]).fillna("None")
+        data = pd.read_csv(config["preprocessing"]["Filename"]).replace("No Data", "None").fillna("None")
         data["DateTime"] = data[data.columns[0]]
         data["DateTime"] = pd.to_datetime(data.DateTime, format="%d-%m-%Y %H:%M:%S")
         data["Datetime"] = data.loc[:, "DateTime"]#data[["DateTime"]]
-        data = data.drop(data.columns[0], axis=1)    
+        data = data.drop(data.columns[0], axis=1)
         data = data.set_index("DateTime")
     elif dataformat == "linear":
         lineardata = pd.read_csv(config["preprocessing"]["Filename"]).fillna("None")
