@@ -810,12 +810,15 @@ def ProcessData():
         data = data.drop(["Date","Time"], axis=1)
         data = data.set_index("DateTime")
     if dataformat == "csv":
-        data = pd.read_csv(config["preprocessing"]["Filename"], sep=";").replace("No Data", "None").fillna("None")
+        data = pd.read_csv(config["preprocessing"]["Filename"], sep=";").replace("No Data", np.nan)
         data["DateTime"] = data[data.columns[0]]
         data["DateTime"] = pd.to_datetime(data.DateTime, format=timeformat)
         #data["Datetime"] = data.loc[:, "DateTime"]#data[["DateTime"]]
         data = data.drop(data.columns[0], axis=1)
         data = data.set_index("DateTime")
+        for i in data.columns:
+            print(i)
+            data[i] = pd.to_numeric(data[i])
     elif dataformat == "linear":
         lineardata = pd.read_csv(config["preprocessing"]["Filename"]).fillna("None")
         lineardata["ID_Name_Property"] = lineardata["Productname"] + "_" + lineardata["Propertyname"]
