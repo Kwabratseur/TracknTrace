@@ -812,7 +812,7 @@ def ProcessData():
     if dataformat == "csv":
         data = pd.read_csv(config["preprocessing"]["Filename"]).replace("No Data", "None").fillna("None")
         data["DateTime"] = data[data.columns[0]]
-        data["DateTime"] = pd.to_datetime(data.DateTime, format=timeformat)
+        data["DateTime"] = pd.to_datetime(data.DateTime, format=timeformat, sep=";")
         #data["Datetime"] = data.loc[:, "DateTime"]#data[["DateTime"]]
         data = data.drop(data.columns[0], axis=1)
         data = data.set_index("DateTime")
