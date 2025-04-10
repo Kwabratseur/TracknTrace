@@ -1140,7 +1140,11 @@ def ProcessData():
 
         fmf = MultiFitter(Instance,lambdaMap=lambdaMap,lambdaDict=lambdaDict,verbose=2) # On instantiation we MUST pass instance NAME
         fmf.loadData(data,initPredictors=True)
-        fmf.loadConstants({"C":12000.0,"U":regressor.coef_[0][0],"Ag":float(config["schil"]["glasoppervlak"]),"Ga":0.3})
+        MODULE = "EnergySignatureMethod"
+        if modules[MODULE] == str(1):
+            fmf.loadConstants({"C":12000.0,"U":regressor.coef_[0][0],"Ag":float(config["schil"]["glasoppervlak"]),"Ga":0.3})
+        else:
+            fmf.loadConstants({"C":12000.0,"U":0.5,"Ag":float(config["schil"]["glasoppervlak"]),"Ga":0.3})
         fmf.loadConstants("best")
         df = pd.DataFrame(fmf.error,columns=["index","error","c0","c1"])
         fmf.dt = 1800.0
