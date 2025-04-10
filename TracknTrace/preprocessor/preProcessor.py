@@ -804,14 +804,14 @@ def ProcessData():
     if dataformat == "Excel":
         data = pd.read_excel(config["preprocessing"]["Filename"], sheet_name = "Data", header=[0,1])
         data["DateTime"] = data[["Date","Time"]].apply(lambda x: str(x[0])[:10]+" "+str(x[1]), axis=1)
-        data["DateTime"] = pd.to_datetime(data.DateTime, format="%d-%m-%Y %H:%M:%S")
+        data["DateTime"] = pd.to_datetime(data.DateTime, format="%Y-%m-%d %H:%M:%S")
         data["Datetime"] = data.loc[:, "DateTime"]#data[["DateTime"]]
         data = data.drop(["Date","Time"], axis=1)
         data = data.set_index("DateTime")
     if dataformat == "csv":
         data = pd.read_csv(config["preprocessing"]["Filename"]).fillna("None")
         data["DateTime"] = data[data.columns[0]]
-        data["DateTime"] = pd.to_datetime(data.DateTime, format="%Y-%m-%d %H:%M:%S")
+        data["DateTime"] = pd.to_datetime(data.DateTime, format="%d-%m-%Y %H:%M:%S")
         data["Datetime"] = data.loc[:, "DateTime"]#data[["DateTime"]]
         data = data.drop(["Date","Time"], axis=1)
         data = data.set_index("DateTime")
