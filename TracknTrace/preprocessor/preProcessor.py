@@ -907,6 +907,8 @@ def ProcessData():
     data = data.resample(config["preprocessing"]["ResampleTime"]).mean().interpolate()
     MODULE = "DataSlicer"
     if modules[MODULE] == str(1):
+        LogReport("Executing module {}".format(MODULE),5)
+        print(len(data))
         startslice = int(config["slice"]["start"])
         endslice = int(config["slice"]["end"])
         data = data.iloc[startslice:]

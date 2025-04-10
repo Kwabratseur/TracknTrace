@@ -17,8 +17,8 @@ Timeformat = csvonlynone
 dataYear = 2020
 
 [slice]
-start = 200
-end = 0
+start = 50
+end = -1
 
 
 [CategoryWeights]
