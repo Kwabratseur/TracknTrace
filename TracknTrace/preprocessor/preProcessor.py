@@ -979,7 +979,8 @@ def ProcessData():
     if modules[MODULE] == str(1):
         LogReport("Executing module {}".format(MODULE),5)
         Indoor_temperatures = config["preprocessing"]["IndoorTemperatures"].split(",")
-        data["Tavg"] = data[Indoor_temperatures].sum(axis=1)/3.0
+        count = len(Indoor_temperatures)
+        data["Tavg"] = data[Indoor_temperatures].sum(axis=1)/count
         data["Tavg"]
         LogReport("__"*80, 4)
         LogReport("# Indoor temperatures compiled to average")
