@@ -939,7 +939,7 @@ def ProcessData():
                 try:
                     KNMI = KNMI_Resampler(path+"/uurgeg_290_2011-2020.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
                     KNMI = KNMI.T[data.index].T
-                except KeyError:  #Attempt a newer KNMI Data file
+                except:  #Attempt a newer KNMI Data file
                     KNMI = KNMI_Resampler(path+"/uurgeg_290_2021-2025.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
                     KNMI = KNMI.T[data.index].T
             else:

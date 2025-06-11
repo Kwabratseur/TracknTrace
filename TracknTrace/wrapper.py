@@ -28,4 +28,4 @@ if __name__ == "__main__":
         print("Error")
         os._exit(os.EX_OK)
 else:
-    print("---\n{}\n---\nV0.0.1 is being imported\n---".format(sys.argv[0]))
+    print("---\n{}\n---\nV0.1.0 is being imported\n---".format(sys.argv[0]))
