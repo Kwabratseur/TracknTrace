@@ -984,10 +984,11 @@ def ProcessData():
         logFigure("Fixed_Data", data, Instance)
 
     ####~~~~~~~~~~~~~~~~~ USER ANALYSIS FUNCTION MAGIC ~~~~~~~~~~~~~~~~~####
-
-        Function_List = getmembers(analysis, isfunction)
-        if len(Function_List) > 0:
-            data = AnalysisDealer(data,Function_List)
+        MODULE = "UserFunctions"
+        if modules[MODULE] == str(1):
+            Function_List = getmembers(analysis, isfunction)
+            if len(Function_List) > 0:
+                data = AnalysisDealer(data,Function_List)
 
     ####~~~~~~~~~~~~~~~~~ USER ANALYSIS FUNCTION MAGIC ~~~~~~~~~~~~~~~~~####
 
