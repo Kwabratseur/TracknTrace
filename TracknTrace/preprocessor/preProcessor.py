@@ -935,12 +935,19 @@ def ProcessData():
             RevertArray = []
             path = os.path.abspath(analysis.__file__)
             path = "".join(["/{}".format(i) for i in path.split("/")[:-1]])
+
+            if len(path) > 0:
+                LogReport("__"*80, 4)
+                LogReport("PatchChecking...........", 1)
+                LogReport(path, 1)
+                LogReport("__"*80, 4)
+                path = path + "/"
             if config["preprocessing"]["KNMI"] == "True":
                 try:
-                    KNMI = KNMI_Resampler(path+"/uurgeg_290_2011-2020.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
+                    KNMI = KNMI_Resampler(path+"uurgeg_290_2011-2020.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
                     KNMI = KNMI.T[data.index].T
                 except:  #Attempt a newer KNMI Data file
-                    KNMI = KNMI_Resampler(path+"/uurgeg_290_2021-2025.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
+                    KNMI = KNMI_Resampler(path+"uurgeg_290_2021-2025.txt",T_Columns,ScaleArray,header=28, Interval = "30min")
                     KNMI = KNMI.T[data.index].T
             else:
                 KNMI = KNMI_Resampler(config["preprocessing"]["KNMI"],T_Columns,ScaleArray,header=28, Interval = "30min")
